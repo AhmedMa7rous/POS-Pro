@@ -1,0 +1,11 @@
+framework module Alhamrani {
+  umbrella header "Alhamrani.h"
+
+  export *
+  module * { export * }
+}
+
+module Alhamrani.Swift {
+    header "Alhamrani-Swift.h"
+    requires objc
+}

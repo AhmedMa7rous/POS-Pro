@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="DevicesManagementCell" rowHeight="115" id="KGk-i7-Jjw" customClass="DevicesManagementCell" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="590" height="115"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="590" height="115"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XVR-Cv-twV">
+                        <rect key="frame" x="5" y="10" width="580" height="95"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FXV-Gw-mQe">
+                                <rect key="frame" x="5" y="5" width="570" height="85"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AC5-2y-38R">
+                                        <rect key="frame" x="0.0" y="0.0" width="246.5" height="85"/>
+                                        <string key="text">LabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabelLabel</string>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <stackView opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="FW9-8U-pUp">
+                                        <rect key="frame" x="246.5" y="20" width="323.5" height="45"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jRf-TR-vWG" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="148" height="45"/>
+                                                <color key="backgroundColor" red="1" green="0.5647059083" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Test Connection"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اختبار الاتصال"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapOnTestConnectionBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="vbt-7C-vSl"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ylL-hC-IaM" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="152" y="0.0" width="76.5" height="45"/>
+                                                <color key="backgroundColor" red="1" green="0.5647059083" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" secondItem="ylL-hC-IaM" secondAttribute="height" multiplier="1.7:1" id="8gt-Yd-fLX"/>
+                                                </constraints>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Ping"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="Ping"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="unU-E0-mJR" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="156" y="0.0" width="119.5" height="45"/>
+                                                <color key="backgroundColor" red="1" green="0.5647059083" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Test Printer"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="12"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اختبار الطابعة"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapOnTestPrinterBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="adh-ca-6dm"/>
+                                                </connections>
+                                            </button>
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmq-en-bmf" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="279.5" y="0.0" width="52.5" height="45"/>
+                                                <color key="backgroundColor" red="0.32549019610000002" green="0.1529411765" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" title="Log"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="10"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="السجل"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="tapOnLogBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="h56-0C-hII"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pen-c6-UJb" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="283.5" y="0.0" width="40" height="45"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="40" id="a5y-0O-WNv"/>
+                                                </constraints>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="plain" image="delet-gray-btn" title=" "/>
+                                                <connections>
+                                                    <action selector="tapOnDeletPrinterBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="qtg-5I-JUR"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="45" id="gIj-8H-7Vx"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="FXV-Gw-mQe" firstAttribute="top" secondItem="XVR-Cv-twV" secondAttribute="top" constant="5" id="5Ww-nX-Lu9"/>
+                            <constraint firstItem="FXV-Gw-mQe" firstAttribute="leading" secondItem="XVR-Cv-twV" secondAttribute="leading" constant="5" id="Ua2-tL-rpa"/>
+                            <constraint firstAttribute="bottom" secondItem="FXV-Gw-mQe" secondAttribute="bottom" constant="5" id="XzY-OL-LP5"/>
+                            <constraint firstAttribute="trailing" secondItem="FXV-Gw-mQe" secondAttribute="trailing" constant="5" id="z0P-4n-jPZ"/>
+                        </constraints>
+                    </view>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TvF-aX-OOO">
+                        <rect key="frame" x="0.0" y="114" width="590" height="1"/>
+                        <color key="backgroundColor" red="1" green="0.5647059083" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="p1k-8g-4x5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="XVR-Cv-twV" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="4Dr-N2-UR0"/>
+                    <constraint firstItem="XVR-Cv-twV" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="E5s-RB-BqS"/>
+                    <constraint firstAttribute="trailing" secondItem="XVR-Cv-twV" secondAttribute="trailing" constant="5" id="Hoq-L1-bmm"/>
+                    <constraint firstAttribute="trailing" secondItem="TvF-aX-OOO" secondAttribute="trailing" id="LJG-g1-WZt"/>
+                    <constraint firstItem="TvF-aX-OOO" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Ob6-pF-V0M"/>
+                    <constraint firstAttribute="bottom" secondItem="TvF-aX-OOO" secondAttribute="bottom" id="guR-2Y-gon"/>
+                    <constraint firstAttribute="bottom" secondItem="XVR-Cv-twV" secondAttribute="bottom" constant="10" id="zVS-Bd-Lpw"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="deletBtn" destination="pen-c6-UJb" id="edi-qs-Efp"/>
+                <outlet property="logBtn" destination="rmq-en-bmf" id="RG3-AS-bK2"/>
+                <outlet property="pingBtn" destination="ylL-hC-IaM" id="NRJ-QZ-yIM"/>
+                <outlet property="printerNameLbl" destination="AC5-2y-38R" id="OiI-nv-cES"/>
+                <outlet property="testConnectionBtn" destination="jRf-TR-vWG" id="n4k-Um-UUn"/>
+                <outlet property="testPrinterBtn" destination="unU-E0-mJR" id="K9g-hU-0Ed"/>
+            </connections>
+            <point key="canvasLocation" x="182.22222222222223" y="106.29629629629629"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="jRf-TR-vWG">
+            <size key="intrinsicContentSize" width="148" height="38.5"/>
+        </designable>
+        <designable name="pen-c6-UJb">
+            <size key="intrinsicContentSize" width="48" height="38.5"/>
+        </designable>
+        <designable name="rmq-en-bmf">
+            <size key="intrinsicContentSize" width="52.5" height="38.5"/>
+        </designable>
+        <designable name="unU-E0-mJR">
+            <size key="intrinsicContentSize" width="111.5" height="38.5"/>
+        </designable>
+        <designable name="ylL-hC-IaM">
+            <size key="intrinsicContentSize" width="58" height="38.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="delet-gray-btn" width="19.5" height="22"/>
+    </resources>
+</document>

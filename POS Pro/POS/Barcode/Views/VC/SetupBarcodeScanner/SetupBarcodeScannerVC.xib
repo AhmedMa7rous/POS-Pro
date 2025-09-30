@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SetupBarcodeScannerVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="nextStepBtn" destination="TJk-r2-JWf" id="Vdv-W8-v5K"/>
+                <outlet property="pageControl" destination="ZMQ-fS-HMh" id="A7e-Dw-QAU"/>
+                <outlet property="skipBtn" destination="onX-MG-yne" id="6Fw-l9-RLl"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewContainerStep" destination="naH-1S-lCe" id="3fG-rx-Ltc"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="naH-1S-lCe">
+                    <rect key="frame" x="40" y="60" width="944" height="564"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </view>
+                <pageControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="ZMQ-fS-HMh">
+                    <rect key="frame" x="454" y="682" width="116.5" height="26"/>
+                </pageControl>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJk-r2-JWf">
+                    <rect key="frame" x="40" y="664" width="944" height="64"/>
+                    <color key="backgroundColor" name="DGTERA-purple"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="64" id="XFw-v9-S0P"/>
+                        <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="64" id="cjd-o9-y1P"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                    <color key="tintColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="tapOnNextBtn:" destination="-1" eventType="touchUpInside" id="cbt-ph-2HQ"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="onX-MG-yne">
+                    <rect key="frame" x="904" y="60" width="90" height="50"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="n7V-KS-3Zq"/>
+                        <constraint firstAttribute="width" constant="90" id="rHw-6b-24l"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="27"/>
+                    <state key="normal" title="SKIP">
+                        <color key="titleColor" name="DGTERA-purple"/>
+                    </state>
+                    <connections>
+                        <action selector="tapOnSkipBtn:" destination="-1" eventType="touchUpInside" id="Xvf-SN-Lw7"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="naH-1S-lCe" secondAttribute="trailing" constant="40" id="Gbx-SE-em8"/>
+                <constraint firstItem="naH-1S-lCe" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="HMr-0K-nR1"/>
+                <constraint firstItem="TJk-r2-JWf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="PfQ-uO-iCD"/>
+                <constraint firstItem="TJk-r2-JWf" firstAttribute="top" secondItem="naH-1S-lCe" secondAttribute="bottom" constant="40" id="STB-tq-efF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="TJk-r2-JWf" secondAttribute="bottom" constant="40" id="UE8-iM-JtG"/>
+                <constraint firstItem="naH-1S-lCe" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="azi-mG-kbr"/>
+                <constraint firstItem="ZMQ-fS-HMh" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="i01-VQ-axB"/>
+                <constraint firstItem="onX-MG-yne" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="sZr-bz-w3Q"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="ZMQ-fS-HMh" secondAttribute="bottom" constant="60" id="u3f-XC-tWN"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="TJk-r2-JWf" secondAttribute="trailing" constant="40" id="xsJ-kk-okx"/>
+                <constraint firstAttribute="trailing" secondItem="onX-MG-yne" secondAttribute="trailing" constant="30" id="ymq-mJ-F8R"/>
+            </constraints>
+            <point key="canvasLocation" x="116" y="74"/>
+        </view>
+    </objects>
+    <resources>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

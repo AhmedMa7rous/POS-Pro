@@ -1,0 +1,1767 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Semibold.ttf">
+            <string>OpenSans-Semibold</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Reports home-->
+        <scene sceneID="rsb-iK-T4W">
+            <objects>
+                <viewController storyboardIdentifier="reports_home" id="FQZ-7N-7vP" customClass="reports_home" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Joq-v0-wZc">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NZ7-rQ-VXY">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wky-rJ-Hvm">
+                                        <rect key="frame" x="258" y="67" width="758" height="701"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="deX-4i-p5Z">
+                                                <rect key="frame" x="-6" y="0.0" width="770" height="701"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" red="0.98039215686274506" green="0.98039215686274506" blue="0.98039215686274506" alpha="1" colorSpace="calibratedRGB"/>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="53B-1c-iTd" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="67" width="300" height="701"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                        <subviews>
+                                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DOW-YX-Twp">
+                                                <rect key="frame" x="0.0" y="8" width="300" height="693"/>
+                                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="scrollIndicatorInsets" minX="0.0" minY="50" maxX="0.0" maxY="0.0"/>
+                                                <prototypes>
+                                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="cell" id="bdu-Pv-vue" customClass="reports_homeTableViewCell" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="50" width="300" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask"/>
+                                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bdu-Pv-vue" id="vp7-8q-vdf">
+                                                            <rect key="frame" x="0.0" y="0.0" width="300" height="50"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pqG-Cs-lcq">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="284" height="50"/>
+                                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                    <subviews>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="16" translatesAutoresizingMaskIntoConstraints="NO" id="hgk-44-GYt" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                                            <rect key="frame" x="36" y="2" width="248" height="48"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                                            <nil key="textColor"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="icon_dashboard.png" translatesAutoresizingMaskIntoConstraints="NO" id="SUX-3y-w57" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                                                                            <rect key="frame" x="8" y="16" width="20" height="20"/>
+                                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                                            <userDefinedRuntimeAttributes>
+                                                                                <userDefinedRuntimeAttribute type="string" keyPath="imageFileName" value="icon_dashboard.png"/>
+                                                                            </userDefinedRuntimeAttributes>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                </view>
+                                                            </subviews>
+                                                        </tableViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="lblTitle" destination="hgk-44-GYt" id="98V-7A-o8n"/>
+                                                            <outlet property="photo" destination="SUX-3y-w57" id="fUT-r0-te7"/>
+                                                        </connections>
+                                                    </tableViewCell>
+                                                </prototypes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="FQZ-7N-7vP" id="5Lr-rl-bvl"/>
+                                                    <outlet property="delegate" destination="FQZ-7N-7vP" id="o3x-aC-2pb"/>
+                                                </connections>
+                                            </tableView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="0.0" y="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="kvA-El-DM2" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="70"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qmu-Hc-ozV">
+                                                <rect key="frame" x="15" y="22" width="49" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Button" image="menu_right.png"/>
+                                                <connections>
+                                                    <action selector="btnOpenMenu:" destination="FQZ-7N-7vP" eventType="touchUpInside" id="C6s-SH-iZd"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reports" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aOY-dY-yYe" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="448" y="22" width="129" height="40"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="التقارير"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uTW-7H-zqu" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="910" y="23" width="98" height="38"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                                <state key="normal" title="Print">
+                                                    <color key="titleColor" systemColor="darkTextColor"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="طباعة"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPrint:" destination="FQZ-7N-7vP" eventType="touchUpInside" id="rbC-pz-2B5"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="0.16"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="0.0" y="0.0"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                </subviews>
+                                <viewLayoutGuide key="safeArea" id="x8w-Kq-aWf"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="8bI-4U-onO"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="deX-4i-p5Z" id="vTY-fm-nUz"/>
+                        <outlet property="tableview" destination="DOW-YX-Twp" id="pdm-wU-Pw3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oiS-yK-87n" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9602" y="-4577"/>
+        </scene>
+        <!--Till Operation-->
+        <scene sceneID="iAt-jK-JyQ">
+            <objects>
+                <viewController storyboardIdentifier="tillOperation" id="PyB-dX-4xQ" customClass="tillOperation" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="amq-EF-tEN">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zlu-mA-ybb">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="cdh-UG-6zw">
+                                        <rect key="frame" x="20" y="0.0" width="984" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zNg-9o-LTS" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="581" height="50"/>
+                                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="57" translatesAutoresizingMaskIntoConstraints="NO" id="7GP-hh-fpG" userLabel="line">
+                                                <rect key="frame" x="581" y="0.0" width="1" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="VKL-Ex-Bi4"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session status" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7tT-dN-CPQ" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="582" y="0.0" width="150" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="LyP-ql-mWk"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="57" translatesAutoresizingMaskIntoConstraints="NO" id="hXf-wR-N8n" userLabel="line">
+                                                <rect key="frame" x="732" y="0.0" width="1" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="vs8-AT-zv9"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wPl-Fm-2qP" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="733" y="0.0" width="150" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="8Ou-z9-BF2"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="57" translatesAutoresizingMaskIntoConstraints="NO" id="EnZ-9g-yAa" userLabel="line">
+                                                <rect key="frame" x="883" y="0.0" width="1" height="50"/>
+                                                <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="1" id="pvU-DK-Obt"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o4h-VR-4bg" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="884" y="0.0" width="100" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="Aqh-jl-pn6"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="20"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="r4N-2j-IfB"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.89411764709999997" green="0.83921568629999999" blue="0.90588235289999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="cdh-UG-6zw" firstAttribute="top" secondItem="zlu-mA-ybb" secondAttribute="top" id="8Vm-3x-784"/>
+                                    <constraint firstItem="cdh-UG-6zw" firstAttribute="leading" secondItem="zlu-mA-ybb" secondAttribute="leading" constant="20" id="JeV-6y-Omm"/>
+                                    <constraint firstAttribute="height" constant="50" id="LUf-Vb-yGr"/>
+                                    <constraint firstAttribute="trailing" secondItem="cdh-UG-6zw" secondAttribute="trailing" constant="20" id="d4t-C2-n89"/>
+                                    <constraint firstAttribute="bottom" secondItem="cdh-UG-6zw" secondAttribute="bottom" id="sNw-eU-HTb"/>
+                                </constraints>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Cff-jn-BIr">
+                                <rect key="frame" x="10" y="80" width="1004" height="678"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" indentationWidth="10" reuseIdentifier="cell" id="lHM-gl-D7i" customClass="tillOperationCell" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="50" width="1004" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="lHM-gl-D7i" id="TnM-lE-8mI">
+                                            <rect key="frame" x="0.0" y="0.0" width="1004" height="60"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="inV-Xa-5sx">
+                                                    <rect key="frame" x="0.0" y="0.0" width="994" height="57"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qQc-Bj-nIX" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="591" height="57"/>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="57" translatesAutoresizingMaskIntoConstraints="NO" id="PrP-QA-dAN" userLabel="line">
+                                                            <rect key="frame" x="591" y="0.0" width="1" height="57"/>
+                                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="1" id="lcr-UC-YhE"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Session status  Session status" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yV2-63-UGQ" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="592" y="0.0" width="150" height="57"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="150" id="fqK-rx-0Yb"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="57" translatesAutoresizingMaskIntoConstraints="NO" id="Dwh-iv-Iwo" userLabel="line">
+                                                            <rect key="frame" x="742" y="0.0" width="1" height="57"/>
+                                                            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="1" id="BK8-jD-ekr"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="viB-RG-DM5" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="743" y="0.0" width="150" height="57"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="150" id="BjE-Sf-6ki"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <view contentMode="scaleToFill" placeholderIntrinsicWidth="1" placeholderIntrinsicHeight="57" translatesAutoresizingMaskIntoConstraints="NO" id="WJo-HV-js0" userLabel="line">
+                                                            <rect key="frame" x="893" y="0.0" width="1" height="57"/>
+                                                            <color key="backgroundColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="1" id="bFn-oG-1N7"/>
+                                                            </constraints>
+                                                        </view>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4k-64-0fO" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="894" y="0.0" width="100" height="57"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="100" id="ofC-yG-06F"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="60" id="9mT-ey-i1N"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3KN-ce-AuG">
+                                                    <rect key="frame" x="0.0" y="58" width="1004" height="1"/>
+                                                    <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="Pk1-4L-DSw"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="3KN-ce-AuG" secondAttribute="bottom" constant="1" id="4ZL-MD-lGL"/>
+                                                <constraint firstAttribute="trailing" secondItem="3KN-ce-AuG" secondAttribute="trailing" id="5i6-26-RAt"/>
+                                                <constraint firstAttribute="trailing" secondItem="inV-Xa-5sx" secondAttribute="trailing" constant="10" id="VVS-rD-aNR"/>
+                                                <constraint firstItem="3KN-ce-AuG" firstAttribute="leading" secondItem="TnM-lE-8mI" secondAttribute="leading" id="hbq-ND-iZE"/>
+                                                <constraint firstAttribute="bottom" secondItem="inV-Xa-5sx" secondAttribute="bottom" constant="3" id="jta-zG-TlE"/>
+                                                <constraint firstItem="inV-Xa-5sx" firstAttribute="leading" secondItem="TnM-lE-8mI" secondAttribute="leading" id="nO4-94-vgs"/>
+                                                <constraint firstItem="inV-Xa-5sx" firstAttribute="top" secondItem="TnM-lE-8mI" secondAttribute="top" id="pnm-Oi-Zwu"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="lblNAme" destination="qQc-Bj-nIX" id="D9v-l4-Dip"/>
+                                            <outlet property="lblSessionStatus" destination="yV2-63-UGQ" id="SZh-HB-hyh"/>
+                                            <outlet property="lblTime" destination="viB-RG-DM5" id="IBF-G7-WKm"/>
+                                            <outlet property="lblTotal" destination="q4k-64-0fO" id="SCV-2B-wfO"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="PyB-dX-4xQ" id="xaf-Z0-641"/>
+                                    <outlet property="delegate" destination="PyB-dX-4xQ" id="SQi-sw-U1z"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="J1h-gO-Hkh"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Cff-jn-BIr" firstAttribute="leading" secondItem="J1h-gO-Hkh" secondAttribute="leading" constant="10" id="AMl-zb-62z"/>
+                            <constraint firstItem="Cff-jn-BIr" firstAttribute="top" secondItem="zlu-mA-ybb" secondAttribute="bottom" constant="10" id="CBE-Iq-WgU"/>
+                            <constraint firstItem="zlu-mA-ybb" firstAttribute="trailing" secondItem="J1h-gO-Hkh" secondAttribute="trailing" id="jx1-FW-ftY"/>
+                            <constraint firstAttribute="trailing" secondItem="Cff-jn-BIr" secondAttribute="trailing" constant="10" id="lzj-4p-y0K"/>
+                            <constraint firstItem="zlu-mA-ybb" firstAttribute="leading" secondItem="J1h-gO-Hkh" secondAttribute="leading" id="qcw-vr-kBM"/>
+                            <constraint firstItem="zlu-mA-ybb" firstAttribute="top" secondItem="J1h-gO-Hkh" secondAttribute="top" id="zJx-SS-jDC"/>
+                            <constraint firstAttribute="bottom" secondItem="Cff-jn-BIr" secondAttribute="bottom" constant="10" id="zMh-iv-r68"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="Cff-jn-BIr" id="vze-pw-mto"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ytB-7p-UtA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9602.34375" y="-5384.375"/>
+        </scene>
+        <!--Products Report View Controller-->
+        <scene sceneID="9if-XT-pNh">
+            <objects>
+                <viewController storyboardIdentifier="ProductsReport" id="9I7-Qm-37P" customClass="ProductsReportViewController" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="HeL-XB-SJ1">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BnS-PX-q1i">
+                                <rect key="frame" x="0.0" y="82" width="1024" height="686"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NIn-a0-afO" customClass="kTextField_datePicker">
+                                <rect key="frame" x="358" y="33" width="308" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="dateonly" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="delegate" destination="9I7-Qm-37P" id="S7e-c6-BGx"/>
+                                </connections>
+                            </textField>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="ozj-pT-uP2"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="BnS-PX-q1i" id="9pv-Nk-r2M"/>
+                        <outlet property="txtDate" destination="NIn-a0-afO" id="e2U-A2-ZFL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XDx-qT-OUX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8108" y="-4098"/>
+        </scene>
+        <!--zReport-->
+        <scene sceneID="dCC-mh-dZ1">
+            <objects>
+                <viewController storyboardIdentifier="zReport" id="qYG-oV-pR2" userLabel="zReport" customClass="zReport" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="guQ-sm-T3s">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bHw-36-Rc0">
+                                <rect key="frame" x="0.0" y="70" width="1024" height="50"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="CNU-V4-e1g">
+                                        <rect key="frame" x="15" y="0.0" width="552" height="50"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="Z39-NK-2hW">
+                                                <rect key="frame" x="0.0" y="0.0" width="157.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a2C-Z3-jN9" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bad-61-qNS" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="60.5" y="0.0" width="97" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <state key="normal" title="01/01/2010"/>
+                                                        <connections>
+                                                            <action selector="btnStartDate:" destination="qYG-oV-pR2" eventType="touchUpInside" id="QdV-5e-3Ou"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="yVT-mO-rwf">
+                                                <rect key="frame" x="172.5" y="0.0" width="113" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Shift : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UAT-BD-na4" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="49" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OHR-vj-OeW" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="61" y="0.0" width="52" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                                        <state key="normal" title="All"/>
+                                                        <connections>
+                                                            <action selector="btnSelectShift:" destination="qYG-oV-pR2" eventType="touchUpInside" id="zvS-Pi-Uvo"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="SXZ-oT-ObN">
+                                                <rect key="frame" x="300.5" y="0.0" width="123" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Brand : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="j0D-OH-ARj" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="59" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qIh-KR-E3C" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="71" y="0.0" width="52" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                                        <state key="normal" title="All"/>
+                                                        <connections>
+                                                            <action selector="tapOnSelectBrandBtn:" destination="qYG-oV-pR2" eventType="touchUpInside" id="NXS-EE-s8C"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="lre-Fb-2ZK">
+                                                <rect key="frame" x="438.5" y="0.0" width="113.5" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J7N-bY-7gf" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="49.5" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                        <userDefinedRuntimeAttributes>
+                                                            <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="المستخدم :"/>
+                                                        </userDefinedRuntimeAttributes>
+                                                    </label>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TWr-V1-Gdj" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="61.5" y="0.0" width="52" height="50"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                                        <state key="normal" title="All"/>
+                                                        <connections>
+                                                            <action selector="tapOnSelectBrandBtn:" destination="qYG-oV-pR2" eventType="touchUpInside" id="jIR-54-2qM"/>
+                                                            <action selector="tapOnSelectUsersBtn:" destination="qYG-oV-pR2" eventType="touchUpInside" id="XFm-kI-ksz"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="CNU-V4-e1g" secondAttribute="bottom" id="3hN-en-BJP"/>
+                                    <constraint firstItem="CNU-V4-e1g" firstAttribute="top" secondItem="bHw-36-Rc0" secondAttribute="top" id="86g-YU-6Ir"/>
+                                    <constraint firstItem="CNU-V4-e1g" firstAttribute="leading" secondItem="bHw-36-Rc0" secondAttribute="leading" constant="15" id="IEh-OW-2it"/>
+                                    <constraint firstItem="CNU-V4-e1g" firstAttribute="centerY" secondItem="bHw-36-Rc0" secondAttribute="centerY" id="NrE-Bz-Cjc"/>
+                                    <constraint firstAttribute="height" constant="50" id="t6T-19-K4a"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dmL-xD-1QK" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="70"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfm-os-hZa">
+                                        <rect key="frame" x="0.0" y="20" width="120" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="btnback4.png">
+                                            <color key="titleColor" red="0.1058823529" green="0.1529411765" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnBack:" destination="qYG-oV-pR2" eventType="touchUpInside" id="iTk-XW-J4E"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reports" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kk3-Sm-YdX" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="448" y="30" width="129" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="التقارير"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gvb-HH-y3d" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="912" y="22" width="98" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                        <state key="normal" title="Print">
+                                            <color key="titleColor" systemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="طباعة"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnPrint:" destination="qYG-oV-pR2" eventType="touchUpInside" id="9Ul-WK-QpO"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="edz-R2-6dQ"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vM2-uk-Y2i">
+                                <rect key="frame" x="0.0" y="120" width="1024" height="648"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5K-5o-e9N">
+                                        <rect key="frame" x="127" y="8" width="770" height="633"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Y8Q-YW-CMD"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="dmL-xD-1QK" firstAttribute="trailing" secondItem="Y8Q-YW-CMD" secondAttribute="trailing" id="CSK-Bs-ygV"/>
+                            <constraint firstItem="dmL-xD-1QK" firstAttribute="leading" secondItem="Y8Q-YW-CMD" secondAttribute="leading" id="IEM-YF-JWM"/>
+                            <constraint firstItem="vM2-uk-Y2i" firstAttribute="leading" secondItem="Y8Q-YW-CMD" secondAttribute="leading" id="KLc-He-r9Y"/>
+                            <constraint firstItem="bHw-36-Rc0" firstAttribute="leading" secondItem="Y8Q-YW-CMD" secondAttribute="leading" id="Shl-vR-Fl8"/>
+                            <constraint firstItem="dmL-xD-1QK" firstAttribute="top" secondItem="guQ-sm-T3s" secondAttribute="top" id="TwY-fO-tos"/>
+                            <constraint firstItem="bHw-36-Rc0" firstAttribute="top" secondItem="dmL-xD-1QK" secondAttribute="bottom" id="dlw-WA-2ot"/>
+                            <constraint firstItem="vM2-uk-Y2i" firstAttribute="top" secondItem="bHw-36-Rc0" secondAttribute="bottom" id="etv-dR-Iay"/>
+                            <constraint firstAttribute="bottom" secondItem="vM2-uk-Y2i" secondAttribute="bottom" id="fbD-VO-djf"/>
+                            <constraint firstItem="bHw-36-Rc0" firstAttribute="trailing" secondItem="Y8Q-YW-CMD" secondAttribute="trailing" id="hX8-FF-jRf"/>
+                            <constraint firstItem="vM2-uk-Y2i" firstAttribute="trailing" secondItem="Y8Q-YW-CMD" secondAttribute="trailing" id="rum-2A-Mr4"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnSelectShift" destination="OHR-vj-OeW" id="Kca-zp-jsi"/>
+                        <outlet property="btnSelectUsers" destination="TWr-V1-Gdj" id="Kom-Wi-QBd"/>
+                        <outlet property="btnStartDate" destination="bad-61-qNS" id="LD5-YB-2G0"/>
+                        <outlet property="container" destination="Y5K-5o-e9N" id="OOt-QA-Y9p"/>
+                        <outlet property="nav" destination="dmL-xD-1QK" id="Des-0j-kjK"/>
+                        <outlet property="selectBrandBtn" destination="qIh-KR-E3C" id="DK4-DD-svm"/>
+                        <outlet property="selectBrandStack" destination="SXZ-oT-ObN" id="Et4-wQ-N1l"/>
+                        <outlet property="selectUsersStack" destination="lre-Fb-2ZK" id="COX-qI-NeH"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jfP-ob-gJa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8887" y="-4677"/>
+        </scene>
+        <!--Products Rang Report-->
+        <scene sceneID="alh-M5-vEf">
+            <objects>
+                <viewController storyboardIdentifier="Products_Rang_Report" id="YZD-qX-Xom" customClass="Products_Rang_Report" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="cA0-m9-6rO">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="aDB-tn-SEJ">
+                                <rect key="frame" x="0.0" y="82" width="1024" height="686"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gVw-Ww-oJz">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yJy-kO-UPg">
+                                        <rect key="frame" x="0.0" y="2" width="700" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyI-ab-4KL" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="53" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VRQ-uF-pRa" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="11" width="28" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FdT-yH-mYj" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="236" y="7" width="120" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="01/01/2030"/>
+                                                <connections>
+                                                    <action selector="btnEndDate:" destination="YZD-qX-Xom" eventType="touchUpInside" id="tTK-82-5qA"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wsz-jc-v2f" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="72" y="9" width="120" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="01/01/2010"/>
+                                                <connections>
+                                                    <action selector="btnStartDate:" destination="YZD-qX-Xom" eventType="touchUpInside" id="6Tl-pt-hEg"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xsD-qw-6H7" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="435" y="6" width="247" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="All"/>
+                                                <connections>
+                                                    <action selector="btnSelectShift:" destination="YZD-qX-Xom" eventType="touchUpInside" id="dM6-nb-EZY"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shift : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Byl-7q-NNo" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="374" y="11" width="49" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="USE-kg-lgj"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnEndDate" destination="FdT-yH-mYj" id="pAk-pj-fgq"/>
+                        <outlet property="btnSelectShift" destination="xsD-qw-6H7" id="bb3-Pl-zJF"/>
+                        <outlet property="btnStartDate" destination="wsz-jc-v2f" id="hSf-Sb-Rlk"/>
+                        <outlet property="container" destination="aDB-tn-SEJ" id="ywf-77-ZBu"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8Hn-tf-z8S" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8868" y="-2567"/>
+        </scene>
+        <!--Stock report-->
+        <scene sceneID="fCB-MH-xfJ">
+            <objects>
+                <viewController storyboardIdentifier="stock_report" id="31R-Gd-QAl" customClass="stock_report" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Hxy-rI-5jS">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="KQo-hI-R9c">
+                                <rect key="frame" x="8" y="0.0" width="750" height="768"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="ICx-yh-Piy">
+                                <rect key="frame" x="375" y="374" width="20" height="20"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="UZC-1y-hlX"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <connections>
+                        <outlet property="container" destination="KQo-hI-R9c" id="JIo-W3-tOD"/>
+                        <outlet property="indc" destination="ICx-yh-Piy" id="4GG-mS-eNf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Oh-q4-ojn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9602" y="-3889"/>
+        </scene>
+        <!--STCLogViewController-->
+        <scene sceneID="pIp-sz-zVh">
+            <objects>
+                <viewController storyboardIdentifier="STCLogViewController" id="bL3-Ta-JRo" userLabel="STCLogViewController" customClass="STCLogViewController" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bd2-fo-s6K">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ISq-Tc-150" userLabel="tableview">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                                <subviews>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="60" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="IJn-el-wKr">
+                                        <rect key="frame" x="8" y="78" width="1008" height="662"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <prototypes>
+                                            <tableViewCell contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="gray" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="cell" id="yP2-uB-WkG" customClass="STCLogCell" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="50" width="1008" height="60"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="yP2-uB-WkG" id="BLT-Jb-LV3">
+                                                    <rect key="frame" x="0.0" y="0.0" width="981.5" height="60"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="equalCentering" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="N9g-Ur-B4v">
+                                                            <rect key="frame" x="20" y="0.0" width="941.5" height="60"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0nd-vf-Lt9" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="385.5" height="60"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="height" constant="60" id="6xl-55-VOS"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yac-Ha-KcY" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                                    <rect key="frame" x="385.5" y="3" width="150" height="54"/>
+                                                                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="150" id="Abd-Pz-cck"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F5h-fm-8kW" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                                    <rect key="frame" x="538.5" y="3" width="200" height="54"/>
+                                                                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="200" id="Mv6-7a-HWE"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hGX-YS-wFp" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                                    <rect key="frame" x="741.5" y="3" width="100" height="54"/>
+                                                                    <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="KT5-Cz-vFj"/>
+                                                                    </constraints>
+                                                                    <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="15"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JXa-n9-xi8">
+                                                                    <rect key="frame" x="841.5" y="0.0" width="100" height="60"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="width" constant="100" id="16c-Gh-NSv"/>
+                                                                    </constraints>
+                                                                    <state key="normal" title="Reload">
+                                                                        <color key="titleColor" name="DGTERA-purple"/>
+                                                                    </state>
+                                                                    <connections>
+                                                                        <action selector="btn_get_update:" destination="yP2-uB-WkG" eventType="touchUpInside" id="xi6-Tw-i2p"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="0nd-vf-Lt9" firstAttribute="leading" secondItem="N9g-Ur-B4v" secondAttribute="leading" id="3Js-SI-BqT"/>
+                                                                <constraint firstAttribute="trailing" secondItem="JXa-n9-xi8" secondAttribute="trailing" id="4lu-00-JCh"/>
+                                                                <constraint firstItem="hGX-YS-wFp" firstAttribute="leading" secondItem="F5h-fm-8kW" secondAttribute="trailing" constant="3" id="5MN-FB-MJ5"/>
+                                                                <constraint firstItem="F5h-fm-8kW" firstAttribute="leading" secondItem="Yac-Ha-KcY" secondAttribute="trailing" constant="3" id="CdN-9Y-mHo"/>
+                                                                <constraint firstAttribute="bottom" secondItem="F5h-fm-8kW" secondAttribute="bottom" constant="3" id="GGx-6c-jSM"/>
+                                                                <constraint firstAttribute="bottom" secondItem="JXa-n9-xi8" secondAttribute="bottom" id="PYM-ac-lPq"/>
+                                                                <constraint firstItem="JXa-n9-xi8" firstAttribute="top" secondItem="N9g-Ur-B4v" secondAttribute="top" id="RMj-UJ-nW6"/>
+                                                                <constraint firstAttribute="bottom" secondItem="hGX-YS-wFp" secondAttribute="bottom" constant="3" id="RPe-Dw-PbS"/>
+                                                                <constraint firstItem="JXa-n9-xi8" firstAttribute="leading" secondItem="hGX-YS-wFp" secondAttribute="trailing" id="bjO-JP-3DP"/>
+                                                                <constraint firstItem="Yac-Ha-KcY" firstAttribute="leading" secondItem="0nd-vf-Lt9" secondAttribute="trailing" id="eyU-9g-3mv"/>
+                                                                <constraint firstItem="0nd-vf-Lt9" firstAttribute="top" secondItem="N9g-Ur-B4v" secondAttribute="top" id="fAy-or-OBg"/>
+                                                                <constraint firstAttribute="bottom" secondItem="Yac-Ha-KcY" secondAttribute="bottom" constant="3" id="u8q-PC-m5w"/>
+                                                            </constraints>
+                                                        </stackView>
+                                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fTb-Lb-h14">
+                                                            <rect key="frame" x="0.0" y="58" width="1024" height="1"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="bottom" secondItem="N9g-Ur-B4v" secondAttribute="bottom" id="A7s-Ky-tO5"/>
+                                                        <constraint firstItem="N9g-Ur-B4v" firstAttribute="leading" secondItem="BLT-Jb-LV3" secondAttribute="leading" constant="20" id="GKe-zF-e30"/>
+                                                        <constraint firstAttribute="trailing" secondItem="N9g-Ur-B4v" secondAttribute="trailing" constant="20" id="Snu-w6-fYf"/>
+                                                        <constraint firstItem="N9g-Ur-B4v" firstAttribute="top" secondItem="BLT-Jb-LV3" secondAttribute="top" id="vvw-pK-qtV"/>
+                                                    </constraints>
+                                                </tableViewCellContentView>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <connections>
+                                                    <outlet property="lblNAme" destination="0nd-vf-Lt9" id="mN6-34-cTO"/>
+                                                    <outlet property="lblSessionStatus" destination="hGX-YS-wFp" id="mr4-MQ-JOZ"/>
+                                                    <outlet property="lblTime" destination="F5h-fm-8kW" id="gWr-5h-XfQ"/>
+                                                    <outlet property="lblTotal" destination="Yac-Ha-KcY" id="Ff8-Tv-lzJ"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="bL3-Ta-JRo" id="vyE-dw-3xy"/>
+                                            <outlet property="delegate" destination="bL3-Ta-JRo" id="hNq-gl-8uW"/>
+                                        </connections>
+                                    </tableView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailingMargin" secondItem="IJn-el-wKr" secondAttribute="trailing" id="MUE-qi-bkZ"/>
+                                    <constraint firstItem="IJn-el-wKr" firstAttribute="top" secondItem="ISq-Tc-150" secondAttribute="topMargin" constant="70" id="cMk-eG-MDI"/>
+                                    <constraint firstItem="IJn-el-wKr" firstAttribute="leading" secondItem="ISq-Tc-150" secondAttribute="leadingMargin" id="eTF-pv-YkZ"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="IJn-el-wKr" secondAttribute="bottom" id="t5c-VQ-cMU"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="vOe-9i-3hB">
+                                <rect key="frame" x="20" y="40" width="984" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ref" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PFh-mf-qz0" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="434" height="50"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="50" id="s9k-5d-LK7"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Amount" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="U0o-ZM-OsM" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="434" y="3" width="150" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="150" id="2Qu-2d-gX6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="56R-qr-Tiu" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="584" y="3" width="200" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="200" id="gK3-sA-G9j"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="status" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PS1-zU-rvy" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="784" y="3" width="100" height="44"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Wms-wS-Rr6"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0lv-v8-pns">
+                                        <rect key="frame" x="884" y="8" width="100" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="Lu2-fP-cw6"/>
+                                        </constraints>
+                                        <state key="normal" title="Update">
+                                            <color key="titleColor" name="DGTERA-purple"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="PFh-mf-qz0" firstAttribute="leading" secondItem="vOe-9i-3hB" secondAttribute="leadingMargin" id="96l-hj-Fm8"/>
+                                    <constraint firstAttribute="height" constant="50" id="QZY-sR-ikD"/>
+                                    <constraint firstItem="PFh-mf-qz0" firstAttribute="bottom" secondItem="vOe-9i-3hB" secondAttribute="bottomMargin" id="fu4-0i-kwh"/>
+                                    <constraint firstItem="PFh-mf-qz0" firstAttribute="leading" secondItem="vOe-9i-3hB" secondAttribute="leading" id="hiP-3e-PAp"/>
+                                    <constraint firstAttribute="bottom" secondItem="U0o-ZM-OsM" secondAttribute="bottom" constant="3" id="i4I-sz-7Eq"/>
+                                    <constraint firstAttribute="bottom" secondItem="56R-qr-Tiu" secondAttribute="bottom" constant="3" id="jBM-pv-cm3"/>
+                                    <constraint firstItem="PFh-mf-qz0" firstAttribute="top" secondItem="vOe-9i-3hB" secondAttribute="topMargin" id="n3H-ao-cRm"/>
+                                    <constraint firstAttribute="bottom" secondItem="PS1-zU-rvy" secondAttribute="bottom" constant="3" id="vHo-lK-YJM"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="GFx-0T-Fva"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="centerX" secondItem="bd2-fo-s6K" secondAttribute="centerX" id="146-dj-Xw0"/>
+                            <constraint firstItem="vOe-9i-3hB" firstAttribute="trailing" secondItem="bd2-fo-s6K" secondAttribute="trailingMargin" id="6Bh-4e-Dey"/>
+                            <constraint firstItem="vOe-9i-3hB" firstAttribute="top" secondItem="GFx-0T-Fva" secondAttribute="top" constant="20" id="8JU-ET-Ym4"/>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="bottom" secondItem="GFx-0T-Fva" secondAttribute="bottom" id="H4U-aV-F4o"/>
+                            <constraint firstItem="vOe-9i-3hB" firstAttribute="top" secondItem="GFx-0T-Fva" secondAttribute="top" constant="20" id="ICN-96-KIc"/>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="leading" secondItem="GFx-0T-Fva" secondAttribute="leading" id="JUH-ch-7if"/>
+                            <constraint firstItem="vOe-9i-3hB" firstAttribute="leading" secondItem="GFx-0T-Fva" secondAttribute="leading" constant="20" id="Wbd-qj-DBL"/>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="bottom" secondItem="GFx-0T-Fva" secondAttribute="bottom" id="X3u-De-yGM"/>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="top" secondItem="GFx-0T-Fva" secondAttribute="top" id="Ye1-Jw-cqU"/>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="leading" secondItem="GFx-0T-Fva" secondAttribute="leading" id="ZgX-7r-eHi"/>
+                            <constraint firstItem="GFx-0T-Fva" firstAttribute="trailing" secondItem="vOe-9i-3hB" secondAttribute="trailing" constant="20" id="bqf-B0-r4X"/>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="trailing" secondItem="GFx-0T-Fva" secondAttribute="trailing" id="gYl-PB-PTX"/>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="trailing" secondItem="GFx-0T-Fva" secondAttribute="trailing" id="jML-Zn-yjU"/>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="top" secondItem="bd2-fo-s6K" secondAttribute="top" id="lWr-SR-GGg"/>
+                            <constraint firstItem="ISq-Tc-150" firstAttribute="centerX" secondItem="bd2-fo-s6K" secondAttribute="centerX" id="vMW-9a-VDr"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="tableview" destination="IJn-el-wKr" id="YuN-zM-dQq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TQh-l0-GJf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-9602" y="-3178"/>
+        </scene>
+        <!--zReport_total-->
+        <scene sceneID="GDy-VI-a21">
+            <objects>
+                <viewController storyboardIdentifier="zReport_total" id="92n-Nj-gol" userLabel="zReport_total" customClass="zReport_total" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LKv-LJ-Ngf">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U7R-pK-cXY">
+                                <rect key="frame" x="0.0" y="70" width="1024" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jP7-sl-4oY" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="94" y="10" width="120" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="01/01/2010"/>
+                                        <connections>
+                                            <action selector="btnStartDate:" destination="92n-Nj-gol" eventType="touchUpInside" id="zLV-Gg-LYI"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Date : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dsj-ZA-hvT" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="33" y="15" width="50" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ray-7j-gTD" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="298" y="9" width="385" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="All"/>
+                                        <connections>
+                                            <action selector="btnSelectShift:" destination="92n-Nj-gol" eventType="touchUpInside" id="7S4-wE-vCh"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shift : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q0V-Wq-yWk" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="237" y="14" width="49" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" layoutMarginsFollowReadableWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="DOH-7I-zob" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="70"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YJN-Gp-P0s">
+                                        <rect key="frame" x="0.0" y="20" width="120" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" backgroundImage="btnback4.png">
+                                            <color key="titleColor" red="0.1058823529" green="0.1529411765" blue="0.23921568630000001" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btnBack:" destination="92n-Nj-gol" eventType="touchUpInside" id="iUN-XS-ZfX"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Reports" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NK1-XN-7un" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="448" y="30" width="129" height="21"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="OpenSans-Semibold" family="Open Sans" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="التقارير"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tVQ-0A-jCC" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="912" y="22" width="98" height="38"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                        <state key="normal" title="Print">
+                                            <color key="titleColor" systemColor="darkTextColor"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="طباعة"/>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="btnPrint:" destination="92n-Nj-gol" eventType="touchUpInside" id="R8W-Wz-LJr"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                        <real key="value" value="0.16"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                        <point key="value" x="0.0" y="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qpe-ag-ARh">
+                                <rect key="frame" x="0.0" y="128" width="1024" height="648"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" preservesSuperviewLayoutMargins="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Mzn-fD-pBH">
+                                        <rect key="frame" x="127" y="8" width="770" height="633"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1f2-Zr-5wP"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnSelectShift" destination="Ray-7j-gTD" id="1Hc-rV-zb9"/>
+                        <outlet property="btnStartDate" destination="jP7-sl-4oY" id="oc9-0j-Eyy"/>
+                        <outlet property="container" destination="Mzn-fD-pBH" id="12X-5X-m2l"/>
+                        <outlet property="nav" destination="DOH-7I-zob" id="9fG-pA-frk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="I1F-B6-gPL" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8902" y="-5384"/>
+        </scene>
+        <!--Total rang report-->
+        <scene sceneID="Iu8-fy-SkZ">
+            <objects>
+                <viewController storyboardIdentifier="total_rang_report" id="6X3-ik-GMV" customClass="total_rang_report" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aC5-hX-wUF">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="De1-Km-P2B">
+                                <rect key="frame" x="0.0" y="82" width="1024" height="686"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="el8-b1-Lca">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Loh-44-K62">
+                                        <rect key="frame" x="53" y="10" width="918" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Filter">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn_filter:" destination="6X3-ik-GMV" eventType="touchUpInside" id="pJG-mo-U0R"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="fbW-p1-SCq"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn_filtter" destination="Loh-44-K62" id="HGm-Ub-5d9"/>
+                        <outlet property="container" destination="De1-Km-P2B" id="M4y-cp-Fnx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="k3k-Ne-Vlh" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8895" y="-3982"/>
+        </scene>
+        <!--Sales report multi pos-->
+        <scene sceneID="2c5-wY-feR">
+            <objects>
+                <viewController storyboardIdentifier="sales_report_multi_pos" id="Ja5-26-VdF" customClass="sales_report_multi_pos" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" clipsSubviews="YES" contentMode="scaleToFill" id="cGC-wx-7Ec">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="m2M-Pq-0od">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKm-2j-uLe">
+                                        <rect key="frame" x="0.0" y="2" width="1024" height="47"/>
+                                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y9X-2e-buh" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="15" y="13" width="53" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nun-Q7-mcI" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="200" y="11" width="28" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPH-Zr-W3r" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="236" y="7" width="120" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="01/01/2030"/>
+                                                <connections>
+                                                    <action selector="btnEndDate:" destination="Ja5-26-VdF" eventType="touchUpInside" id="Wzq-mK-ed0"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pv8-62-Us4" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="72" y="9" width="120" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="01/01/2010"/>
+                                                <connections>
+                                                    <action selector="btnStartDate:" destination="Ja5-26-VdF" eventType="touchUpInside" id="sKG-Mg-54D"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="APK-vP-95H" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="433" y="6" width="247" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="All"/>
+                                                <connections>
+                                                    <action selector="btnSelectPOS:" destination="Ja5-26-VdF" eventType="touchUpInside" id="zxv-8g-KAD"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="POS :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WIL-d7-e9X" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="372" y="11" width="43" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6sy-IU-Mje" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="933" y="7" width="72" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <state key="normal" title="Fillter"/>
+                                                <connections>
+                                                    <action selector="btn_fillter:" destination="Ja5-26-VdF" eventType="touchUpInside" id="Btg-AQ-xii"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zQi-Ao-Cfc">
+                                <rect key="frame" x="0.0" y="58" width="1024" height="710"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6lx-D5-8rB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnEndDate" destination="KPH-Zr-W3r" id="hOW-3R-0BL"/>
+                        <outlet property="btnSelectPOSs" destination="APK-vP-95H" id="UHf-MM-mM3"/>
+                        <outlet property="btnStartDate" destination="Pv8-62-Us4" id="nds-To-L9v"/>
+                        <outlet property="container" destination="zQi-Ao-Cfc" id="2GK-NJ-Yz0"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Fg6-Z3-M4s" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8108" y="-5458"/>
+        </scene>
+        <!--Filter report-->
+        <scene sceneID="JYu-CT-g1Z">
+            <objects>
+                <viewController storyboardIdentifier="filter_report" id="Lgc-8V-NQL" customClass="filter_report" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="y5h-qk-AyY">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="vNh-Wr-pWd" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                <rect key="frame" x="287" y="234" width="450" height="300"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <view clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RNA-sQ-IPN">
+                                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="From : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YBZ-hT-4Mh" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="64" y="53" width="53" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="To :" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gsS-qk-pPr" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="64" y="104" width="49" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFh-wk-npi" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="124" y="104" width="247" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="01/01/2030"/>
+                                                <connections>
+                                                    <action selector="btnEndDate:" destination="Lgc-8V-NQL" eventType="touchUpInside" id="rfP-3c-1x6"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dlH-iD-4tg" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="124" y="52" width="247" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="01/01/2010"/>
+                                                <connections>
+                                                    <action selector="btnStartDate:" destination="Lgc-8V-NQL" eventType="touchUpInside" id="7OA-9q-eIo"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YeM-Hu-AFZ" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="124" y="149" width="247" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
+                                                <state key="normal" title="All"/>
+                                                <connections>
+                                                    <action selector="btnSelectShift:" destination="Lgc-8V-NQL" eventType="touchUpInside" id="4M1-HH-a37"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Shift : " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3pj-25-PM7" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="64" y="149" width="49" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="352-px-AMH" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="247" y="203" width="150" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.94901960780000005" green="0.49019607840000001" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <state key="normal" title="OK">
+                                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="backgroundColor_Disabled">
+                                                        <color key="value" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="موافق"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btn_ok:" destination="Lgc-8V-NQL" eventType="touchUpInside" id="huX-LN-auK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QLR-o3-top" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="54" y="203" width="150" height="45"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="20"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="0.56078431370000004" green="0.64705882349999999" blue="0.75294117650000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.16"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                                        <real key="value" value="8"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الغاء"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btn_cancel:" destination="Lgc-8V-NQL" eventType="touchUpInside" id="bZg-L3-LzL"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="yn0-ND-sLG"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnEndDate" destination="EFh-wk-npi" id="Vxr-fv-Otu"/>
+                        <outlet property="btnSelectShift" destination="YeM-Hu-AFZ" id="IAP-jz-1mK"/>
+                        <outlet property="btnStartDate" destination="dlH-iD-4tg" id="IR5-Vt-hgh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wUt-7x-ZrA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8125" y="-3308"/>
+        </scene>
+        <!--Products Rang Report2-->
+        <scene sceneID="ioZ-j3-fZv">
+            <objects>
+                <viewController storyboardIdentifier="Products_Rang_Report2" id="3Gx-lv-NAL" customClass="Products_Rang_Report2" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="m1a-Gv-sDv">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="4qa-W0-qvw">
+                                <rect key="frame" x="-1" y="82" width="1024" height="686"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view hidden="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="MRU-w7-KiJ" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                <rect key="frame" x="218" y="54" width="588" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show Factory quantity" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w4G-hp-yqJ">
+                                        <rect key="frame" x="18" y="6" width="465" height="40"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iKc-fm-kK9">
+                                        <rect key="frame" x="509" y="10" width="49" height="31"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxY="YES"/>
+                                        <color key="onTintColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <action selector="tapOnShowQtyFactoryToggle:" destination="3Gx-lv-NAL" eventType="valueChanged" id="z07-jz-MtI"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" red="0.19607841970000001" green="0.1411764771" blue="0.30980393290000002" alpha="0.94104408110000004" colorSpace="custom" customColorSpace="displayP3"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="20"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Sew-EF-rJT">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nFl-7F-emH">
+                                        <rect key="frame" x="54" y="12" width="918" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Filter">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn_filter:" destination="3Gx-lv-NAL" eventType="touchUpInside" id="QEI-DA-geq"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="7M3-dv-hBW"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn_filtter" destination="nFl-7F-emH" id="8UD-b3-VgV"/>
+                        <outlet property="container" destination="4qa-W0-qvw" id="RdF-No-5FI"/>
+                        <outlet property="showQtyFactoryToggle" destination="iKc-fm-kK9" id="7CB-b5-GdC"/>
+                        <outlet property="showQtyFactoryView" destination="MRU-w7-KiJ" id="611-sr-FJq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XvJ-ej-D85" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8881.0546875" y="-3309.375"/>
+        </scene>
+        <!--Driver report-->
+        <scene sceneID="eXo-hU-hmL">
+            <objects>
+                <viewController storyboardIdentifier="driver_report" id="QCD-WK-Ms8" customClass="driver_report" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mO8-eB-bfn">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fjW-gx-mNm">
+                                <rect key="frame" x="0.0" y="82" width="1024" height="686"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="idi-fc-ZPN">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kAE-g9-hVE">
+                                        <rect key="frame" x="54" y="12" width="918" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Filter">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn_filter:" destination="QCD-WK-Ms8" eventType="touchUpInside" id="Cgd-JG-GFT"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="LA9-iB-1Cn"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn_filtter" destination="kAE-g9-hVE" id="uZh-WP-jlK"/>
+                        <outlet property="container" destination="fjW-gx-mNm" id="fng-Ac-p38"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zrf-KO-Jcg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8119" y="-2567"/>
+        </scene>
+        <!--Session List report-->
+        <scene sceneID="Ond-Nh-DIv">
+            <objects>
+                <viewController storyboardIdentifier="sessionList_report" id="m9P-IZ-5iW" customClass="sessionList_report" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="qik-hb-pID">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gAa-Gv-oZN">
+                                <rect key="frame" x="0.0" y="82" width="1024" height="686"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y5h-Ui-j5k">
+                                <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Asq-ke-IDf">
+                                        <rect key="frame" x="54" y="12" width="918" height="30"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" title="Filter">
+                                            <color key="titleColor" systemColor="linkColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="btn_filter:" destination="m9P-IZ-5iW" eventType="touchUpInside" id="ZZo-7a-enw"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="C5J-hu-3J9"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <connections>
+                        <outlet property="btn_filtter" destination="Asq-ke-IDf" id="pJs-nU-PCb"/>
+                        <outlet property="container" destination="gAa-Gv-oZN" id="tqb-sb-wKE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hjI-d6-Onz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-8108" y="-4773"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="0nd-vf-Lt9">
+            <size key="intrinsicContentSize" width="40" height="17.5"/>
+        </designable>
+        <designable name="352-px-AMH">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="3pj-25-PM7">
+            <size key="intrinsicContentSize" width="49" height="20.5"/>
+        </designable>
+        <designable name="56R-qr-Tiu">
+            <size key="intrinsicContentSize" width="37.5" height="20"/>
+        </designable>
+        <designable name="6sy-IU-Mje">
+            <size key="intrinsicContentSize" width="48" height="36"/>
+        </designable>
+        <designable name="7tT-dN-CPQ">
+            <size key="intrinsicContentSize" width="131" height="23.5"/>
+        </designable>
+        <designable name="APK-vP-95H">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="Byl-7q-NNo">
+            <size key="intrinsicContentSize" width="49" height="20.5"/>
+        </designable>
+        <designable name="EFh-wk-npi">
+            <size key="intrinsicContentSize" width="128" height="42"/>
+        </designable>
+        <designable name="F5h-fm-8kW">
+            <size key="intrinsicContentSize" width="33" height="17.5"/>
+        </designable>
+        <designable name="FdT-yH-mYj">
+            <size key="intrinsicContentSize" width="100" height="36"/>
+        </designable>
+        <designable name="Gvb-HH-y3d">
+            <size key="intrinsicContentSize" width="41" height="35"/>
+        </designable>
+        <designable name="J7N-bY-7gf">
+            <size key="intrinsicContentSize" width="49.5" height="20.5"/>
+        </designable>
+        <designable name="KPH-Zr-W3r">
+            <size key="intrinsicContentSize" width="100" height="36"/>
+        </designable>
+        <designable name="NK1-XN-7un">
+            <size key="intrinsicContentSize" width="71" height="23.5"/>
+        </designable>
+        <designable name="Nun-Q7-mcI">
+            <size key="intrinsicContentSize" width="27.5" height="20.5"/>
+        </designable>
+        <designable name="OHR-vj-OeW">
+            <size key="intrinsicContentSize" width="52" height="24"/>
+        </designable>
+        <designable name="PFh-mf-qz0">
+            <size key="intrinsicContentSize" width="26" height="20"/>
+        </designable>
+        <designable name="PS1-zU-rvy">
+            <size key="intrinsicContentSize" width="46.5" height="20"/>
+        </designable>
+        <designable name="Pv8-62-Us4">
+            <size key="intrinsicContentSize" width="97" height="36"/>
+        </designable>
+        <designable name="Q0V-Wq-yWk">
+            <size key="intrinsicContentSize" width="49" height="20.5"/>
+        </designable>
+        <designable name="QLR-o3-top">
+            <size key="intrinsicContentSize" width="67" height="36"/>
+        </designable>
+        <designable name="Ray-7j-gTD">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="SUX-3y-w57">
+            <size key="intrinsicContentSize" width="120" height="120"/>
+        </designable>
+        <designable name="TWr-V1-Gdj">
+            <size key="intrinsicContentSize" width="52" height="24"/>
+        </designable>
+        <designable name="U0o-ZM-OsM">
+            <size key="intrinsicContentSize" width="60" height="20"/>
+        </designable>
+        <designable name="UAT-BD-na4">
+            <size key="intrinsicContentSize" width="49" height="20.5"/>
+        </designable>
+        <designable name="VRQ-uF-pRa">
+            <size key="intrinsicContentSize" width="27.5" height="20.5"/>
+        </designable>
+        <designable name="WIL-d7-e9X">
+            <size key="intrinsicContentSize" width="42.5" height="20.5"/>
+        </designable>
+        <designable name="YBZ-hT-4Mh">
+            <size key="intrinsicContentSize" width="52.5" height="20.5"/>
+        </designable>
+        <designable name="Yac-Ha-KcY">
+            <size key="intrinsicContentSize" width="32" height="17.5"/>
+        </designable>
+        <designable name="YeM-Hu-AFZ">
+            <size key="intrinsicContentSize" width="30" height="42"/>
+        </designable>
+        <designable name="a2C-Z3-jN9">
+            <size key="intrinsicContentSize" width="49.5" height="20.5"/>
+        </designable>
+        <designable name="aOY-dY-yYe">
+            <size key="intrinsicContentSize" width="71" height="23.5"/>
+        </designable>
+        <designable name="bad-61-qNS">
+            <size key="intrinsicContentSize" width="97" height="36"/>
+        </designable>
+        <designable name="dlH-iD-4tg">
+            <size key="intrinsicContentSize" width="124" height="42"/>
+        </designable>
+        <designable name="dsj-ZA-hvT">
+            <size key="intrinsicContentSize" width="49.5" height="20.5"/>
+        </designable>
+        <designable name="gsS-qk-pPr">
+            <size key="intrinsicContentSize" width="27.5" height="20.5"/>
+        </designable>
+        <designable name="gyI-ab-4KL">
+            <size key="intrinsicContentSize" width="52.5" height="20.5"/>
+        </designable>
+        <designable name="hGX-YS-wFp">
+            <size key="intrinsicContentSize" width="41" height="17.5"/>
+        </designable>
+        <designable name="hgk-44-GYt">
+            <size key="intrinsicContentSize" width="52" height="26.5"/>
+        </designable>
+        <designable name="j0D-OH-ARj">
+            <size key="intrinsicContentSize" width="59" height="20.5"/>
+        </designable>
+        <designable name="jP7-sl-4oY">
+            <size key="intrinsicContentSize" width="97" height="36"/>
+        </designable>
+        <designable name="kk3-Sm-YdX">
+            <size key="intrinsicContentSize" width="71" height="23.5"/>
+        </designable>
+        <designable name="o4h-VR-4bg">
+            <size key="intrinsicContentSize" width="42.5" height="23.5"/>
+        </designable>
+        <designable name="q4k-64-0fO">
+            <size key="intrinsicContentSize" width="42.5" height="23.5"/>
+        </designable>
+        <designable name="qIh-KR-E3C">
+            <size key="intrinsicContentSize" width="52" height="24"/>
+        </designable>
+        <designable name="qQc-Bj-nIX">
+            <size key="intrinsicContentSize" width="53" height="23.5"/>
+        </designable>
+        <designable name="tVQ-0A-jCC">
+            <size key="intrinsicContentSize" width="41" height="35"/>
+        </designable>
+        <designable name="uTW-7H-zqu">
+            <size key="intrinsicContentSize" width="41" height="35"/>
+        </designable>
+        <designable name="viB-RG-DM5">
+            <size key="intrinsicContentSize" width="44" height="23.5"/>
+        </designable>
+        <designable name="wPl-Fm-2qP">
+            <size key="intrinsicContentSize" width="44" height="23.5"/>
+        </designable>
+        <designable name="wsz-jc-v2f">
+            <size key="intrinsicContentSize" width="97" height="36"/>
+        </designable>
+        <designable name="xsD-qw-6H7">
+            <size key="intrinsicContentSize" width="30" height="36"/>
+        </designable>
+        <designable name="y9X-2e-buh">
+            <size key="intrinsicContentSize" width="52.5" height="20.5"/>
+        </designable>
+        <designable name="yV2-63-UGQ">
+            <size key="intrinsicContentSize" width="273" height="23.5"/>
+        </designable>
+        <designable name="zNg-9o-LTS">
+            <size key="intrinsicContentSize" width="53" height="23.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="btnback4.png" width="360" height="120"/>
+        <image name="icon_dashboard.png" width="120" height="120"/>
+        <image name="menu_right.png" width="26" height="20"/>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

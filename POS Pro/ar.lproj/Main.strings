@@ -1,0 +1,42 @@
+
+/* Class = "KLabel"; text = "PrinterName :"; ObjectID = "12e-VK-gMM"; */
+"12e-VK-gMM.text" = "اسم الطابعه :";
+
+/* Class = "UIButton"; normalTitle = "Setting"; ObjectID = "165-dw-q7q"; */
+"165-dw-q7q.normalTitle" = "الاعدادات";
+
+/* Class = "UIButton"; normalTitle = "try again"; ObjectID = "2c1-6q-aul"; */
+"2c1-6q-aul.normalTitle" = "حاول مره اخرى";
+
+/* Class = "KLabel"; text = "Current Printer"; ObjectID = "EHt-vT-sBl"; */
+"EHt-vT-sBl.text" = "الطابعه الحاليه";
+
+/* Class = "UIButton"; normalTitle = "Save Setting"; ObjectID = "JyB-PB-U9a"; */
+"JyB-PB-U9a.normalTitle" = "حفظ";
+
+/* Class = "KLabel"; text = "Page not found ."; ObjectID = "OTw-x1-LrW"; */
+"OTw-x1-LrW.text" = "لا يمكن ايجاد الصفحه";
+
+/* Class = "UIViewController"; title = "Printer List"; ObjectID = "ZaH-Ds-IAF"; */
+"ZaH-Ds-IAF.title" = "الطابعات";
+
+/* Class = "KLabel"; text = "Url :"; ObjectID = "aCs-jw-gRh"; */
+"aCs-jw-gRh.text" = "Url :";
+
+/* Class = "KLabel"; text = "Label"; ObjectID = "axb-7F-jKR"; */
+"axb-7F-jKR.text" = "Label";
+
+/* Class = "KLabel"; text = "No printer default , please select printer"; ObjectID = "b88-o8-Fyz"; */
+"b88-o8-Fyz.text" = "من فضلك اختار الطابعه";
+
+/* Class = "UIButton"; normalTitle = "Save Setting"; ObjectID = "gOc-VM-dTq"; */
+"gOc-VM-dTq.normalTitle" = "حفظ";
+
+/* Class = "UIButton"; normalTitle = "Printer"; ObjectID = "rPp-5a-fan"; */
+"rPp-5a-fan.normalTitle" = "الطابعه";
+
+/* Class = "KLabel"; text = "IP :"; ObjectID = "vCM-9G-Yxj"; */
+"vCM-9G-Yxj.text" = "IP :";
+
+/* Class = "UIButton"; normalTitle = "Home"; ObjectID = "xdL-V1-uaq"; */
+"xdL-V1-uaq.normalTitle" = "الرئيسيه";

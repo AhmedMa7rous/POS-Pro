@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DevicesMangmentVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="deviceManagmentTable" destination="eu9-jz-08S" id="N3M-di-5EN"/>
+                <outlet property="emptyView" destination="CQ2-GN-NU7" id="kHl-24-QeK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="yee-hs-Anf">
+                    <rect key="frame" x="0.0" y="20" width="1080" height="790"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="Devices Management" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pYG-IQ-ZJw" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="0.0" width="1080" height="27.5"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="23"/>
+                            <color key="textColor" name="DGTERA-purple"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="إدارة الاجهزة"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fXE-cW-6H3">
+                            <rect key="frame" x="0.0" y="42.5" width="1080" height="747.5"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ysf-vD-N2D" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="15" y="0.0" width="109" height="45"/>
+                                    <color key="backgroundColor" red="1" green="0.5647059083" blue="0.25098040700000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="45" id="vzF-mg-7SL"/>
+                                    </constraints>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Add New">
+                                        <fontDescription key="titleFontDescription" type="boldSystem" pointSize="20"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اضافة جديد"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnAddNewPrinter:" destination="-1" eventType="touchUpInside" id="5l8-7R-HUP"/>
+                                    </connections>
+                                </button>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="eu9-jz-08S">
+                                    <rect key="frame" x="10" y="60" width="1060" height="677.5"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </tableView>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CQ2-GN-NU7">
+                                    <rect key="frame" x="423" y="268" width="234" height="261.5"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="empty_Img" translatesAutoresizingMaskIntoConstraints="NO" id="jDJ-BI-RPc">
+                                            <rect key="frame" x="0.0" y="0.0" width="234" height="231"/>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Data Find" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ao5-HL-vlr" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="67" y="241" width="100.5" height="20.5"/>
+                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="17"/>
+                                            <color key="textColor" red="0.36501163240000001" green="0.17321425679999999" blue="0.55858886240000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <nil key="highlightedColor"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="لا يوجد بيانات"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="Ao5-HL-vlr" firstAttribute="top" secondItem="jDJ-BI-RPc" secondAttribute="bottom" constant="10" id="1Kj-fR-vnm"/>
+                                        <constraint firstItem="jDJ-BI-RPc" firstAttribute="top" secondItem="CQ2-GN-NU7" secondAttribute="top" id="3vE-LB-p8c"/>
+                                        <constraint firstAttribute="bottom" secondItem="Ao5-HL-vlr" secondAttribute="bottom" id="8cu-Qu-0PK"/>
+                                        <constraint firstAttribute="trailing" secondItem="jDJ-BI-RPc" secondAttribute="trailing" id="TlX-Jd-kPy"/>
+                                        <constraint firstItem="jDJ-BI-RPc" firstAttribute="leading" secondItem="CQ2-GN-NU7" secondAttribute="leading" id="XpO-wj-kZi"/>
+                                        <constraint firstItem="Ao5-HL-vlr" firstAttribute="centerX" secondItem="jDJ-BI-RPc" secondAttribute="centerX" id="kRZ-rw-hmx"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="CQ2-GN-NU7" firstAttribute="centerX" secondItem="eu9-jz-08S" secondAttribute="centerX" id="0Qm-MC-7FZ"/>
+                                <constraint firstAttribute="bottom" secondItem="eu9-jz-08S" secondAttribute="bottom" constant="10" id="8YN-9A-FUc"/>
+                                <constraint firstItem="Ysf-vD-N2D" firstAttribute="top" secondItem="fXE-cW-6H3" secondAttribute="top" id="DZb-w8-7xo"/>
+                                <constraint firstItem="CQ2-GN-NU7" firstAttribute="centerY" secondItem="eu9-jz-08S" secondAttribute="centerY" id="TVg-YM-ZPE"/>
+                                <constraint firstAttribute="trailing" secondItem="eu9-jz-08S" secondAttribute="trailing" constant="10" id="YsR-kI-ZmF"/>
+                                <constraint firstItem="eu9-jz-08S" firstAttribute="leading" secondItem="fXE-cW-6H3" secondAttribute="leading" constant="10" id="aRa-ld-7bG"/>
+                                <constraint firstItem="eu9-jz-08S" firstAttribute="top" secondItem="Ysf-vD-N2D" secondAttribute="bottom" constant="15" id="fep-ha-bKy"/>
+                                <constraint firstItem="Ysf-vD-N2D" firstAttribute="leading" secondItem="fXE-cW-6H3" secondAttribute="leading" constant="15" id="wRf-iw-UNw"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="yee-hs-Anf" secondAttribute="bottom" id="1CD-aS-lZU"/>
+                <constraint firstItem="yee-hs-Anf" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Ccc-2k-zTm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yee-hs-Anf" secondAttribute="trailing" id="WNe-Dd-Urt"/>
+                <constraint firstItem="yee-hs-Anf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="hiv-zl-3UO"/>
+            </constraints>
+            <point key="canvasLocation" x="138.88888888888889" y="81.481481481481481"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Ao5-HL-vlr">
+            <size key="intrinsicContentSize" width="100.5" height="20.5"/>
+        </designable>
+        <designable name="Ysf-vD-N2D">
+            <size key="intrinsicContentSize" width="109" height="38"/>
+        </designable>
+        <designable name="pYG-IQ-ZJw">
+            <size key="intrinsicContentSize" width="231.5" height="27.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="empty_Img" width="234" height="231"/>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

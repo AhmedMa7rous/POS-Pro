@@ -1,0 +1,18 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target arm64-apple-ios14.5 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name Alhamrani
+@_exported import Alhamrani
+import Foundation
+import Swift
+import SwiftSocket
+import UIKit
+public protocol AlhamraniDelegate : AnyObject {
+  func didReceiveResponse(_response: [Swift.Dictionary<Swift.String, Swift.String>])
+}
+@objc @_inheritsConvenienceInitializers public class Alhamrani : ObjectiveC.NSObject {
+  weak public var delegate: Alhamrani.AlhamraniDelegate?
+  public func sendECRRequest(device_ip: Swift.String, msg_id: Swift.String, amount: Swift.String, ecr_no: Swift.String, ecr_receipt_no: Swift.String, field1: Swift.String, field2: Swift.String, field3: Swift.String, field4: Swift.String, field5: Swift.String)
+  public func checkDevice(device_ip: Swift.String) -> Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}

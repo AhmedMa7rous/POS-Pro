@@ -1,0 +1,11 @@
+#AdditionalDocumentReference_QR_CODE#
+
+<cac:AdditionalDocumentReference>
+    <cbc:ID>PIH</cbc:ID>
+    <cac:Attachment>#PIH#</cac:Attachment>
+</cac:AdditionalDocumentReference>
+
+<cac:AdditionalDocumentReference>
+    <cbc:ID>ICV</cbc:ID>
+    <cbc:UUID>#ICV#</cbc:UUID>
+</cac:AdditionalDocumentReference>

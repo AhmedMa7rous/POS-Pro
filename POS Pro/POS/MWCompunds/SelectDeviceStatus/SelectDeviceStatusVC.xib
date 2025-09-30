@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectDeviceStatusVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="selectDeviceStatusTable" destination="yCl-vd-6jE" id="96b-2U-ytW"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="gg1-Q7-QK0">
+                    <rect key="frame" x="10" y="34" width="800" height="1116"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZHO-FE-PXU">
+                            <rect key="frame" x="0.0" y="0.0" width="800" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yvf-hX-Qd9" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="6" width="76.5" height="38.5"/>
+                                    <color key="tintColor" red="0.91372549020000005" green="0.46666666670000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الغاء"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnCancel:" destination="-1" eventType="touchUpInside" id="q41-G7-Jgd"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="50i-pp-Mnc" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="735.5" y="6" width="64.5" height="38.5"/>
+                                    <color key="tintColor" red="0.91372549020000005" green="0.46666666670000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="تم"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnDone:" destination="-1" eventType="touchUpInside" id="ONB-vY-pjS"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="Yvf-hX-Qd9" firstAttribute="centerY" secondItem="ZHO-FE-PXU" secondAttribute="centerY" id="0Ek-xn-xrs"/>
+                                <constraint firstAttribute="trailing" secondItem="50i-pp-Mnc" secondAttribute="trailing" id="Z6K-eg-cuM"/>
+                                <constraint firstItem="Yvf-hX-Qd9" firstAttribute="leading" secondItem="ZHO-FE-PXU" secondAttribute="leading" id="jv1-uV-jiF"/>
+                                <constraint firstAttribute="height" constant="50" id="lCt-Le-pCr"/>
+                                <constraint firstItem="50i-pp-Mnc" firstAttribute="centerY" secondItem="ZHO-FE-PXU" secondAttribute="centerY" id="nql-55-lNY"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="yCl-vd-6jE">
+                            <rect key="frame" x="0.0" y="0.0" width="800" height="1116"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="gg1-Q7-QK0" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="3Xs-hB-MkF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gg1-Q7-QK0" secondAttribute="trailing" constant="10" id="bJk-x0-mfX"/>
+                <constraint firstItem="gg1-Q7-QK0" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="fOf-Si-k6y"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gg1-Q7-QK0" secondAttribute="bottom" constant="10" id="vNc-Pk-Ofv"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="77"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="50i-pp-Mnc">
+            <size key="intrinsicContentSize" width="64.5" height="38.5"/>
+        </designable>
+        <designable name="Yvf-hX-Qd9">
+            <size key="intrinsicContentSize" width="76.5" height="38.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

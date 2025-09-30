@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MultiAddressVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="addAddressLbl" destination="Cf5-hy-gEg" id="5oH-HI-lMc"/>
+                <outlet property="fieldTable" destination="nVr-GG-HKl" id="d9y-1E-wFd"/>
+                <outlet property="fieldView" destination="IsH-es-vpy" id="1Sv-sA-6Kx"/>
+                <outlet property="showTable" destination="zOJ-jZ-58e" id="asW-Qe-KQG"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1mK-QC-xxZ">
+                    <rect key="frame" x="15" y="34" width="1150" height="766"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BDb-lU-Ngg" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="10" width="1140" height="70"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sTp-8V-MX6">
+                                    <rect key="frame" x="0.0" y="9.5" width="50" height="51"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                    <state key="normal" backgroundImage="x-icon"/>
+                                    <connections>
+                                        <action selector="tapOnCloseBtn:" destination="-1" eventType="touchUpInside" id="Zr4-Vp-ZTI"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contents &amp; Address" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cf5-hy-gEg" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="924.5" y="22" width="205.5" height="26.5"/>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="جهات الاتصال والعنوان"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Cf5-hy-gEg" secondAttribute="trailing" constant="10" id="Qgj-op-flF"/>
+                                <constraint firstItem="sTp-8V-MX6" firstAttribute="centerY" secondItem="BDb-lU-Ngg" secondAttribute="centerY" id="YQC-FG-Pt8"/>
+                                <constraint firstItem="sTp-8V-MX6" firstAttribute="leading" secondItem="BDb-lU-Ngg" secondAttribute="leading" id="osf-r3-v4k"/>
+                                <constraint firstAttribute="height" constant="70" id="rwG-8m-1Iv"/>
+                                <constraint firstItem="Cf5-hy-gEg" firstAttribute="centerY" secondItem="BDb-lU-Ngg" secondAttribute="centerY" id="sBT-3l-heK"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="D9g-CF-cf1">
+                            <rect key="frame" x="0.0" y="100" width="1140" height="596"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IsH-es-vpy" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="667" height="596"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" tag="1" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="nVr-GG-HKl">
+                                            <rect key="frame" x="10" y="5" width="647" height="586"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-1" id="YRf-Eg-I8g"/>
+                                                <outlet property="delegate" destination="-1" id="cH4-hx-0ha"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="nVr-GG-HKl" secondAttribute="trailing" constant="10" id="WUC-5q-gA8"/>
+                                        <constraint firstAttribute="bottom" secondItem="nVr-GG-HKl" secondAttribute="bottom" constant="5" id="hM9-FP-9ou"/>
+                                        <constraint firstItem="nVr-GG-HKl" firstAttribute="leading" secondItem="IsH-es-vpy" secondAttribute="leading" constant="10" id="kCd-NJ-coO"/>
+                                        <constraint firstItem="nVr-GG-HKl" firstAttribute="top" secondItem="IsH-es-vpy" secondAttribute="top" constant="5" id="tuZ-qF-7ov"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="b0R-Kg-jNT" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="687" y="0.0" width="453" height="596"/>
+                                    <subviews>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="zOJ-jZ-58e">
+                                            <rect key="frame" x="5" y="5" width="443" height="586"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-1" id="AEH-Y9-d5a"/>
+                                                <outlet property="delegate" destination="-1" id="PW2-II-EAo"/>
+                                            </connections>
+                                        </tableView>
+                                    </subviews>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <constraints>
+                                        <constraint firstItem="zOJ-jZ-58e" firstAttribute="top" secondItem="b0R-Kg-jNT" secondAttribute="top" constant="5" id="8VG-mh-SjX"/>
+                                        <constraint firstItem="zOJ-jZ-58e" firstAttribute="leading" secondItem="b0R-Kg-jNT" secondAttribute="leading" constant="5" id="8ff-qg-b6d"/>
+                                        <constraint firstAttribute="trailing" secondItem="zOJ-jZ-58e" secondAttribute="trailing" constant="5" id="HvU-fP-8XB"/>
+                                        <constraint firstAttribute="bottom" secondItem="zOJ-jZ-58e" secondAttribute="bottom" constant="5" id="Me6-7D-DBb"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Jb-kf-rhS">
+                            <rect key="frame" x="212" y="711" width="726" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VaF-bp-nkH" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="225" height="50"/>
+                                    <color key="backgroundColor" red="0.88235294119999996" green="0.49803921569999998" blue="0.21960784310000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="NgY-ws-jjh"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <inset key="contentEdgeInsets" minX="80" minY="20" maxX="80" maxY="20"/>
+                                    <state key="normal" title="Cancel"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="إلغاء"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnCloseBtn:" destination="-1" eventType="touchUpInside" id="SAm-IV-mol"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Zx-vT-d4o" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="235" y="0.0" width="199" height="50"/>
+                                    <color key="backgroundColor" name="DGTERA-purple"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="9Bn-7Y-VNr"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <inset key="contentEdgeInsets" minX="80" minY="20" maxX="80" maxY="20"/>
+                                    <state key="normal" title="Add"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="إضافه"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnAdd:" destination="-1" eventType="touchUpInside" id="CVY-vt-1mY"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JmX-Id-HcB" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="444" y="0.0" width="282" height="50"/>
+                                    <color key="backgroundColor" name="DGTERA-purple"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="50" id="IcK-VO-sVd"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                    <inset key="contentEdgeInsets" minX="80" minY="20" maxX="80" maxY="20"/>
+                                    <state key="normal" title="Save &amp; Close"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="حفظ &amp; وإغلاق"/>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnSave:" destination="-1" eventType="touchUpInside" id="PPw-EC-Zwf"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstItem="4Jb-kf-rhS" firstAttribute="centerX" secondItem="1mK-QC-xxZ" secondAttribute="centerX" id="4Gg-nh-RqV"/>
+                        <constraint firstAttribute="trailing" secondItem="BDb-lU-Ngg" secondAttribute="trailing" constant="10" id="EAw-5d-7wd"/>
+                        <constraint firstItem="D9g-CF-cf1" firstAttribute="top" secondItem="BDb-lU-Ngg" secondAttribute="bottom" constant="20" id="G6b-iO-0ai"/>
+                        <constraint firstAttribute="bottom" secondItem="4Jb-kf-rhS" secondAttribute="bottom" constant="5" id="Wy6-X9-aDh"/>
+                        <constraint firstItem="4Jb-kf-rhS" firstAttribute="top" secondItem="D9g-CF-cf1" secondAttribute="bottom" constant="15" id="hwD-4F-yNa"/>
+                        <constraint firstItem="IsH-es-vpy" firstAttribute="width" secondItem="1mK-QC-xxZ" secondAttribute="width" multiplier="0.58" id="k4I-fQ-Ynr"/>
+                        <constraint firstItem="D9g-CF-cf1" firstAttribute="trailing" secondItem="BDb-lU-Ngg" secondAttribute="trailing" id="kFZ-QV-VOv"/>
+                        <constraint firstItem="BDb-lU-Ngg" firstAttribute="top" secondItem="1mK-QC-xxZ" secondAttribute="top" constant="10" id="mLH-Bc-BX2"/>
+                        <constraint firstItem="D9g-CF-cf1" firstAttribute="leading" secondItem="BDb-lU-Ngg" secondAttribute="leading" id="pIU-Lg-dXp"/>
+                        <constraint firstItem="BDb-lU-Ngg" firstAttribute="leading" secondItem="1mK-QC-xxZ" secondAttribute="leading" id="rki-MX-DC2"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+            <constraints>
+                <constraint firstItem="1mK-QC-xxZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="1rr-Ve-sh5"/>
+                <constraint firstItem="1mK-QC-xxZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="15" id="dAT-hV-arj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="1mK-QC-xxZ" secondAttribute="bottom" id="ilg-7f-0tP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="1mK-QC-xxZ" secondAttribute="trailing" constant="15" id="uOm-6e-RXu"/>
+            </constraints>
+            <point key="canvasLocation" x="93.559322033898312" y="-1.4634146341463414"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="3Zx-vT-d4o">
+            <size key="intrinsicContentSize" width="199" height="64"/>
+        </designable>
+        <designable name="Cf5-hy-gEg">
+            <size key="intrinsicContentSize" width="205.5" height="26.5"/>
+        </designable>
+        <designable name="JmX-Id-HcB">
+            <size key="intrinsicContentSize" width="282" height="64"/>
+        </designable>
+        <designable name="VaF-bp-nkH">
+            <size key="intrinsicContentSize" width="225" height="64"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="x-icon" width="50" height="51"/>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

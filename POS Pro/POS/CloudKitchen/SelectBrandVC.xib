@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectBrandVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="selectBrandTable" destination="rqX-vu-SQt" id="46f-mS-4yA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="820" height="1180"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MfR-AF-5o4">
+                    <rect key="frame" x="0.0" y="24" width="820" height="50"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HoP-17-V8B" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                            <rect key="frame" x="0.0" y="6" width="76.5" height="38.5"/>
+                            <color key="tintColor" red="0.91372549020000005" green="0.46666666670000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الغاء"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select Brand" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cdT-SG-yOo" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                            <rect key="frame" x="361.5" y="15" width="97.5" height="20.5"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" red="0.99215686319999996" green="0.97647058959999999" blue="0.98431372640000003" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            <nil key="highlightedColor"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اختر العلامه التجارية"/>
+                            </userDefinedRuntimeAttributes>
+                        </label>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uST-Td-0WB" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                            <rect key="frame" x="755.5" y="6" width="64.5" height="38.5"/>
+                            <color key="tintColor" red="0.91372549020000005" green="0.46666666670000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <state key="normal" title="Button"/>
+                            <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="تم"/>
+                            </userDefinedRuntimeAttributes>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" name="DGTERA-purple"/>
+                    <constraints>
+                        <constraint firstItem="uST-Td-0WB" firstAttribute="centerY" secondItem="MfR-AF-5o4" secondAttribute="centerY" id="3ED-ML-4oY"/>
+                        <constraint firstAttribute="trailing" secondItem="uST-Td-0WB" secondAttribute="trailing" id="M6F-Wj-W3O"/>
+                        <constraint firstAttribute="height" constant="50" id="UjF-5W-jBo"/>
+                        <constraint firstItem="cdT-SG-yOo" firstAttribute="centerY" secondItem="MfR-AF-5o4" secondAttribute="centerY" id="euc-nz-Mjd"/>
+                        <constraint firstItem="HoP-17-V8B" firstAttribute="centerY" secondItem="MfR-AF-5o4" secondAttribute="centerY" id="jTn-MJ-VWG"/>
+                        <constraint firstItem="cdT-SG-yOo" firstAttribute="centerX" secondItem="MfR-AF-5o4" secondAttribute="centerX" id="x04-1n-twU"/>
+                        <constraint firstItem="HoP-17-V8B" firstAttribute="leading" secondItem="MfR-AF-5o4" secondAttribute="leading" id="zhv-an-1QA"/>
+                    </constraints>
+                </view>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Zve-Ae-1AD">
+                    <rect key="frame" x="10" y="74" width="800" height="1081"/>
+                    <subviews>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="rqX-vu-SQt">
+                            <rect key="frame" x="0.0" y="0.0" width="800" height="1081"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="MfR-AF-5o4" secondAttribute="trailing" id="61O-Pm-fGe"/>
+                <constraint firstItem="MfR-AF-5o4" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GDC-8q-q6c"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Zve-Ae-1AD" secondAttribute="bottom" constant="5" id="aVd-bi-Fhd"/>
+                <constraint firstItem="Zve-Ae-1AD" firstAttribute="top" secondItem="MfR-AF-5o4" secondAttribute="bottom" id="hCA-nt-MgP"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Zve-Ae-1AD" secondAttribute="trailing" constant="10" id="o8e-Ok-Xae"/>
+                <constraint firstItem="MfR-AF-5o4" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yQg-Xg-cVc"/>
+                <constraint firstItem="Zve-Ae-1AD" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="zZT-RI-dkz"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="82"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="HoP-17-V8B">
+            <size key="intrinsicContentSize" width="76.5" height="38.5"/>
+        </designable>
+        <designable name="cdT-SG-yOo">
+            <size key="intrinsicContentSize" width="97.5" height="20.5"/>
+        </designable>
+        <designable name="uST-Td-0WB">
+            <size key="intrinsicContentSize" width="64.5" height="38.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

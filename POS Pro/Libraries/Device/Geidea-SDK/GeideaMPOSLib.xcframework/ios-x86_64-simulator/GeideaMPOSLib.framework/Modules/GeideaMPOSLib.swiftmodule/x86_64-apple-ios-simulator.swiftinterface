@@ -1,0 +1,781 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.4 (swiftlang-1205.0.26.9 clang-1205.0.19.55)
+// swift-module-flags: -target x86_64-apple-ios11.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name GeideaMPOSLib
+import CommonCrypto
+import CoreData
+import Foundation
+@_exported import GeideaMPOSLib
+import Swift
+import SystemConfiguration
+import UIKit
+@objc public enum ReconciliationStatus : Swift.Int {
+  case Successful
+  case Unsucessful
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc final public class MPOSReconciliation : ObjectiveC.NSObject {
+  @objc final public var TransactionDate: Swift.String?
+  @objc final public var TransactionTime: Swift.String?
+  @objc final public var TerminalID: Swift.String?
+  @objc final public var POSVersionNumber: Swift.String?
+  @objc final public var reconciliationStatus: GeideaMPOSLib.ReconciliationStatus
+  @objc final public var ReconciliationStatusAr: Swift.String?
+  @objc final public var ReconciliationStatusEn: Swift.String?
+  @objc final public var UnsucessfulReasonEn: Swift.String
+  @objc final public var UnsucessfulReasonAr: Swift.String
+  @objc final public var SystemsTraceAuditNumber: Swift.String?
+  @objc final public var MerchantNameAr: Swift.String?
+  @objc final public var MerchantNameEn: Swift.String?
+  @objc final public var AddressAr: Swift.String?
+  @objc final public var AddressEn: Swift.String?
+  @objc final public var BankID: Swift.String?
+  @objc final public var CardAcceptorBusinessCode: Swift.String?
+  @objc final public var MerchantID: Swift.String?
+  @objc final public var TransactionDueDate: Swift.String?
+  @objc final public var TransactionDueTime: Swift.String?
+  @objc final public var hostResponseCode: Swift.String?
+  @objc final public var rowsCount: Swift.Int
+  @objc final public var posTerminalDetailsSchemaArray: [GeideaMPOSLib.POSTerminalDetailTransaction]
+  @objc final public var hostSchemaArray: [GeideaMPOSLib.HostSchemaTransaction]
+  @objc final public var posTerminalSchemaArray: [GeideaMPOSLib.POSTerminalTransaction]
+  @objc final public var cardSchemeDict: [Swift.String : Swift.String]
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public class HostSchemaTransaction : ObjectiveC.NSObject {
+  @objc public var CardSchemeEn: Swift.String!
+  @objc public var authCount: Swift.String!
+  @objc public var totalDBCount: Swift.String!
+  @objc public var totalCRCount: Swift.String!
+  @objc public var cADVAmount: Swift.String!
+  @objc public var totalDBAmount: Swift.String!
+  @objc public var totalCRAmount: Swift.String!
+  @objc public var nAQDRAmount: Swift.String!
+  @objc public var totalsCount: Swift.String!
+  @objc public var totalsAmount: Swift.String!
+  public init(_ HostSchemaInfo: [Any]?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers public class Reachability {
+  @objc deinit
+}
+@objc public class POSTerminalDetailTransaction : ObjectiveC.NSObject {
+  @objc public var pOFFCount: Swift.String!
+  @objc public var pOFFAmount: Swift.String!
+  @objc public var pONCount: Swift.String!
+  @objc public var pONAmount: Swift.String!
+  @objc public var pURNAQDCount: Swift.String!
+  @objc public var pURNAQDAmount: Swift.String!
+  @objc public var reversalCount: Swift.String!
+  @objc public var reversalAmount: Swift.String!
+  @objc public var refundCount: Swift.String!
+  @objc public var completionCount: Swift.String!
+  @objc public var completionAmount: Swift.String!
+  public init(_ POSTerminalDetailInfo: [Any]?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum TransactionStatus : Swift.Int {
+  case Approved
+  case Declined
+  case OfflineApproved
+  public func stringValue() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_hasMissingDesignatedInitializers @objc final public class MPOSTransaction : ObjectiveC.NSObject {
+  @objc final public var transactionDate: Swift.String
+  @objc final public var transactionTime: Swift.String
+  @objc final public var bankID: Swift.String
+  @objc final public var merchantID: Swift.String
+  @objc final public var terminalID: Swift.String
+  @objc final public var merchantNameAr: Swift.String
+  @objc final public var merchantNameEn: Swift.String
+  @objc final public var addressAr: Swift.String
+  @objc final public var addressEn: Swift.String
+  @objc final public var cardAcceptorBusinessCode: Swift.String
+  @objc final public var systemsTraceAuditNumber: Swift.String
+  @objc final public var pOSVersionNumber: Swift.String
+  @objc final public var retrievalReferenceNumber: Swift.String
+  @objc final public var cardSchemeAr: Swift.String
+  @objc final public var cardSchemeEn: Swift.String
+  @objc final public var cardNumber: Swift.String
+  @objc final public var expiryDate: Swift.String
+  @objc final public var purchaseAmountEn: Swift.String
+  @objc final public var purchaseAmountAr: Swift.String
+  @objc final public var transactionStatus: GeideaMPOSLib.TransactionStatus
+  @objc final public var transactionStatusEn: Swift.String
+  @objc final public var transactionStatusAr: Swift.String
+  @objc final public var pinVerifiedStatusEn: Swift.String
+  @objc final public var pinVerifiedStatusAr: Swift.String
+  @objc final public var amountDebitMsgEn: Swift.String
+  @objc final public var amountDebitMsgAr: Swift.String
+  @objc final public var approvalCodeAr: Swift.String
+  @objc final public var approvalCodeEn: Swift.String
+  @objc final public var transactionDueDate: Swift.String
+  @objc final public var transactionDueTime: Swift.String
+  @objc final public var iD1: Swift.String
+  @objc final public var tVR: Swift.String
+  @objc final public var tSI: Swift.String
+  @objc final public var crytogramResult: Swift.String
+  @objc final public var cVMResult: Swift.String
+  @objc final public var applicationCryt: Swift.String
+  @objc final public var kernelId: Swift.String
+  @objc final public var paymentAccountReference: Swift.String
+  @objc final public var fundingPAN: Swift.String
+  @objc final public var customerCopyTitleAr: Swift.String
+  @objc final public var customerCopyTitleEn: Swift.String
+  @objc final public var purchaseLabelEn: Swift.String
+  @objc final public var purchaseLabelAr: Swift.String
+  @objc final public var purchaseAmountLabelEn: Swift.String
+  @objc final public var purchaseAmountLabelAr: Swift.String
+  @objc final public var approvalLabelEn: Swift.String
+  @objc final public var approvalLabelAr: Swift.String
+  @objc final public var dipped: Swift.String
+  @objc final public var hostResponseCode: Swift.String
+  @objc final public var qrString: Swift.String
+  @objc final public var campaign_message_ar: Swift.String
+  @objc final public var campaign_message_en: Swift.String
+  @objc final public var qrCodeImage: UIKit.UIImage?
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum ErrorCodeType : Swift.Int {
+  case InvalidLogin, UserNotActive, NewVersion, NoRootVC, NoUsername, NoPassword, UnknownError, UnknownOperationName, JSONSerializationErr, JSONSerializationException, NoNSURLSessionData, NSDictionaryDownCastErr, NoHTTPStatusCode, ErrorMessageFromServer
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public protocol GeideaMPOSDelegate {
+  @objc func mposAuthDidFinished(_ status: Swift.Bool, error: Foundation.NSError?, userInfo: GeideaMPOSLib.UserInfo?)
+  @objc func mposTransactionResponseHTML(_ htmlString: Swift.String)
+  @objc func mposTransactionResponseJSON(_ jsonResponse: GeideaMPOSLib.MPOSTransaction)
+  @objc func mposReconciliationResponseHTML(_ htmlString: Swift.String)
+  @objc func mposReconciliationResponseJSON(_ jsonResponse: GeideaMPOSLib.MPOSReconciliation)
+  @objc func mposDidFailWithError(_ errorCode: Swift.Int, errorMessage: Swift.String)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class GeideaMposManager : ObjectiveC.NSObject {
+  @objc public var delegate: GeideaMPOSLib.GeideaMPOSDelegate?
+  @objc public static let shared: GeideaMPOSLib.GeideaMposManager
+  @objc public var popupImage: UIKit.UIImage?
+  @objc public var popupColorStyle: Swift.UInt32
+  @objc public var popupColorTextButton: Swift.UInt32
+  @objc public var isConnected: Swift.Bool {
+    @objc get
+  }
+  @objc public func initalize(_ appID: Foundation.NSString, withAppSecret: Foundation.NSString)
+  @objc public func showFindDevices()
+  @objc public func startPayment(amount: Swift.Double)
+  @objc public func startPayment(amount: Swift.Double, referenceNumber: Swift.String)
+  @objc public func reconciliation()
+  @objc public func disconnect()
+  @objc public func getTerminalID() -> Swift.String?
+  @objc public func getAutoReconciliationTime() -> Foundation.Date?
+  @objc public func getMYPerTrxLimit() -> Swift.Double
+  @objc public func uploadLogs()
+  @objc public func getAllTransactions() -> [GeideaMPOSLib.TransactionRecord]?
+  @objc deinit
+}
+public enum SCLAlertViewStyle {
+  case success, error, notice, warning, info, edit, wait, question
+  public var defaultColorInt: Swift.UInt {
+    get
+  }
+  public static func == (a: GeideaMPOSLib.SCLAlertViewStyle, b: GeideaMPOSLib.SCLAlertViewStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SCLAnimationStyle {
+  case noAnimation, topToBottom, bottomToTop, leftToRight, rightToLeft
+  public static func == (a: GeideaMPOSLib.SCLAnimationStyle, b: GeideaMPOSLib.SCLAnimationStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SCLActionType {
+  case none, selector, closure
+  public static func == (a: GeideaMPOSLib.SCLActionType, b: GeideaMPOSLib.SCLActionType) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public enum SCLAlertButtonLayout {
+  case horizontal, vertical
+  public static func == (a: GeideaMPOSLib.SCLAlertButtonLayout, b: GeideaMPOSLib.SCLAlertButtonLayout) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+@objc @_inheritsConvenienceInitializers open class SCLButton : UIKit.UIButton {
+  public struct ShowTimeoutConfiguration {
+    public init(prefix: Swift.String = "", suffix: Swift.String = "")
+  }
+  @objc dynamic public init()
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc override dynamic public init(frame: CoreGraphics.CGRect)
+  @objc deinit
+}
+open class SCLAlertViewResponder {
+  public init(alertview: GeideaMPOSLib.SCLAlertView)
+  open func setTitle(_ title: Swift.String)
+  open func setSubTitle(_ subTitle: Swift.String?)
+  open func close()
+  open func setDismissBlock(_ dismissBlock: @escaping GeideaMPOSLib.DismissBlock)
+  @objc deinit
+}
+public typealias DismissBlock = () -> Swift.Void
+@objc @_inheritsConvenienceInitializers open class SCLAlertView : UIKit.UIViewController {
+  public struct SCLAppearance {
+    public struct Margin {
+      public var titleTop: CoreGraphics.CGFloat
+      public var textViewBottom: CoreGraphics.CGFloat
+      public var buttonSpacing: CoreGraphics.CGFloat
+      public var textFieldSpacing: CoreGraphics.CGFloat
+      public var bottom: CoreGraphics.CGFloat
+      public var horizontal: CoreGraphics.CGFloat
+      public init(titleTop: CoreGraphics.CGFloat = 30, textViewBottom: CoreGraphics.CGFloat = 12, buttonSpacing: CoreGraphics.CGFloat = 10, textFieldSpacing: CoreGraphics.CGFloat = 15, bottom: CoreGraphics.CGFloat = 14, horizontal: CoreGraphics.CGFloat = 12)
+    }
+    public init(kDefaultShadowOpacity: CoreGraphics.CGFloat = 0.7, kCircleTopPosition: CoreGraphics.CGFloat = 0.0, kCircleBackgroundTopPosition: CoreGraphics.CGFloat = 6.0, kCircleHeight: CoreGraphics.CGFloat = 56.0, kCircleIconHeight: CoreGraphics.CGFloat = 20.0, kTitleHeight: CoreGraphics.CGFloat = 25.0, kWindowWidth: CoreGraphics.CGFloat = 240.0, kWindowHeight: CoreGraphics.CGFloat = 178.0, kTextHeight: CoreGraphics.CGFloat = 90.0, kTextFieldHeight: CoreGraphics.CGFloat = 30.0, kTextViewdHeight: CoreGraphics.CGFloat = 80.0, kButtonHeight: CoreGraphics.CGFloat = 35.0, kTitleFont: UIKit.UIFont = UIFont.systemFont(ofSize: 20), kTitleMinimumScaleFactor: CoreGraphics.CGFloat = 1.0, kTextFont: UIKit.UIFont = UIFont.systemFont(ofSize: 14), kButtonFont: UIKit.UIFont = UIFont.boldSystemFont(ofSize: 14), showCloseButton: Swift.Bool = true, showCircularIcon: Swift.Bool = true, shouldAutoDismiss: Swift.Bool = true, contentViewCornerRadius: CoreGraphics.CGFloat = 5.0, fieldCornerRadius: CoreGraphics.CGFloat = 3.0, buttonCornerRadius: CoreGraphics.CGFloat = 3.0, hideWhenBackgroundViewIsTapped: Swift.Bool = false, circleBackgroundColor: UIKit.UIColor = UIColor.white, contentViewColor: UIKit.UIColor = UIColorFromRGB(0xFFFFFF), contentViewBorderColor: UIKit.UIColor = UIColorFromRGB(0xCCCCCC), titleColor: UIKit.UIColor = UIColorFromRGB(0x4D4D4D), subTitleColor: UIKit.UIColor = UIColorFromRGB(0x4D4D4D), margin: GeideaMPOSLib.SCLAlertView.SCLAppearance.Margin = Margin(), dynamicAnimatorActive: Swift.Bool = false, disableTapGesture: Swift.Bool = false, buttonsLayout: GeideaMPOSLib.SCLAlertButtonLayout = .vertical, activityIndicatorStyle: UIKit.UIActivityIndicatorView.Style = .white)
+  }
+  public struct SCLTimeoutConfiguration {
+    public typealias ActionType = () -> Swift.Void
+    public init(timeoutValue: Foundation.TimeInterval, timeoutAction: @escaping GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration.ActionType)
+  }
+  open var iconTintColor: UIKit.UIColor?
+  open var customSubview: UIKit.UIView?
+  public init(appearance: GeideaMPOSLib.SCLAlertView.SCLAppearance)
+  @objc required dynamic public init?(coder aDecoder: Foundation.NSCoder)
+  @objc required dynamic public init()
+  @objc override dynamic public init(nibName nibNameOrNil: Swift.String?, bundle nibBundleOrNil: Foundation.Bundle?)
+  @objc override dynamic open func viewWillLayoutSubviews()
+  @objc override dynamic open func viewDidAppear(_ animated: Swift.Bool)
+  @objc override dynamic open func viewDidDisappear(_ animated: Swift.Bool)
+  @objc override dynamic open func touchesEnded(_ touches: Swift.Set<UIKit.UITouch>, with event: UIKit.UIEvent?)
+  open func addTextField(_ title: Swift.String? = nil) -> UIKit.UITextField
+  open func addTextView() -> UIKit.UITextView
+  @discardableResult
+  open func addButton(_ title: Swift.String, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil, showTimeout: GeideaMPOSLib.SCLButton.ShowTimeoutConfiguration? = nil, action: @escaping () -> Swift.Void) -> GeideaMPOSLib.SCLButton
+  @discardableResult
+  open func addButton(_ title: Swift.String, backgroundColor: UIKit.UIColor? = nil, textColor: UIKit.UIColor? = nil, showTimeout: GeideaMPOSLib.SCLButton.ShowTimeoutConfiguration? = nil, target: Swift.AnyObject, selector: ObjectiveC.Selector) -> GeideaMPOSLib.SCLButton
+  @discardableResult
+  open func showCustom(_ title: Swift.String, subTitle: Swift.String? = nil, color: UIKit.UIColor, closeButtonTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration? = nil, colorTextButton: Swift.UInt = 0xFFFFFF, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @discardableResult
+  open func showSuccess(_ title: Swift.String, subTitle: Swift.String? = nil, closeButtonTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration? = nil, colorStyle: Swift.UInt = SCLAlertViewStyle.success.defaultColorInt, colorTextButton: Swift.UInt = 0xFFFFFF, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @discardableResult
+  open func showError(_ title: Swift.String, subTitle: Swift.String? = nil, closeButtonTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration? = nil, colorStyle: Swift.UInt = SCLAlertViewStyle.error.defaultColorInt, colorTextButton: Swift.UInt = 0xFFFFFF, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @discardableResult
+  open func showNotice(_ title: Swift.String, subTitle: Swift.String? = nil, closeButtonTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration? = nil, colorStyle: Swift.UInt = SCLAlertViewStyle.notice.defaultColorInt, colorTextButton: Swift.UInt = 0xFFFFFF, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @discardableResult
+  open func showWarning(_ title: Swift.String, subTitle: Swift.String? = nil, closeButtonTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration? = nil, colorStyle: Swift.UInt = SCLAlertViewStyle.warning.defaultColorInt, colorTextButton: Swift.UInt = 0x000000, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @discardableResult
+  open func showInfo(_ title: Swift.String, subTitle: Swift.String? = nil, closeButtonTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration? = nil, colorStyle: Swift.UInt = SCLAlertViewStyle.info.defaultColorInt, colorTextButton: Swift.UInt = 0xFFFFFF, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @discardableResult
+  open func showWait(_ title: Swift.String, subTitle: Swift.String? = nil, closeButtonTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration? = nil, colorStyle: Swift.UInt? = SCLAlertViewStyle.wait.defaultColorInt, colorTextButton: Swift.UInt = 0xFFFFFF, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @discardableResult
+  open func showEdit(_ title: Swift.String, subTitle: Swift.String? = nil, closeButtonTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration? = nil, colorStyle: Swift.UInt = SCLAlertViewStyle.edit.defaultColorInt, colorTextButton: Swift.UInt = 0xFFFFFF, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @discardableResult
+  open func showTitle(_ title: Swift.String, subTitle: Swift.String? = nil, style: GeideaMPOSLib.SCLAlertViewStyle, closeButtonTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration? = nil, colorStyle: Swift.UInt? = 0x000000, colorTextButton: Swift.UInt = 0xFFFFFF, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @discardableResult
+  open func showTitle(_ title: Swift.String, subTitle: Swift.String? = nil, timeout: GeideaMPOSLib.SCLAlertView.SCLTimeoutConfiguration?, completeText: Swift.String?, style: GeideaMPOSLib.SCLAlertViewStyle, colorStyle: Swift.UInt? = 0x000000, colorTextButton: Swift.UInt? = 0xFFFFFF, circleIconImage: UIKit.UIImage? = nil, animationStyle: GeideaMPOSLib.SCLAnimationStyle = .topToBottom) -> GeideaMPOSLib.SCLAlertViewResponder
+  @objc open func updateShowTimeout()
+  @objc open func hideView()
+  @objc open func hideViewTimeout()
+  open func isShowing() -> Swift.Bool
+  @objc deinit
+}
+public func UIColorFromRGB(_ rgbValue: Swift.UInt) -> UIKit.UIColor
+@objc public class POSTerminalTransaction : ObjectiveC.NSObject {
+  @objc public var totalDBCount: Swift.String!
+  @objc public var totalDBAmount: Swift.String!
+  @objc public var totalCRCount: Swift.String!
+  @objc public var totalCRAmount: Swift.String!
+  @objc public var nAQDRAmount: Swift.String!
+  @objc public var cADVAmount: Swift.String!
+  @objc public var authCount: Swift.String!
+  @objc public var totalsCount: Swift.String!
+  @objc public var totalsAmount: Swift.String!
+  public init(_ POSTerminalInfo: [Any]?)
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class TransactionRecord : ObjectiveC.NSObject {
+  @objc final public var id: Swift.String
+  @objc final public var transactiontype: Swift.String
+  @objc final public var dateTime: Swift.String
+  @objc final public var purchaseAmount: Swift.String
+  @objc final public var ecrRefrenceNumber: Swift.String
+  @objc final public var transactionStatus: Swift.String
+  @objc final public var bankID: Swift.String
+  @objc final public var merchantID: Swift.String
+  @objc final public var terminalID: Swift.String
+  @objc final public var cardAcceptorBusinessCode: Swift.String
+  @objc final public var retrievalReferenceNumber: Swift.String
+  @objc final public var pOSVersionNumber: Swift.String
+  @objc final public var schemeID: Swift.String
+  @objc final public var cardNumber: Swift.String
+  @objc final public var expiryDate: Swift.String
+  @objc final public var verificationMethod: Swift.String
+  @objc final public var authResponseCode: Swift.String
+  @objc final public var responseDateTime: Swift.String
+  @objc final public var serialNumber: Swift.String
+  @objc final public var entryMode: Swift.String
+  @objc final public var hostResponseCode: Swift.String
+  @objc final public var labelName: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_hasMissingDesignatedInitializers @objc final public class UserInfo : ObjectiveC.NSObject {
+  @objc final public var status: Swift.Bool
+  @objc final public var perTrxLimit: Swift.Double
+  @objc final public var perdayTrxLimit: Swift.Double
+  @objc final public var address: Swift.String
+  @objc final public var govTax: Swift.String
+  @objc final public var merchantName: Swift.String
+  @objc final public var name: Swift.String
+  @objc final public var phoneNumber: Swift.String
+  @objc final public var serviceCharge: Swift.String
+  @objc final public var terminalId: Swift.String
+  @objc final public var userEmail: Swift.String
+  @objc final public var userPhone: Swift.String
+  @objc override dynamic public init()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(ReconciliationHistory) public class ReconciliationHistory : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension ReconciliationHistory {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<GeideaMPOSLib.ReconciliationHistory>
+  @objc @NSManaged dynamic public var buffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var dateTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var gSdkUploadStatus: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var merchantDetails: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var merchantID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var terminalID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var uploadStatus: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var user: GeideaMPOSLib.User? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(TransactionHistory) public class TransactionHistory : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension TransactionHistory {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<GeideaMPOSLib.TransactionHistory>
+  @objc @NSManaged dynamic public var aID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var amount: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var applicationCrypt: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var authResponseCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var bankID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var cardNumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var cardSystemTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var cryptResult: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var customerDetails: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var customerDetailsBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var customerEmail: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var customerPhoneNumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var customerSignatureBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var cVR: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var dateTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var dateTimeForDisplay: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ecr: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var expiryDate: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var functionCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var gSdkUploadStatus: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var hostBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var labelName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var merchantCategoryCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var merchantID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var merchantNumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var merchantPingBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var messageReasonCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var pingBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var pingUploadStatus: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var pOSEntryMode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var pOSServiceCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var reconciliationBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var reconciliationID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var remark: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var requestDateTimeForDisplay: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var responseBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var responseCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var responseDateTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var rRN: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var schemeID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var serialNumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var softwareVersion: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var sTAN: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var systemTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var terminalBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var terminalID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var tipAmount: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var totalAmount: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var transactionMerchantPingBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var transactionNo: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var transactionPingBuffer: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var transactionRemark: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var transactionRequestDate_Time: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var transactionRequestDateTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var transactionStatus: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var transactiontype: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var tSI: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var tVR: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var uploadStatus: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var verificationMethod: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var user: GeideaMPOSLib.User? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(User) public class User : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension User {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<GeideaMPOSLib.User>
+  @objc @NSManaged dynamic public var address: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var autoReconciliationDateTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var autoReconciliationTime: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var autoRemoteDownloadDateTime: Foundation.Date? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var forcedTMSTransfer: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var fullTerminalID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var govTax: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var isGSDK: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var merchantID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var merchantName: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var notificationStatus: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var perTransactionLimit: Swift.Float {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var phoneNumber: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var posSecrectCode: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var serviceCharge: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var terminalID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var tmsVersion: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var tokenType: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userEmail: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userID: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userPhone: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var userStatus: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var reconciliationHistory: GeideaMPOSLib.ReconciliationHistory? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var transactionHistory: Foundation.NSSet? {
+    @objc get
+    @objc set
+  }
+}
+extension User {
+  @objc(addTransactionHistoryObject:) @NSManaged dynamic public func addToTransactionHistory(_ value: GeideaMPOSLib.TransactionHistory)
+  @objc(removeTransactionHistoryObject:) @NSManaged dynamic public func removeFromTransactionHistory(_ value: GeideaMPOSLib.TransactionHistory)
+  @objc(addTransactionHistory:) @NSManaged dynamic public func addToTransactionHistory(_ values: Foundation.NSSet)
+  @objc(removeTransactionHistory:) @NSManaged dynamic public func removeFromTransactionHistory(_ values: Foundation.NSSet)
+}
+extension GeideaMPOSLib.ReconciliationStatus : Swift.Equatable {}
+extension GeideaMPOSLib.ReconciliationStatus : Swift.Hashable {}
+extension GeideaMPOSLib.ReconciliationStatus : Swift.RawRepresentable {}
+extension GeideaMPOSLib.TransactionStatus : Swift.Equatable {}
+extension GeideaMPOSLib.TransactionStatus : Swift.Hashable {}
+extension GeideaMPOSLib.TransactionStatus : Swift.RawRepresentable {}
+extension GeideaMPOSLib.ErrorCodeType : Swift.Equatable {}
+extension GeideaMPOSLib.ErrorCodeType : Swift.Hashable {}
+extension GeideaMPOSLib.ErrorCodeType : Swift.RawRepresentable {}
+extension GeideaMPOSLib.SCLAlertViewStyle : Swift.Equatable {}
+extension GeideaMPOSLib.SCLAlertViewStyle : Swift.Hashable {}
+extension GeideaMPOSLib.SCLAnimationStyle : Swift.Equatable {}
+extension GeideaMPOSLib.SCLAnimationStyle : Swift.Hashable {}
+extension GeideaMPOSLib.SCLActionType : Swift.Equatable {}
+extension GeideaMPOSLib.SCLActionType : Swift.Hashable {}
+extension GeideaMPOSLib.SCLAlertButtonLayout : Swift.Equatable {}
+extension GeideaMPOSLib.SCLAlertButtonLayout : Swift.Hashable {}

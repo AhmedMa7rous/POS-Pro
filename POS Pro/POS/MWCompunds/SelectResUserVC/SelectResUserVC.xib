@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectResUserVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="selectUsersTable" destination="jhf-i8-Naa" id="H4C-Cn-xih"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WG9-zz-nrZ">
+                    <rect key="frame" x="0.0" y="24" width="1180" height="776"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wAV-1b-QGo">
+                            <rect key="frame" x="0.0" y="0.0" width="1180" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rCS-Bc-702" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="6" width="76.5" height="38.5"/>
+                                    <color key="tintColor" red="0.91372549020000005" green="0.46666666670000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الغاء"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZaG-0P-Bj9" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="1115.5" y="6" width="64.5" height="38.5"/>
+                                    <color key="tintColor" red="0.91372549020000005" green="0.46666666670000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="تم"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="ZaG-0P-Bj9" secondAttribute="trailing" id="1dp-RP-kld"/>
+                                <constraint firstItem="rCS-Bc-702" firstAttribute="centerY" secondItem="wAV-1b-QGo" secondAttribute="centerY" id="bh8-Sf-7Ub"/>
+                                <constraint firstAttribute="height" constant="50" id="iR8-dZ-vXX"/>
+                                <constraint firstItem="rCS-Bc-702" firstAttribute="leading" secondItem="wAV-1b-QGo" secondAttribute="leading" id="jIR-jq-DYU"/>
+                                <constraint firstItem="ZaG-0P-Bj9" firstAttribute="centerY" secondItem="wAV-1b-QGo" secondAttribute="centerY" id="xy9-XB-fRv"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="jhf-i8-Naa">
+                            <rect key="frame" x="0.0" y="0.0" width="1180" height="776"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </tableView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="WG9-zz-nrZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="0ky-fO-zGU"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="WG9-zz-nrZ" secondAttribute="trailing" id="DYs-XO-4v4"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="WG9-zz-nrZ" secondAttribute="bottom" id="a9Y-gP-bJ6"/>
+                <constraint firstItem="WG9-zz-nrZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="zcJ-Q5-Aas"/>
+            </constraints>
+            <point key="canvasLocation" x="40" y="-1"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="ZaG-0P-Bj9">
+            <size key="intrinsicContentSize" width="64.5" height="38.5"/>
+        </designable>
+        <designable name="rCS-Bc-702">
+            <size key="intrinsicContentSize" width="76.5" height="38.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

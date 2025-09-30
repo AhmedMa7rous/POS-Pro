@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DriverListVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="driversTable" destination="vzU-2r-SGa" id="yF4-iX-rRb"/>
+                <outlet property="searchBar" destination="FtB-28-wxL" id="0bn-SU-EMK"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="cMf-HR-UxY">
+                    <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dTD-A4-WGI">
+                            <rect key="frame" x="0.0" y="20" width="1024" height="0.0"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Drivers" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="z1D-Da-hjU" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="481.5" y="-10.5" width="61.5" height="21.5"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                    <color key="textColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    <nil key="highlightedColor"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="السائقين"/>
+                                    </userDefinedRuntimeAttributes>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qR-3P-ecX" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="14" y="-12.5" width="56" height="25"/>
+                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                    <inset key="titleEdgeInsets" minX="0.0" minY="0.0" maxX="-10" maxY="0.0"/>
+                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="5" maxY="0.0"/>
+                                    <state key="normal" title="Back" image="ic_back.png">
+                                        <color key="titleColor" red="0.31372549020000001" green="0.31372549020000001" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="رجوع"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnBack:" destination="-1" eventType="touchUpInside" id="mro-Ij-d2x"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="6qR-3P-ecX" firstAttribute="leading" secondItem="dTD-A4-WGI" secondAttribute="leading" constant="14" id="Bqb-Aj-ugp"/>
+                                <constraint firstItem="6qR-3P-ecX" firstAttribute="centerY" secondItem="dTD-A4-WGI" secondAttribute="centerY" id="GWE-Zf-f2h"/>
+                                <constraint firstAttribute="height" id="LTW-XO-FPD"/>
+                                <constraint firstItem="z1D-Da-hjU" firstAttribute="centerX" secondItem="dTD-A4-WGI" secondAttribute="centerX" id="SZk-mK-YTv"/>
+                                <constraint firstItem="z1D-Da-hjU" firstAttribute="centerY" secondItem="dTD-A4-WGI" secondAttribute="centerY" id="uo0-F2-DvG"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="DEW-jn-n8S" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                            <rect key="frame" x="11" y="35" width="1002" height="48"/>
+                            <subviews>
+                                <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8vg-h4-rEV">
+                                    <rect key="frame" x="0.0" y="0.0" width="1001" height="48"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="svK-Og-Jwb">
+                                            <rect key="frame" x="923" y="0.0" width="78" height="48"/>
+                                            <state key="normal" backgroundImage="MWbtn_search"/>
+                                            <connections>
+                                                <action selector="tapOnSearchBtn:" destination="-1" eventType="touchUpInside" id="qxg-d1-YNl"/>
+                                            </connections>
+                                        </button>
+                                        <searchBar contentMode="redraw" insetsLayoutMarginsFromSafeArea="NO" placeholder="Search here…" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FtB-28-wxL">
+                                            <rect key="frame" x="0.0" y="4" width="923" height="40"/>
+                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="barTintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="1E4-gJ-lHb"/>
+                                            </connections>
+                                        </searchBar>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstItem="svK-Og-Jwb" firstAttribute="top" secondItem="8vg-h4-rEV" secondAttribute="top" id="2rk-In-GGJ"/>
+                                        <constraint firstItem="FtB-28-wxL" firstAttribute="top" secondItem="8vg-h4-rEV" secondAttribute="top" constant="4" id="91J-dR-7j2"/>
+                                        <constraint firstAttribute="bottom" secondItem="FtB-28-wxL" secondAttribute="bottom" constant="4" id="LGq-qJ-0AV"/>
+                                        <constraint firstAttribute="trailing" secondItem="svK-Og-Jwb" secondAttribute="trailing" id="VWA-SZ-okr"/>
+                                        <constraint firstItem="svK-Og-Jwb" firstAttribute="leading" secondItem="FtB-28-wxL" secondAttribute="trailing" id="c4W-wC-w9r"/>
+                                        <constraint firstItem="FtB-28-wxL" firstAttribute="leading" secondItem="8vg-h4-rEV" secondAttribute="leading" id="sNh-Ou-hRS"/>
+                                        <constraint firstAttribute="bottom" secondItem="svK-Og-Jwb" secondAttribute="bottom" id="vzN-98-GRq"/>
+                                    </constraints>
+                                </view>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="8vg-h4-rEV" firstAttribute="leading" secondItem="DEW-jn-n8S" secondAttribute="leading" id="3Mn-M3-Q9C"/>
+                                <constraint firstAttribute="trailing" secondItem="8vg-h4-rEV" secondAttribute="trailing" constant="1" id="96b-8a-pyx"/>
+                                <constraint firstAttribute="bottom" secondItem="8vg-h4-rEV" secondAttribute="bottom" id="Qd3-ZF-CUX"/>
+                                <constraint firstItem="8vg-h4-rEV" firstAttribute="top" secondItem="DEW-jn-n8S" secondAttribute="top" id="eds-0b-SK2"/>
+                                <constraint firstAttribute="height" constant="48" id="puV-Nn-JSb"/>
+                            </constraints>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="8"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                    <color key="value" red="0.94901960780000005" green="0.94901960780000005" blue="0.94901960780000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.080000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                    <point key="value" x="0.0" y="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                    <real key="value" value="6"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JR4-Mf-acK">
+                            <rect key="frame" x="0.0" y="88" width="1024" height="50"/>
+                            <subviews>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="DUS-Zo-uYV">
+                                    <rect key="frame" x="13" y="5" width="998" height="40"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="bpk-nQ-eg9">
+                                            <rect key="frame" x="0.0" y="0.0" width="489" height="40"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_user_white.png" translatesAutoresizingMaskIntoConstraints="NO" id="TFm-Nl-MUb" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="25" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="25" id="OiT-jV-XIM"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="imageFileName" value="ic_user_white.png"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6y8-d8-4Vh" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                    <rect key="frame" x="35" y="0.0" width="443" height="40"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اسم السائق"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bmn-he-63g">
+                                                    <rect key="frame" x="488" y="0.0" width="1" height="40"/>
+                                                    <color key="backgroundColor" red="0.87843137250000003" green="0.87843137250000003" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="1" id="LYQ-R5-nhD"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="vbw-fM-OTT">
+                                            <rect key="frame" x="509" y="0.0" width="489" height="40"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4Ap-sM-I1X" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="40"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" id="sPt-G8-USv"/>
+                                                    </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="imageFileName" value="ic_user_white.png"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Driver Code" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyN-ye-4xI" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="0.0" width="479" height="40"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="19"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="كود السائق"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                            <color key="backgroundColor" name="DGTERA-purple"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="20b-od-x0W"/>
+                                <constraint firstAttribute="bottom" secondItem="DUS-Zo-uYV" secondAttribute="bottom" constant="5" id="2Lo-8w-zbz"/>
+                                <constraint firstItem="DUS-Zo-uYV" firstAttribute="leading" secondItem="JR4-Mf-acK" secondAttribute="leading" constant="13" id="mm9-g0-Mdh"/>
+                                <constraint firstItem="DUS-Zo-uYV" firstAttribute="top" secondItem="JR4-Mf-acK" secondAttribute="top" constant="5" id="sJ4-oW-cAw"/>
+                                <constraint firstAttribute="trailing" secondItem="DUS-Zo-uYV" secondAttribute="trailing" constant="13" id="y5j-JK-U6b"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="52" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="vzU-2r-SGa">
+                            <rect key="frame" x="0.0" y="138" width="1024" height="630"/>
+                            <color key="backgroundColor" red="0.72093611960000004" green="0.70984935760000001" blue="0.71393126250000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <color key="separatorColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <color key="sectionIndexBackgroundColor" red="0.72093611960000004" green="0.70984935760000001" blue="0.71393126250000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="pG3-x7-96M"/>
+                                <outlet property="delegate" destination="-1" id="UVn-2N-jwW"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                    <color key="backgroundColor" red="0.99991279840000002" green="1" blue="0.99988144639999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="dTD-A4-WGI" firstAttribute="leading" secondItem="cMf-HR-UxY" secondAttribute="leading" id="5ob-wW-cZ8"/>
+                        <constraint firstItem="JR4-Mf-acK" firstAttribute="top" secondItem="DEW-jn-n8S" secondAttribute="bottom" constant="5" id="BXL-vy-hdz"/>
+                        <constraint firstAttribute="trailing" secondItem="JR4-Mf-acK" secondAttribute="trailing" id="Goc-ci-P3Y"/>
+                        <constraint firstItem="DEW-jn-n8S" firstAttribute="leading" secondItem="cMf-HR-UxY" secondAttribute="leading" constant="11" id="MGU-7c-9RF"/>
+                        <constraint firstAttribute="trailing" secondItem="DEW-jn-n8S" secondAttribute="trailing" constant="11" id="MzA-lV-zNK"/>
+                        <constraint firstAttribute="trailing" secondItem="vzU-2r-SGa" secondAttribute="trailing" id="PVz-NG-Xvv"/>
+                        <constraint firstAttribute="trailing" secondItem="dTD-A4-WGI" secondAttribute="trailing" id="WeY-3G-6IV"/>
+                        <constraint firstItem="vzU-2r-SGa" firstAttribute="leading" secondItem="cMf-HR-UxY" secondAttribute="leading" id="Yds-bE-n0D"/>
+                        <constraint firstItem="vzU-2r-SGa" firstAttribute="top" secondItem="JR4-Mf-acK" secondAttribute="bottom" id="a7f-c9-cjo"/>
+                        <constraint firstItem="DEW-jn-n8S" firstAttribute="top" secondItem="dTD-A4-WGI" secondAttribute="bottom" constant="15" id="bdG-7c-qCx"/>
+                        <constraint firstAttribute="bottom" secondItem="vzU-2r-SGa" secondAttribute="bottom" id="gGO-O9-5oN"/>
+                        <constraint firstItem="JR4-Mf-acK" firstAttribute="leading" secondItem="cMf-HR-UxY" secondAttribute="leading" id="u90-rN-3bA"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="cMf-HR-UxY" secondAttribute="trailing" id="5OD-l8-UtO"/>
+                <constraint firstAttribute="bottom" secondItem="cMf-HR-UxY" secondAttribute="bottom" id="Hv3-XV-ePp"/>
+                <constraint firstItem="cMf-HR-UxY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LRc-3s-tl4"/>
+                <constraint firstItem="cMf-HR-UxY" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Mj8-4t-ofl"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="top" secondItem="dTD-A4-WGI" secondAttribute="top" id="ihX-tF-VWx"/>
+            </constraints>
+            <point key="canvasLocation" x="132" y="64"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="6qR-3P-ecX">
+            <size key="intrinsicContentSize" width="56" height="25"/>
+        </designable>
+        <designable name="6y8-d8-4Vh">
+            <size key="intrinsicContentSize" width="106" height="22.5"/>
+        </designable>
+        <designable name="TFm-Nl-MUb">
+            <size key="intrinsicContentSize" width="22" height="24"/>
+        </designable>
+        <designable name="dyN-ye-4xI">
+            <size key="intrinsicContentSize" width="101.5" height="22.5"/>
+        </designable>
+        <designable name="z1D-Da-hjU">
+            <size key="intrinsicContentSize" width="61.5" height="21.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="MWbtn_search" width="78" height="48"/>
+        <image name="ic_back.png" width="14" height="25"/>
+        <image name="ic_user_white.png" width="22" height="24"/>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -10,22 +10,9 @@
 		4BBFE0B42E8BF48A00B9B52F /* POS Pro.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "POS Pro.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
-/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		4BBFE0C62E8BF48B00B9B52F /* Exceptions for "POS Pro" folder in "POS Pro" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				Info.plist,
-			);
-			target = 4BBFE0B32E8BF48A00B9B52F /* POS Pro */;
-		};
-/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
-
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		4BBFE0B62E8BF48A00B9B52F /* POS Pro */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			exceptions = (
-				4BBFE0C62E8BF48B00B9B52F /* Exceptions for "POS Pro" folder in "POS Pro" target */,
-			);
 			path = "POS Pro";
 			sourceTree = "<group>";
 		};
@@ -104,6 +91,9 @@
 			knownRegions = (
 				en,
 				Base,
+				ar,
+				"Base 2",
+				"base 2",
 			);
 			mainGroup = 4BBFE0AB2E8BF48A00B9B52F;
 			minimizedProjectReferenceProxies = 1;
@@ -146,6 +136,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V35YDHS93K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/POS\\ Pro/Libraries/Device",
+					"$(PROJECT_DIR)/POS\\ Pro/Libraries/Simulator",
+					"$(PROJECT_DIR)/POS\\ Pro/Libraries/Simulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS Pro/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -156,6 +152,11 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/POS\\ Pro/resources/Epson/sdk",
+					"$(PROJECT_DIR)/POS\\ Pro/POS/Barcode/Interactors/zebra/Zebra-SDK/symbolbt-sdk",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mahrous.POS-Pro";
@@ -174,6 +175,12 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = V35YDHS93K;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/POS\\ Pro/Libraries/Device",
+					"$(PROJECT_DIR)/POS\\ Pro/Libraries/Simulator",
+					"$(PROJECT_DIR)/POS\\ Pro/Libraries/Simulator",
+				);
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "POS Pro/Info.plist";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -184,6 +191,11 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/POS\\ Pro/resources/Epson/sdk",
+					"$(PROJECT_DIR)/POS\\ Pro/POS/Barcode/Interactors/zebra/Zebra-SDK/symbolbt-sdk",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.mahrous.POS-Pro";

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="41" id="KGk-i7-Jjw" customClass="split_orderTableViewCell" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="797" height="150"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="797" height="150"/>
+                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxX="YES" flexibleMinY="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WLa-WL-jCH" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="797" height="149"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_unselected.png" highlightedImage="icon_selected.png" translatesAutoresizingMaskIntoConstraints="NO" id="4m9-vt-wQW" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                                <rect key="frame" x="3" y="8" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="30" id="5wv-re-ZNK"/>
+                                    <constraint firstAttribute="height" constant="30" id="aWD-af-fvx"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageFileName" value="icon_unselected.png"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="HighlightedFileName" value="icon_selected.png"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="Cappuccino Cappuccino Cappuccino" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TiJ-GE-k0B">
+                                <rect key="frame" x="35" y="8" width="590" height="16.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="123x at 5.0 saR unit KG , Discount 10 %" lineBreakMode="characterWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zkp-lH-t3y">
+                                <rect key="frame" x="35" y="32.5" width="585" height="16.5"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                <color key="textColor" red="0.53725490200000003" green="0.53725490200000003" blue="0.53725490200000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="DfK-Zi-FBy">
+                                <rect key="frame" x="640" y="13.5" width="142" height="19.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="123456789 SR" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SvY-Pb-dhH">
+                                        <rect key="frame" x="0.0" y="0.0" width="106.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Medium" family="Helvetica Neue" pointSize="16"/>
+                                        <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" text="1/5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FH4-8e-WLK">
+                                        <rect key="frame" x="121.5" y="0.0" width="20.5" height="19.5"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
+                                        <color key="textColor" red="0.47450980390000003" green="0.47450980390000003" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="142" id="ubG-iz-Msy"/>
+                                </constraints>
+                            </stackView>
+                            <stepper hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="epC-GM-Ell">
+                                <rect key="frame" x="773" y="23" width="0.0" height="0.0"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" id="Swy-HS-GUK"/>
+                                    <constraint firstAttribute="width" id="pWB-g3-Hi9"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="stepper_changed:" destination="KGk-i7-Jjw" eventType="valueChanged" id="b1u-pg-8hr"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="DfK-Zi-FBy" firstAttribute="leading" secondItem="Zkp-lH-t3y" secondAttribute="trailing" constant="20" id="7h7-Bc-SUA"/>
+                            <constraint firstItem="4m9-vt-wQW" firstAttribute="leading" secondItem="WLa-WL-jCH" secondAttribute="leading" constant="3" id="EKb-Mz-lNH"/>
+                            <constraint firstItem="Zkp-lH-t3y" firstAttribute="leading" secondItem="TiJ-GE-k0B" secondAttribute="leading" id="F0A-DZ-m3d"/>
+                            <constraint firstItem="DfK-Zi-FBy" firstAttribute="centerY" secondItem="4m9-vt-wQW" secondAttribute="centerY" id="HzG-tB-fIq"/>
+                            <constraint firstAttribute="trailing" secondItem="epC-GM-Ell" secondAttribute="trailing" constant="24" id="K6C-v5-b4G"/>
+                            <constraint firstItem="TiJ-GE-k0B" firstAttribute="leading" secondItem="4m9-vt-wQW" secondAttribute="trailing" constant="2" id="elk-66-J5r"/>
+                            <constraint firstItem="DfK-Zi-FBy" firstAttribute="leading" secondItem="TiJ-GE-k0B" secondAttribute="trailing" constant="15" id="gnw-No-8vg"/>
+                            <constraint firstItem="4m9-vt-wQW" firstAttribute="top" secondItem="WLa-WL-jCH" secondAttribute="top" constant="8" id="gzB-ip-eTc"/>
+                            <constraint firstItem="epC-GM-Ell" firstAttribute="centerY" secondItem="4m9-vt-wQW" secondAttribute="centerY" id="jva-Fq-VP7"/>
+                            <constraint firstItem="Zkp-lH-t3y" firstAttribute="top" secondItem="TiJ-GE-k0B" secondAttribute="bottom" constant="8" id="oYR-Wt-1Xp"/>
+                            <constraint firstAttribute="trailing" secondItem="DfK-Zi-FBy" secondAttribute="trailing" constant="15" id="tGd-fT-X2U"/>
+                            <constraint firstItem="TiJ-GE-k0B" firstAttribute="top" secondItem="WLa-WL-jCH" secondAttribute="top" constant="8" id="trH-SP-znr"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Zkp-lH-t3y" secondAttribute="bottom" constant="20" id="vfp-Fq-EuD"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_order.png" translatesAutoresizingMaskIntoConstraints="NO" id="p8Q-33-0SI" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="149" width="797" height="1"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="dju-eN-rNU"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="imageFileName" value="line_order.png"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="p8Q-33-0SI" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="3HD-De-neb"/>
+                    <constraint firstItem="WLa-WL-jCH" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="Ezf-p4-w7P"/>
+                    <constraint firstAttribute="trailing" secondItem="WLa-WL-jCH" secondAttribute="trailing" id="RRz-lV-o1Q"/>
+                    <constraint firstAttribute="bottom" secondItem="p8Q-33-0SI" secondAttribute="bottom" id="V18-RF-f6j"/>
+                    <constraint firstItem="WLa-WL-jCH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Zex-b6-iuR"/>
+                    <constraint firstItem="p8Q-33-0SI" firstAttribute="top" secondItem="WLa-WL-jCH" secondAttribute="bottom" id="i5H-MU-uc3"/>
+                    <constraint firstAttribute="trailing" secondItem="p8Q-33-0SI" secondAttribute="trailing" id="m5b-2s-woI"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="img_select" destination="4m9-vt-wQW" id="xx6-Iu-cUr"/>
+                <outlet property="lblCateg" destination="Zkp-lH-t3y" id="MSz-Kx-54D"/>
+                <outlet property="lblPrice" destination="SvY-Pb-dhH" id="yD9-eV-7Hz"/>
+                <outlet property="lblTitle" destination="TiJ-GE-k0B" id="lSN-8H-SJy"/>
+                <outlet property="lbl_qty" destination="FH4-8e-WLK" id="hW2-y1-lYI"/>
+                <outlet property="stepper" destination="epC-GM-Ell" id="Kog-ia-GXf"/>
+            </connections>
+            <point key="canvasLocation" x="-231.58536585365854" y="-476.94915254237293"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="4m9-vt-wQW">
+            <size key="intrinsicContentSize" width="304" height="304"/>
+        </designable>
+        <designable name="p8Q-33-0SI">
+            <size key="intrinsicContentSize" width="1656" height="4"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="icon_selected.png" width="360" height="304"/>
+        <image name="icon_unselected.png" width="304" height="304"/>
+        <image name="line_order.png" width="1656" height="4"/>
+    </resources>
+</document>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="SplitOrderView" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dF-DK-rXM" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="687-R9-DbS">
+                            <rect key="frame" x="10" y="10" width="67" height="31"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="31" id="BrY-34-Epo"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                            <state key="normal" title="Select All">
+                                <color key="titleColor" red="0.33725490200000002" green="0.46274509800000002" blue="0.74901960779999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="tapOnSelectAllBtn:" destination="iN0-l3-epB" eventType="touchUpInside" id="JwN-z3-L2R"/>
+                            </connections>
+                        </button>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UgK-dC-5wf">
+                            <rect key="frame" x="10" y="49" width="1004" height="679"/>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="IGJ-TM-7hr"/>
+                                <outlet property="delegate" destination="-1" id="V2w-2D-4yL"/>
+                            </connections>
+                        </tableView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rsF-Vv-aZB" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                            <rect key="frame" x="917" y="3" width="102" height="45"/>
+                            <color key="backgroundColor" name="DGTERA-purple"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="I4V-7U-7v0"/>
+                            </constraints>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                            <state key="normal" title="Split Table"/>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapOnOrderSelectTable:" destination="iN0-l3-epB" eventType="touchUpInside" id="Sm9-pW-MGF"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.90575665240000003" green="0.90567862990000003" blue="0.92307138440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="687-R9-DbS" firstAttribute="leading" secondItem="1dF-DK-rXM" secondAttribute="leading" constant="10" id="0C4-vF-WVf"/>
+                        <constraint firstItem="687-R9-DbS" firstAttribute="top" secondItem="1dF-DK-rXM" secondAttribute="top" constant="10" id="1TA-Xd-hWb"/>
+                        <constraint firstItem="UgK-dC-5wf" firstAttribute="top" secondItem="687-R9-DbS" secondAttribute="bottom" constant="8" symbolic="YES" id="Fli-nd-ibM"/>
+                        <constraint firstItem="rsF-Vv-aZB" firstAttribute="centerY" secondItem="687-R9-DbS" secondAttribute="centerY" id="OBl-fC-F5n"/>
+                        <constraint firstAttribute="trailing" secondItem="UgK-dC-5wf" secondAttribute="trailing" constant="10" id="Quu-YV-P73"/>
+                        <constraint firstAttribute="trailing" secondItem="rsF-Vv-aZB" secondAttribute="trailing" constant="5" id="Upa-PT-vsH"/>
+                        <constraint firstItem="UgK-dC-5wf" firstAttribute="leading" secondItem="1dF-DK-rXM" secondAttribute="leading" constant="10" id="dS5-nn-Qku"/>
+                        <constraint firstAttribute="bottom" secondItem="UgK-dC-5wf" secondAttribute="bottom" constant="20" id="yxj-AW-ht8"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" red="0.90575665240000003" green="0.90567862990000003" blue="0.92307138440000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="1dF-DK-rXM" secondAttribute="bottom" id="4c4-yQ-Ub6"/>
+                <constraint firstItem="1dF-DK-rXM" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="C6K-cc-S8G"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="1dF-DK-rXM" secondAttribute="trailing" id="Lfp-DM-HNb"/>
+                <constraint firstItem="1dF-DK-rXM" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="zJ1-pd-2kw"/>
+            </constraints>
+            <connections>
+                <outlet property="orderSelectTableBtn" destination="rsF-Vv-aZB" id="0p9-zM-AfL"/>
+                <outlet property="orderTable" destination="UgK-dC-5wf" id="FFZ-mN-SUf"/>
+                <outlet property="selectAllBtn" destination="687-R9-DbS" id="ZU6-zF-Lvd"/>
+            </connections>
+            <point key="canvasLocation" x="116.60156249999999" y="68.75"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="rsF-Vv-aZB">
+            <size key="intrinsicContentSize" width="102" height="18"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

@@ -1,0 +1,21 @@
+<Invoice xmlns="urn:oasis:names:specification:ubl:schema:xsd:Invoice-2" xmlns:ext="urn:oasis:names:specification:ubl:schema:xsd:CommonExtensionComponents-2" xmlns:cac="urn:oasis:names:specification:ubl:schema:xsd:CommonAggregateComponents-2" xmlns:cbc="urn:oasis:names:specification:ubl:schema:xsd:CommonBasicComponents-2">
+  #UBLExtension_TEMPLATE#
+  <cbc:UBLVersionID>2.1</cbc:UBLVersionID>
+  <cbc:ProfileID>reporting:1.0</cbc:ProfileID>
+  #CBC_TEMPLATE#
+  #Billing_Reference_TEMPLATE#
+  #Additional_Document_Reference_TEMPLATE#
+  
+  #SIGNATURE_TEMPLATE#
+  
+  #Accounting_Supplier_Party_TEMPLATE#
+  #Accounting_Customer_Party_TEMPLATE#
+  <cac:Delivery>
+    <cbc:ActualDeliveryDate>#Actual_Delivery_Date#</cbc:ActualDeliveryDate>
+  </cac:Delivery>
+  #Payment_Means_TEMPLATE#
+  #Allowance_Charge_TEMPLATE#
+  #Tax_Total_TEMPLATE#
+  #Legal_Monetary_Total_TEMPLATE#
+  #Invoice_Line_TEMPLATE#
+</Invoice>

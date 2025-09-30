@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddIngenicoDeviceVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="IpTF" destination="Wjz-c8-nBs" id="i1K-7l-xnG"/>
+                <outlet property="activityIndicator" destination="RzX-pa-f6g" id="G20-oD-kPT"/>
+                <outlet property="choseBtn" destination="mxz-cv-U4G" id="PAV-Dg-ljb"/>
+                <outlet property="ipErrorLbl" destination="9cq-Ge-rG0" id="DBq-U9-eeO"/>
+                <outlet property="methodErrorLbl" destination="h2p-qg-EDA" id="EAJ-Rx-O91"/>
+                <outlet property="nameErrorLbl" destination="kOE-vd-KWW" id="ArU-pL-p5d"/>
+                <outlet property="nameTF" destination="W47-T1-tBD" id="YlO-5w-ZQs"/>
+                <outlet property="portStack" destination="e5Y-p2-8TP" id="CFd-eD-HSc"/>
+                <outlet property="portTF" destination="FAk-GT-bgg" id="sbN-uc-hZX"/>
+                <outlet property="removeBtn" destination="oVD-kp-Nhq" id="5EX-Qv-rB2"/>
+                <outlet property="saveBtn" destination="ZS4-3F-Lgv" id="jcN-1J-wad"/>
+                <outlet property="statusImage" destination="3Gk-sR-5ik" id="n0F-5e-nhi"/>
+                <outlet property="statusLbl" destination="2D7-3u-alI" id="OJ2-NU-7Me"/>
+                <outlet property="statusStack" destination="ADE-2I-3JZ" id="2be-Zb-Qfz"/>
+                <outlet property="termiinalTF" destination="IZv-ke-Y3L" id="1Pa-kr-FML"/>
+                <outlet property="terminalStack" destination="0Zc-sw-WFT" id="bK5-L6-rAB"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UB4-6p-XOu" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                    <rect key="frame" x="307" y="50" width="410" height="690"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MWdg_logo" translatesAutoresizingMaskIntoConstraints="NO" id="Qtj-9C-TET">
+                            <rect key="frame" x="20" y="15" width="370" height="53"/>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="OcF-6w-61Y">
+                            <rect key="frame" x="20" y="118" width="370" height="452"/>
+                            <subviews>
+                                <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="RzX-pa-f6g">
+                                    <rect key="frame" x="0.0" y="0.0" width="370" height="37"/>
+                                    <color key="color" name="DGTERA-purple"/>
+                                </activityIndicatorView>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="ADE-2I-3JZ">
+                                    <rect key="frame" x="0.0" y="44.5" width="370" height="45"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_message_payment_suc.png" highlightedImage="icon_error.png" translatesAutoresizingMaskIntoConstraints="NO" id="3Gk-sR-5ik">
+                                            <rect key="frame" x="0.0" y="5" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="35" id="gjM-ej-kRx"/>
+                                                <constraint firstAttribute="width" secondItem="3Gk-sR-5ik" secondAttribute="height" multiplier="1:1" id="niu-x0-mpj"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2D7-3u-alI" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="40" y="0.0" width="330" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="yjK-M8-1z0"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="HXD-pw-AIx">
+                                    <rect key="frame" x="0.0" y="52" width="370" height="67"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QrP-we-yiJ" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.86347156759999999" green="0.42724502089999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اسم الجهاز"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Ingenico" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="W47-T1-tBD">
+                                            <rect key="frame" x="0.0" y="22" width="370" height="45"/>
+                                            <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="BqA-5i-AFc"/>
+                                            </constraints>
+                                            <color key="textColor" name="DGTERA-purple"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits"/>
+                                            <connections>
+                                                <outlet property="delegate" destination="-1" id="Do6-yO-qlt"/>
+                                            </connections>
+                                        </textField>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kOE-vd-KWW" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="67" width="370" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" systemColor="systemRedColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uCs-6z-8h0">
+                                    <rect key="frame" x="0.0" y="134" width="370" height="67"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Device IP" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hW3-S7-X1e" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.86347156759999999" green="0.42724502089999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="IP الجهاز"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="fg3-fm-Z2F">
+                                            <rect key="frame" x="0.0" y="22" width="370" height="45"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="244" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wjz-c8-nBs">
+                                                    <rect key="frame" x="0.0" y="0.0" width="320" height="45"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="dFO-Af-s3S"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="hgh-3R-DwF"/>
+                                                    </connections>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zh0-zz-Zra">
+                                                    <rect key="frame" x="325" y="0.0" width="45" height="45"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" secondItem="zh0-zz-Zra" secondAttribute="height" multiplier="1:1" id="bRB-lP-NsL"/>
+                                                    </constraints>
+                                                    <state key="normal" image="search-btn2"/>
+                                                    <connections>
+                                                        <action selector="tapCheckBtn:" destination="-1" eventType="touchUpInside" id="usy-6T-wGo"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9cq-Ge-rG0" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="67" width="370" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" systemColor="systemRedColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="spk-fy-Xf3">
+                                    <rect key="frame" x="0.0" y="216" width="370" height="72"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Payment Method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xwG-PF-Zca" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.86347156759999999" green="0.42724502089999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="طرق الدفع"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="uQz-LO-r4o">
+                                            <rect key="frame" x="0.0" y="22" width="370" height="50"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxz-cv-U4G" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="50"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="I1e-kg-mCe"/>
+                                                    </constraints>
+                                                    <color key="tintColor" name="DGTERA-purple"/>
+                                                    <state key="normal" title="Button"/>
+                                                    <buttonConfiguration key="configuration" style="plain" title="Choose"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اختر"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="tapOnChoseMthodBtn:" destination="-1" eventType="touchUpInside" id="hbA-1S-Trl"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                        </stackView>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h2p-qg-EDA" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="72" width="370" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" systemColor="systemRedColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="e5Y-p2-8TP">
+                                    <rect key="frame" x="0.0" y="303" width="370" height="67"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Port" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzr-Ho-Jsa" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.86347156759999999" green="0.42724502089999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="Port"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="BUk-rg-C7s">
+                                            <rect key="frame" x="0.0" y="22" width="370" height="45"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="244" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FAk-GT-bgg">
+                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="45"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="RAx-UO-qaW"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="hxI-YZ-xGJ"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="duc-4h-Sil" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="67" width="370" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" systemColor="systemRedColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Zc-sw-WFT">
+                                    <rect key="frame" x="0.0" y="385" width="370" height="67"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Terminal ID" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fWb-ny-NRq" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="370" height="17"/>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.86347156759999999" green="0.42724502089999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="Terminal ID"/>
+                                            </userDefinedRuntimeAttributes>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Xmc-r6-jDu">
+                                            <rect key="frame" x="0.0" y="22" width="370" height="45"/>
+                                            <subviews>
+                                                <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="244" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IZv-ke-Y3L">
+                                                    <rect key="frame" x="0.0" y="0.0" width="370" height="45"/>
+                                                    <color key="backgroundColor" systemColor="systemGray5Color"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="n1k-nX-H1b"/>
+                                                    </constraints>
+                                                    <color key="textColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                    <connections>
+                                                        <outlet property="delegate" destination="-1" id="bnF-Yx-jaN"/>
+                                                    </connections>
+                                                </textField>
+                                            </subviews>
+                                        </stackView>
+                                        <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tK3-6t-KsS" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="67" width="370" height="0.0"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <color key="textColor" systemColor="systemRedColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="u3i-uh-y9G">
+                            <rect key="frame" x="30" y="600" width="350" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZS4-3F-Lgv" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="50"/>
+                                    <color key="backgroundColor" red="0.99215686274509807" green="0.54509803921568623" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Save">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="حفظ"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnSave:" destination="-1" eventType="touchUpInside" id="g6p-nv-CIK"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVD-kp-Nhq" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="180" y="0.0" width="170" height="50"/>
+                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    <state key="normal" title="Remove device">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="مسح الجهاز"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnRemoveDevice:" destination="-1" eventType="touchUpInside" id="XPP-qw-oPp"/>
+                                        <action selector="tapOnSave:" destination="-1" eventType="touchUpInside" id="Ioa-47-SFN"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="ddK-82-vEB"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="Qtj-9C-TET" firstAttribute="centerX" secondItem="UB4-6p-XOu" secondAttribute="centerX" id="IKS-gj-que"/>
+                        <constraint firstItem="u3i-uh-y9G" firstAttribute="top" secondItem="OcF-6w-61Y" secondAttribute="bottom" constant="30" id="LpS-KO-a3m"/>
+                        <constraint firstItem="u3i-uh-y9G" firstAttribute="leading" secondItem="UB4-6p-XOu" secondAttribute="leading" constant="30" id="NEU-Lc-8CM"/>
+                        <constraint firstItem="Qtj-9C-TET" firstAttribute="top" secondItem="UB4-6p-XOu" secondAttribute="top" constant="15" id="NwY-69-D7G"/>
+                        <constraint firstItem="u3i-uh-y9G" firstAttribute="centerX" secondItem="UB4-6p-XOu" secondAttribute="centerX" id="cvv-NJ-XKa"/>
+                        <constraint firstAttribute="bottom" secondItem="u3i-uh-y9G" secondAttribute="bottom" constant="40" id="jkt-Su-JXp"/>
+                        <constraint firstItem="OcF-6w-61Y" firstAttribute="top" secondItem="Qtj-9C-TET" secondAttribute="bottom" constant="50" id="kAD-EN-Rcb"/>
+                        <constraint firstAttribute="trailing" secondItem="Qtj-9C-TET" secondAttribute="trailing" constant="20" id="kcD-Yx-8Be"/>
+                        <constraint firstItem="OcF-6w-61Y" firstAttribute="centerX" secondItem="UB4-6p-XOu" secondAttribute="centerX" id="r3o-lp-zhx"/>
+                        <constraint firstAttribute="trailing" secondItem="OcF-6w-61Y" secondAttribute="trailing" constant="20" id="smo-1O-ItZ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemGray5Color"/>
+            <constraints>
+                <constraint firstItem="UB4-6p-XOu" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="NnC-KR-4YP"/>
+                <constraint firstItem="UB4-6p-XOu" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="kP5-cN-uK2"/>
+                <constraint firstItem="UB4-6p-XOu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="30" id="sZ9-F3-mln"/>
+            </constraints>
+            <point key="canvasLocation" x="138.8671875" y="82.8125"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="2D7-3u-alI"/>
+        <designable name="9cq-Ge-rG0"/>
+        <designable name="QrP-we-yiJ">
+            <size key="intrinsicContentSize" width="90" height="17"/>
+        </designable>
+        <designable name="Xzr-Ho-Jsa">
+            <size key="intrinsicContentSize" width="29.5" height="17"/>
+        </designable>
+        <designable name="ZS4-3F-Lgv">
+            <size key="intrinsicContentSize" width="34" height="30"/>
+        </designable>
+        <designable name="duc-4h-Sil"/>
+        <designable name="fWb-ny-NRq">
+            <size key="intrinsicContentSize" width="78" height="17"/>
+        </designable>
+        <designable name="h2p-qg-EDA"/>
+        <designable name="hW3-S7-X1e">
+            <size key="intrinsicContentSize" width="64" height="17"/>
+        </designable>
+        <designable name="kOE-vd-KWW"/>
+        <designable name="mxz-cv-U4G">
+            <size key="intrinsicContentSize" width="82.5" height="38.5"/>
+        </designable>
+        <designable name="oVD-kp-Nhq">
+            <size key="intrinsicContentSize" width="104" height="30"/>
+        </designable>
+        <designable name="tK3-6t-KsS"/>
+        <designable name="xwG-PF-Zca">
+            <size key="intrinsicContentSize" width="117" height="17"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="MWdg_logo" width="206" height="53"/>
+        <image name="icon_error.png" width="112" height="108"/>
+        <image name="icon_message_payment_suc.png" width="328" height="328"/>
+        <image name="search-btn2" width="88.5" height="60"/>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray5Color">
+            <color red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

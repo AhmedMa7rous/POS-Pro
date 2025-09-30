@@ -1,0 +1,10 @@
+
+<cac:LegalMonetaryTotal>
+  <cbc:LineExtensionAmount currencyID="SAR">#LineExtensionAmount#</cbc:LineExtensionAmount>
+  <cbc:TaxExclusiveAmount currencyID="SAR">#TaxExclusiveAmount#</cbc:TaxExclusiveAmount>
+  <cbc:TaxInclusiveAmount currencyID="SAR">#TaxInclusiveAmount#</cbc:TaxInclusiveAmount>
+  <cbc:AllowanceTotalAmount currencyID="SAR">#AllowanceTotalAmount#</cbc:AllowanceTotalAmount>
+  #ChargeTotalAmount#
+  <cbc:PrepaidAmount currencyID="SAR">#PrepaidAmount#</cbc:PrepaidAmount>
+  <cbc:PayableAmount currencyID="SAR">#PayableAmount#</cbc:PayableAmount>
+</cac:LegalMonetaryTotal>

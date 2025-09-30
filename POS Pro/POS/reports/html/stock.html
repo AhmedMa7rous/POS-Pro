@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+
+        <style>
+            @font-face { font-family: 'Almarai-Regular'; src: url('Almarai-Regular.ttf'); }
+            @font-face { font-family: 'Almarai-Bold'; src: url('Almarai-Bold.ttf'); }
+            
+        * {
+          box-sizing: border-box;
+        }
+
+        #myInput {
+          background-image: url('/css/searchicon.png');
+          background-position: 10px 10px;
+          background-repeat: no-repeat;
+          width: 100%;
+          font-size: 20px;
+          padding: 12px 20px 12px 40px;
+          border: 1px solid #ddd;
+          margin-bottom: 12px;
+        }
+
+        #myTable {
+          border-collapse: collapse;
+          width: 100%;
+          border: 1px solid #ddd;
+          
+          font-size:38px;
+          text-align: center;
+          margin-left: 35px;
+          margin-right: 25px;
+          margin-bottom: 150px;
+          font-family:Almarai-Regular;
+          
+          background-color:white;
+          
+          margin: 5px;
+          width: 100%;
+          table-layout: auto;/**fixed*/
+          line-height: inherit;
+          text-align: left;
+         
+        }
+
+        #myTable th, #myTable td {
+          text-align: left;
+          padding: 12px;
+        }
+
+        #myTable tr {
+          border-bottom: 1px solid #ddd;
+        }
+
+        #myTable tr.header, #myTable tr:hover {
+          background-color: #f1f1f1;
+        }
+        
+
+        
+        </style>
+    </head>
+    <body   >
+        
+        <div style="width: 900px;font-size:45px;text-align: center;line-height: 1.2;margin-left: 25px;margin-right: 25px;margin-bottom: 150px; font-family:#font;"  >
+            
+            
+            <div  >
+                <h2 style=" border: 4px solid black;padding: 10px ;margin-right: 40px;"> Stock report</h2>    </div>
+            
+            <div  >
+                            
+                                 <table style="text-align: left">
+                                     #rows_header
+                                 </table>
+                          
+                           
+                         </div>
+              
+                <div  >
+<input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+ 
+                    <table id="myTable">
+                          
+                        <tr>
+                            <th>Code</th>
+                            <th>Name</th>
+                            <th>QTY</th>
+                            <th>Unit</th>
+                        </tr>
+                        
+                        #rows
+                    </table>
+                    #copy_right
+
+                </div>
+                
+         
+            
+        </div><!--End Invoice-->
+        <!-- partial -->
+        
+        <script>
+        function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+        </script>
+        
+    </body>
+</html>

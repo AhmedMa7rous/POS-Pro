@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="OpenSans-Regular.ttf">
+            <string>OpenSans</string>
+        </array>
+        <array key="Raleway-SemiBold.ttf">
+            <string>Raleway-SemiBold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="SettingCell" rowHeight="71" id="KGk-i7-Jjw" customClass="SettingCell" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="631" height="71"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="631" height="71"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nvd-5I-UMu">
+                        <rect key="frame" x="8" y="4" width="615" height="63"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="lJU-d1-JwX">
+                                <rect key="frame" x="5" y="0.0" width="605" height="63"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GE8-7N-9vM">
+                                        <rect key="frame" x="0.0" y="20.5" width="137" height="22.5"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="19"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mF3-jL-DFZ">
+                                        <rect key="frame" x="145" y="15" width="120" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="120" id="2Lr-RW-McL"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="OpenSans" family="Open Sans" pointSize="18"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="Button">
+                                            <color key="titleColor" name="DGTERA-purple"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapOnTimeCloseSession:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="W8w-Nf-7Hq"/>
+                                        </connections>
+                                    </button>
+                                    <segmentedControl opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="az4-9X-qrn">
+                                        <rect key="frame" x="273" y="16" width="197" height="32"/>
+                                        <segments>
+                                            <segment title="First"/>
+                                            <segment title="Second"/>
+                                            <segment title="third"/>
+                                        </segments>
+                                        <connections>
+                                            <action selector="togleSeqmentSetting:" destination="KGk-i7-Jjw" eventType="valueChanged" id="Od1-Ln-Qgg"/>
+                                        </connections>
+                                    </segmentedControl>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="750" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rQS-bd-8l0">
+                                        <rect key="frame" x="478" y="16" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="togleSwitchSetting:" destination="KGk-i7-Jjw" eventType="valueChanged" id="aay-hr-VsB"/>
+                                        </connections>
+                                    </switch>
+                                    <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1lN-qU-4cM">
+                                        <rect key="frame" x="535" y="14.5" width="70" height="34"/>
+                                        <color key="backgroundColor" name="DGTERA-purple"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="70" id="Ojb-9G-zlQ"/>
+                                        </constraints>
+                                        <color key="textColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <fontDescription key="fontDescription" name="Raleway-SemiBold" family="Raleway" pointSize="18"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <connections>
+                                            <action selector="tfSettingEditing:" destination="KGk-i7-Jjw" eventType="editingDidEnd" id="SX8-Sd-B2M"/>
+                                        </connections>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="lJU-d1-JwX" secondAttribute="trailing" constant="5" id="2hb-zc-Tqt"/>
+                            <constraint firstAttribute="bottom" secondItem="lJU-d1-JwX" secondAttribute="bottom" id="FIl-SW-aT3"/>
+                            <constraint firstItem="lJU-d1-JwX" firstAttribute="top" secondItem="nvd-5I-UMu" secondAttribute="top" id="Vm7-4G-9ga"/>
+                            <constraint firstItem="lJU-d1-JwX" firstAttribute="leading" secondItem="nvd-5I-UMu" secondAttribute="leading" constant="5" id="jEg-Le-bkw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                <constraints>
+                    <constraint firstItem="nvd-5I-UMu" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="AUh-4D-fn2"/>
+                    <constraint firstAttribute="trailing" secondItem="nvd-5I-UMu" secondAttribute="trailing" constant="8" id="COm-54-cpJ"/>
+                    <constraint firstAttribute="bottom" secondItem="nvd-5I-UMu" secondAttribute="bottom" constant="4" id="FQM-Zy-CM2"/>
+                    <constraint firstItem="nvd-5I-UMu" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="ht5-6L-EPg"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="settingBtn" destination="mF3-jL-DFZ" id="qvx-Xb-X6g"/>
+                <outlet property="settingHintLbl" destination="GE8-7N-9vM" id="wri-sE-X6Q"/>
+                <outlet property="settingSegment" destination="az4-9X-qrn" id="2RS-fF-F6m"/>
+                <outlet property="settingSwitch" destination="rQS-bd-8l0" id="CUu-QS-2Cs"/>
+                <outlet property="settingTF" destination="1lN-qU-4cM" id="ohC-cz-cSD"/>
+                <outlet property="settingView" destination="nvd-5I-UMu" id="8NR-bY-IwG"/>
+            </connections>
+            <point key="canvasLocation" x="79.390243902439025" y="5.8474576271186445"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

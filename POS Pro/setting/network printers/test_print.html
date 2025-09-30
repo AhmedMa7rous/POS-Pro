@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+            <style>
+            @font-face { font-family: 'Almarai-Regular'; src: url('Almarai-Regular.ttf'); }
+            @font-face { font-family: 'Almarai-Bold'; src: url('Almarai-Bold.ttf'); }
+                .test-box {
+                    width: 900px;
+                    font-size:38px;
+                    text-align: center;
+                    margin-left: 35px;
+                    margin-right: 25px;
+                    margin-bottom: 150px;
+                    font-family:Almarai-Regular;
+                    background-color:white;
+                }
+                .test-box table {
+                    margin: 5px;
+                    width: 100%;
+                    table-layout: auto;/**fixed*/
+                    line-height: inherit;
+                    text-align: left;
+                }
+                
+                .test-box table td.bold-title-center{
+                    /* padding-top: 3px;*/
+                    font-weight: bold;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                .test-box table td.bold-title-left {
+                    /* padding-top: 3px;*/
+                    font-weight: bold;
+                    text-align: left;
+                    vertical-align: middle;
+                }
+                .test-box table td.normal-title-center {
+                    /* padding-top: 3px;*/
+                    font-weight: normal;
+                    text-align: center;
+                    vertical-align: middle;
+                }
+                .test-box table td.bold-title-right {
+                   /* padding-top: 3px;*/
+                    font-weight: bold;
+                    text-align: right;
+                    vertical-align: middle;
+                }
+            </style>
+    </head>
+    
+    <body>
+        <div class="test-box">
+            <table id = "header" cellpadding="0" cellspacing="2">
+                <tbody>
+                    <tr >
+                        <td class="bold-title-center" colspan="3">
+                            <h3>Test Printer<br>Dgtera Co. Ltd.</h3>
+                        </td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="bold-title-left" colspan="3"></td>
+                    </tr>
+                    
+                    <tr>
+                    <td class="bold-title-left">POS</td>
+                    <td class="normal-title-center">#POS_NAME#</td>
+                    <td class="bold-title-right" style="width: 250px;">نقطة البيع</td>
+                    </tr>
+                    
+                    <tr>
+                    <td class="bold-title-left">Printer</td>
+                    <td class="normal-title-center">#PRINTER_NAME#</td>
+                    <td class="bold-title-right" style="width: 250px;"> اسم الطابعة</td>
+                    </tr>
+                    
+                    <tr>
+                    <td class="bold-title-left">Ip</td>
+                    <td class="normal-title-center">#PRINTER_IP#</td>
+                    <td class="bold-title-right" style="width: 250px;">Ip</td>
+                    </tr>
+                    
+                    <tr>
+                    <td class="bold-title-left">Categories</td>
+                    <td class="normal-title-center">#CATEGORIES#</td>
+                    <td class="bold-title-right" style="width: 250px;">التصنيفات</td>
+                    </tr>
+                    
+                    <tr>
+                        <td class="bold-title-left" colspan="3"></td>
+                    </tr>
+                    
+                    <tr>
+                        <td  style="font-weight: normal;
+                            text-align: center;
+                            vertical-align: middle;"  colspan="3" >
+                           #REF_DATE#
+                        </td>
+                    </tr>
+                    
+                    
+                    
+                   
+                    
+                    
+                </tbody>
+            </table>
+            
+                    
+            
+            
+        </div>
+        
+    </body>
+    
+</html>

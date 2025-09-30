@@ -1,0 +1,14 @@
+<cac:AccountingCustomerParty>
+  <cac:Party>
+    <cac:PartyIdentification>
+    <cbc:ID schemeID="MOM">#CUSTOMER_ID#</cbc:ID>
+    </cac:PartyIdentification>
+    <cac:PartyName>
+      <cbc:Name>#CUSTOMER_NAME#</cbc:Name>
+    </cac:PartyName>
+    #PostalAddress_TEMPLATE#
+    #PartyTaxScheme_TEMPLATE#
+    #PartyLegalEntity_TEMPLATE#
+    #Contact_TEMPLATE#
+  </cac:Party>
+</cac:AccountingCustomerParty>

@@ -1,0 +1,95 @@
+/* 
+  Localizable.strings
+  pos
+
+  Created by khaled on 7/26/19.
+  Copyright © 2019 khaled. All rights reserved.
+*/
+{
+    "printerseries_t88" = "TM-T88 Series";
+    "printerseries_t70" = "TM-T70 Series";
+    "printerseries_u220" = "TM-U220 Series";
+    "printerseries_u330" = "TM-U330 Series";
+    "printerseries_l90" = "TM-L90 Series";
+    "printerseries_p60" = "TM-P60 Series";
+    "printerseries_p60ii" = "TM-P60II Series";
+    "printerseries_t81" = "TM-T81 Series";
+    "printerseries_t20" = "TM-T20 Series";
+    "printerseries_t60" = "TM-T60 Series";
+    "printerseries_t82" = "TM-T82 Series";
+    "printerseries_t83" = "TM-T83 Series";
+    "printerseries_t83iii" = "TM-T83III Series";
+    "printerseries_t90" = "TM-T90 Series";
+    "printerseries_t90kp" = "TM-T90KP Series";
+    "printerseries_t100" = "TM-T100 Series";
+    "printerseries_p80" = "TM-P80 Series";
+    "printerseries_p20" = "TM-P20 Series";
+    "printerseries_m10" = "TM-m10 Series";
+    "printerseries_m30" = "TM-m30 Series";
+    "printerseries_h6000" = "TM-H6000 Series";
+    
+    "language_ank" = "ANK";
+    "language_japanese" = "JAPANESE";
+    "language_chinese" = "CHINESE";
+    "language_taiwan" = "TAIWAN";
+    "language_korean" = "KOREAN";
+    "language_thai" = "THAI";
+    "language_southasia" = "SOUTHASIA";
+    
+    // ====================================
+
+    "methoderr_errcode" = "كود رقم";
+    "methoderr_method" = "الداله";
+    "statusmsg_result" = "النتيجه";
+    "statusmsg_description" = "الوصف";
+    "warn_receipt_near_end" = "لفة الورق انتهت تقريبا.\n";
+    "warn_battery_near_end" = "مستوى بطارية الطابعة منخفض. \ n";
+    "err_offline" = "الطابعة غير متصلة. \ n" ;
+    "err_no_response" = "يرجى التحقق من اتصال الطابعة ومحطة الهاتف المحمول. \ n فقد الاتصال. \ n";
+    "err_cover_open" = "الرجاء إغلاق غطاء لفة الورق. \ n";
+    "err_paper_feed" = "يرجى تحرير مفتاح تغذية الورق. \ n";
+    "err_autocutter" = "يرجى إزالة الورق المحشور وإغلاق غطاء لفة الورق. \ n قم بإزالة أي ورق محشور أو مواد غريبة في الطابعة ، ثم قم بإيقاف تشغيل الطابعة وتشغيل الطابعة مرة أخرى. \ n";
+    "err_need_recover" = "بعد ذلك ، إذا لم تسترد الطابعة الخطأ ، فالرجاء دورة مفتاح الطاقة. \ n";
+    "err_unrecover" = "يرجى تدوير مفتاح الطاقة الخاص بالطابعة. \ n إذا حدثت أخطاء واحدة حتى عند تدوير الطاقة ، فقد تتوقف الطابعة عن العمل.";
+    "err_receipt_end" = "يرجى التحقق من لفة الورق. \ n";
+    "err_battery" = "بطارية الطابعة ساخنة. \ n";
+    "err_overheat" = "يرجى الانتظار حتى يتم إيقاف تشغيل مؤشر خطأ الطابعة. \ n";
+    "err_head" = "رأس الطباعة للطابعة ساخن. \ n";
+    "err_motor" = "IC Motor Driver للطابعة ساخنة. \ n";
+    "err_wrong_paper" = "يرجى ضبط لفة الورق الصحيحة. \ n";
+    "err_battery_real_end" = "يرجى توصيل محول التيار المتردد أو تغيير البطارية. \ n بطارية الطابعة فارغة تقريبًا. \ n";
+
+    
+    
+    // ====================================
+    "SUCCESS" = "تمت الطباعة بنجاح;" ;
+    "ERR_PARAM" = "حدث خطأ ما;" ;
+    "ERR_CONNECT" = "لا يمكن الاتصال بالطابعة" ;
+    "ERR_TIMEOUT" = "لا يمكن الطباعة الآن ، TIMEOUT" ;
+    "ERR_MEMORY" = "لا يمكن الطباعة الآن ، MEMORY" ;
+    "ERR_ILLEGAL" = "لا يمكن الطباعة الآن ، ILLEGAL" ;
+    "ERR_PROCESSING" = "لا يمكن الطباعة الآن ، PROCESSING" ;
+    "ERR_NOT_FOUND" = "لا يمكن الطباعة الآن ، وليس العثور على " ;
+    "ERR_IN_USE" = "الطابعة IN_USE" ;
+    "ERR_TYPE_INVALID" = "لا يمكن طباعة TYPE_INVALID" ;
+    "ERR_DISCONNECT" = "تم قطع اتصال الطابعة" ;
+    "ERR_ALREADY_OPENED" = "لا يمكن الطباعة الآن ، ALREADY OPENED" ;
+    "ERR_ALREADY_USED" = "لا يمكن الطباعة الآن ، يتم استخدامها بالفعل" ;
+    "ERR_BOX_COUNT_OVER" = "لا يمكن الطباعة الآن ، BOX COUNT OVER" ;
+    "ERR_BOXT_CLIENT_OVER" = "لا يمكن الطباعة الآن ، BOXT CLIENT OVER" ;
+    "ERR_UNSUPPORTED" = "لا يمكن الطباعة الآن ، غير مدعوم" ;
+    "ERR_FAILURE" = "لا يمكن الطباعة الآن ، الفشل" ;
+    // ====================================
+
+ 
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

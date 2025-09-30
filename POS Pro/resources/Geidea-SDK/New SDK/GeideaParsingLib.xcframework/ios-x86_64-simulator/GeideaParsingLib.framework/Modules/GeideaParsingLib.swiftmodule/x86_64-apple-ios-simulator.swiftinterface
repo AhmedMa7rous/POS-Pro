@@ -1,0 +1,408 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.10 effective-4.1.50 (swiftlang-5.10.0.13 clang-1500.3.9.4)
+// swift-module-flags: -target x86_64-apple-ios12.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 4 -enforce-exclusivity=checked -O -enable-bare-slash-regex -module-name GeideaParsingLib
+import Foundation
+@_exported import GeideaParsingLib
+import Swift
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+@objc public class POSTerminalTransaction : ObjectiveC.NSObject {
+  @objc public var totalDBCount: Swift.String
+  @objc public var totalDBAmount: Swift.String
+  @objc public var totalCRCount: Swift.String
+  @objc public var totalCRAmount: Swift.String
+  @objc public var nAQDRAmount: Swift.String
+  @objc public var cADVAmount: Swift.String
+  @objc public var authCount: Swift.String
+  @objc public var totalsCount: Swift.String
+  @objc public var totalsAmount: Swift.String
+  public init(_ POSTerminalInfo: [Any]?)
+  @objc deinit
+}
+@objc public protocol GeideaTCPDelegate {
+  @objc func checkCommStatus(_ status: Swift.Bool)
+  @objc func updateStatus(message: Swift.String)
+  @objc func didFailWithError(_ errorCode: Swift.Int, errorMessage: Swift.String)
+}
+@objc public protocol GeideaTCPTransactionDelegate {
+  @objc func transactionResponseHTML(_ htmlString: Swift.String)
+  @objc func transactionResponseJSON(_ jsonResponse: GeideaParsingLib.Transaction)
+}
+@objc public protocol GeideaTCPRefundDelegate {
+  @objc func refundResponseHTML(_ htmlString: Swift.String)
+  @objc func refundResponseJSON(_ jsonResponse: GeideaParsingLib.Refund)
+}
+@objc public protocol GeideaTCPReversalDelegate {
+  @objc func reversalResponseHTML(_ htmlString: Swift.String)
+  @objc func reversalResponseJSON(_ jsonResponse: GeideaParsingLib.Reversal)
+}
+@objc public protocol GeideaTCPReconcilaitionDelegate {
+  @objc func reconciliationResponseHTML(_ htmlString: Swift.String)
+  @objc func reconciliationResponseJSON(_ jsonResponse: GeideaParsingLib.Reconciliation)
+}
+@_inheritsConvenienceInitializers @_hasMissingDesignatedInitializers @objc public class GeideaParsingManager : ObjectiveC.NSObject {
+  @objc public var tcpDelegate: (any GeideaParsingLib.GeideaTCPDelegate)!
+  @objc public var transactionDelegate: (any GeideaParsingLib.GeideaTCPTransactionDelegate)!
+  @objc public var refundDelegate: (any GeideaParsingLib.GeideaTCPRefundDelegate)!
+  @objc public var reconcilitionDelegate: (any GeideaParsingLib.GeideaTCPReconcilaitionDelegate)!
+  @objc public var reversalDelegate: (any GeideaParsingLib.GeideaTCPReversalDelegate)!
+  @objc public static let shared: GeideaParsingLib.GeideaParsingManager
+  @objc public var hostAddress: Swift.String
+  @objc public var port: Swift.Int
+  @objc public var uploadLogs: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc public func checkCommunication()
+  @objc public func Payment(amount: Foundation.NSString)
+  @objc public func Reconciliation()
+  @objc public func Reversal()
+  @objc public func Refund(_ amount: Foundation.NSString, fordate date: Foundation.NSString, forrrn rrn: Foundation.NSString)
+  @objc public func Refund(_ amount: Foundation.NSString, fordate date: Foundation.NSString, forrrn rrn: Foundation.NSString, cardno: Foundation.NSString)
+  @objc deinit
+}
+@objc public enum ReversalStatus : Swift.Int {
+  case Accepted
+  case Declined
+  public func stringValue() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc final public class Reversal : ObjectiveC.NSObject {
+  @objc final public var transactionDate: Swift.String
+  @objc final public var transactionTime: Swift.String
+  @objc final public var bankID: Swift.String
+  @objc final public var merchantID: Swift.String
+  @objc final public var terminalID: Swift.String
+  @objc final public var merchantNameAr: Swift.String
+  @objc final public var merchantNameEn: Swift.String
+  @objc final public var addressAr: Swift.String
+  @objc final public var addressEn: Swift.String
+  @objc final public var cardAcceptorBusinessCode: Swift.String
+  @objc final public var systemsTraceAuditNumber: Swift.String
+  @objc final public var pOSVersionNumber: Swift.String
+  @objc final public var retrievalReferenceNumber: Swift.String
+  @objc final public var cardSchemeAr: Swift.String
+  @objc final public var cardSchemeEn: Swift.String
+  @objc final public var cardNumber: Swift.String
+  @objc final public var expiryDate: Swift.String
+  @objc final public var purchaseAmountEn: Swift.String
+  @objc final public var purchaseAmountAr: Swift.String
+  @objc final public var transactionStatus: GeideaParsingLib.ReversalStatus
+  @objc final public var transactionStatusEn: Swift.String
+  @objc final public var transactionStatusAr: Swift.String
+  @objc final public var pinVerifiedStatusEn: Swift.String
+  @objc final public var pinVerifiedStatusAr: Swift.String
+  @objc final public var amountDebitMsgEn: Swift.String
+  @objc final public var amountDebitMsgAr: Swift.String
+  @objc final public var approvalCodeAr: Swift.String
+  @objc final public var approvalCodeEn: Swift.String
+  @objc final public var transactionDueDate: Swift.String
+  @objc final public var transactionDueTime: Swift.String
+  @objc final public var iD1: Swift.String
+  @objc final public var tVR: Swift.String
+  @objc final public var tSI: Swift.String
+  @objc final public var crytogramResult: Swift.String
+  @objc final public var cVMResult: Swift.String
+  @objc final public var applicationCryt: Swift.String
+  @objc final public var copyTitleAr: Swift.String
+  @objc final public var copyTitleEn: Swift.String
+  @objc final public var purchaseLabelEn: Swift.String
+  @objc final public var purchaseLabelAr: Swift.String
+  @objc final public var purchaseAmountLabelEn: Swift.String
+  @objc final public var purchaseAmountLabelAr: Swift.String
+  @objc final public var approvalLabelEn: Swift.String
+  @objc final public var approvalLabelAr: Swift.String
+  @objc final public var dipped: Swift.String
+  @objc final public var hostResponseCode: Swift.String
+  @objc final public var qrString: Swift.String
+  @objc final public var campaign_message_ar: Swift.String
+  @objc final public var campaign_message_en: Swift.String
+  @objc final public var qrCodeImage: UIKit.UIImage?
+  @objc final public var clKernalID: Swift.String
+  @objc final public var clPAR: Swift.String
+  @objc final public var clFPAN_Suffix: Swift.String
+  @objc public init(_ entityInfo: Swift.Dictionary<Swift.String, Swift.AnyObject>?)
+  @objc deinit
+}
+extension UIKit.UIDevice {
+  @_Concurrency.MainActor(unsafe) public var modelName: Swift.String {
+    get
+  }
+}
+extension Swift.Sequence where Self.Element : Swift.Hashable {
+  public var uniqueElements: [Self.Element] {
+    get
+  }
+}
+extension Swift.Sequence where Self.Element : Swift.Equatable {
+  public var uniqueElements: [Self.Element] {
+    get
+  }
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public func shake(count: Swift.Float? = nil, for duration: Foundation.TimeInterval? = nil, withTranslation translation: Swift.Float? = nil)
+}
+@objc public enum ReconciliationStatus : Swift.Int {
+  case Successful
+  case Unsucessful
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc final public class Reconciliation : ObjectiveC.NSObject {
+  @objc final public var TransactionDate: Swift.String
+  @objc final public var TransactionTime: Swift.String
+  @objc final public var TerminalID: Swift.String
+  @objc final public var POSVersionNumber: Swift.String
+  @objc final public var reconciliationStatus: GeideaParsingLib.ReconciliationStatus
+  @objc final public var ReconciliationStatusAr: Swift.String
+  @objc final public var ReconciliationStatusEn: Swift.String
+  @objc final public var UnsucessfulReasonEn: Swift.String
+  @objc final public var UnsucessfulReasonAr: Swift.String
+  @objc final public var SystemsTraceAuditNumber: Swift.String
+  @objc final public var MerchantNameAr: Swift.String
+  @objc final public var MerchantNameEn: Swift.String
+  @objc final public var addressAr: Swift.String
+  @objc final public var addressEn: Swift.String
+  @objc final public var BankID: Swift.String
+  @objc final public var CardAcceptorBusinessCode: Swift.String
+  @objc final public var MerchantID: Swift.String
+  @objc final public var TransactionDueDate: Swift.String
+  @objc final public var TransactionDueTime: Swift.String
+  @objc final public var hostResponseCode: Swift.String
+  @objc final public var rowsCount: Swift.Int
+  @objc final public var posTerminalDetailsSchemaArray: [GeideaParsingLib.POSTerminalDetailTransaction]
+  @objc final public var hostSchemaArray: [GeideaParsingLib.HostSchemaTransaction]
+  @objc final public var posTerminalSchemaArray: [GeideaParsingLib.POSTerminalTransaction]
+  @objc final public var cardSchemeDict: [Swift.String : Swift.String]
+  public init(_ entityInfo: Swift.Dictionary<Swift.String, Any>?)
+  @objc deinit
+}
+@objc public class POSTerminalDetailTransaction : ObjectiveC.NSObject {
+  @objc public var pOFFCount: Swift.String
+  @objc public var pOFFAmount: Swift.String
+  @objc public var pONCount: Swift.String
+  @objc public var pONAmount: Swift.String
+  @objc public var pURNAQDCount: Swift.String
+  @objc public var pURNAQDAmount: Swift.String
+  @objc public var reversalCount: Swift.String
+  @objc public var reversalAmount: Swift.String
+  @objc public var refundCount: Swift.String
+  @objc public var completionCount: Swift.String
+  @objc public var completionAmount: Swift.String
+  public init(_ POSTerminalDetailInfo: [Any]?)
+  @objc deinit
+}
+@objc final public class Refund : ObjectiveC.NSObject {
+  @objc final public var transactionDate: Swift.String
+  @objc final public var transactionTime: Swift.String
+  @objc final public var bankID: Swift.String
+  @objc final public var merchantID: Swift.String
+  @objc final public var terminalID: Swift.String
+  @objc final public var merchantNameAr: Swift.String
+  @objc final public var merchantNameEn: Swift.String
+  @objc final public var addressAr: Swift.String
+  @objc final public var addressEn: Swift.String
+  @objc final public var cardAcceptorBusinessCode: Swift.String
+  @objc final public var systemsTraceAuditNumber: Swift.String
+  @objc final public var pOSVersionNumber: Swift.String
+  @objc final public var retrievalReferenceNumber: Swift.String
+  @objc final public var cardSchemeAr: Swift.String
+  @objc final public var cardSchemeEn: Swift.String
+  @objc final public var cardNumber: Swift.String
+  @objc final public var expiryDate: Swift.String
+  @objc final public var RefundAmountEn: Swift.String
+  @objc final public var RefundAmountAr: Swift.String
+  @objc final public var transactionStatus: GeideaParsingLib.TransactionStatus
+  @objc final public var transactionStatusEn: Swift.String
+  @objc final public var transactionStatusAr: Swift.String
+  @objc final public var pinVerifiedStatusEn: Swift.String
+  @objc final public var pinVerifiedStatusAr: Swift.String
+  @objc final public var amountCreditMsgEn: Swift.String
+  @objc final public var amountCreditMsgAr: Swift.String
+  @objc final public var approvalCodeAr: Swift.String
+  @objc final public var approvalCodeEn: Swift.String
+  @objc final public var transactionDueDate: Swift.String
+  @objc final public var transactionDueTime: Swift.String
+  @objc final public var iD1: Swift.String
+  @objc final public var tVR: Swift.String
+  @objc final public var tSI: Swift.String
+  @objc final public var crytogramResult: Swift.String
+  @objc final public var cVMResult: Swift.String
+  @objc final public var applicationCryt: Swift.String
+  @objc final public var customerCopyTitleAr: Swift.String
+  @objc final public var customerCopyTitleEn: Swift.String
+  @objc final public var refundLabelEn: Swift.String
+  @objc final public var refundLabelAr: Swift.String
+  @objc final public var refundAmountLabelEn: Swift.String
+  @objc final public var refundAmountLabelAr: Swift.String
+  @objc final public var retailerSignLabelEn: Swift.String
+  @objc final public var retailerSignLabelAr: Swift.String
+  @objc final public var creditCustomerAccountLabelEn: Swift.String
+  @objc final public var creditCustomerAccountLabelAr: Swift.String
+  @objc final public var approvalLabelEn: Swift.String
+  @objc final public var approvalLabelAr: Swift.String
+  @objc final public var dipped: Swift.String
+  @objc final public var hostResponseCode: Swift.String
+  @objc final public var qrString: Swift.String
+  @objc final public var campaign_message_ar: Swift.String
+  @objc final public var campaign_message_en: Swift.String
+  @objc final public var qrCodeImage: UIKit.UIImage?
+  @objc final public var clKernalID: Swift.String
+  @objc final public var clPAR: Swift.String
+  @objc final public var clFPAN_Suffix: Swift.String
+  @objc public init(_ entityInfo: Swift.Dictionary<Swift.String, Swift.AnyObject>?)
+  @objc deinit
+}
+public enum errorType : Swift.Int {
+  case InternalServerStatusCode
+  case UnAuthorizedStatusCode
+  case ConnectionErrorCode
+  case TimeoutErrorCode
+  case BadRequestStatusCode
+  case KeyChainErrorCode
+  case FetchLimit
+  case FetchAutoCompleteLimit
+  case NoHost
+  case NoPort
+  case NoAmount
+  case WrongTerminal
+  case InvalidBuffer
+  case StreamError
+  case Failure
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum CheckEchoType : Swift.Int {
+  case CheckEchoTypeNone, CheckEchoTypeRun, CheckEchoTypeCreateSection
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+public enum PaymentType : Swift.Int {
+  case Card
+  case Cash
+  case All
+  case StartCash
+  case EndCash
+  case AllCash
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum TransactionStatus : Swift.Int {
+  case APPROVED
+  case DECLINED
+  case CANCELLATION
+  case OFFLINE_APPROVED
+  public func stringValue() -> Swift.String
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc final public class Transaction : ObjectiveC.NSObject {
+  @objc final public var transactionDate: Swift.String
+  @objc final public var transactionTime: Swift.String
+  @objc final public var bankID: Swift.String
+  @objc final public var merchantID: Swift.String
+  @objc final public var terminalID: Swift.String
+  @objc final public var merchantNameAr: Swift.String
+  @objc final public var merchantNameEn: Swift.String
+  @objc final public var addressAr: Swift.String
+  @objc final public var addressEn: Swift.String
+  @objc final public var cardAcceptorBusinessCode: Swift.String
+  @objc final public var systemsTraceAuditNumber: Swift.String
+  @objc final public var pOSVersionNumber: Swift.String
+  @objc final public var retrievalReferenceNumber: Swift.String
+  @objc final public var cardSchemeAr: Swift.String
+  @objc final public var cardSchemeEn: Swift.String
+  @objc final public var cardNumber: Swift.String
+  @objc final public var expiryDate: Swift.String
+  @objc final public var purchaseAmountEn: Swift.String
+  @objc final public var purchaseAmountAr: Swift.String
+  @objc final public var transactionStatus: GeideaParsingLib.TransactionStatus
+  @objc final public var transactionStatusEn: Swift.String
+  @objc final public var transactionStatusAr: Swift.String
+  @objc final public var pinVerifiedStatusEn: Swift.String
+  @objc final public var pinVerifiedStatusAr: Swift.String
+  @objc final public var amountDebitMsgEn: Swift.String
+  @objc final public var amountDebitMsgAr: Swift.String
+  @objc final public var approvalCodeAr: Swift.String
+  @objc final public var approvalCodeEn: Swift.String
+  @objc final public var transactionDueDate: Swift.String
+  @objc final public var transactionDueTime: Swift.String
+  @objc final public var iD1: Swift.String
+  @objc final public var tVR: Swift.String
+  @objc final public var tSI: Swift.String
+  @objc final public var crytogramResult: Swift.String
+  @objc final public var cVMResult: Swift.String
+  @objc final public var applicationCryt: Swift.String
+  @objc final public var customerCopyTitleAr: Swift.String
+  @objc final public var customerCopyTitleEn: Swift.String
+  @objc final public var purchaseLabelEn: Swift.String
+  @objc final public var purchaseLabelAr: Swift.String
+  @objc final public var purchaseAmountLabelEn: Swift.String
+  @objc final public var purchaseAmountLabelAr: Swift.String
+  @objc final public var approvalLabelEn: Swift.String
+  @objc final public var approvalLabelAr: Swift.String
+  @objc final public var dipped: Swift.String
+  @objc final public var hostResponseCode: Swift.String
+  @objc final public var qrString: Swift.String
+  @objc final public var campaign_message_ar: Swift.String
+  @objc final public var campaign_message_en: Swift.String
+  @objc final public var qrCodeImage: UIKit.UIImage?
+  @objc final public var clKernalID: Swift.String
+  @objc final public var clPAR: Swift.String
+  @objc final public var clFPAN_Suffix: Swift.String
+  @objc public init(_ entityInfo: Swift.Dictionary<Swift.String, Swift.AnyObject>?)
+  @objc deinit
+}
+@objc public class HostSchemaTransaction : ObjectiveC.NSObject {
+  @objc public var CardSchemeEn: Swift.String
+  @objc public var authCount: Swift.String
+  @objc public var totalDBCount: Swift.String
+  @objc public var totalCRCount: Swift.String
+  @objc public var cADVAmount: Swift.String
+  @objc public var totalDBAmount: Swift.String
+  @objc public var totalCRAmount: Swift.String
+  @objc public var nAQDRAmount: Swift.String
+  @objc public var totalsCount: Swift.String
+  @objc public var totalsAmount: Swift.String
+  public init(_ HostSchemaInfo: [Any]?)
+  @objc deinit
+}
+extension GeideaParsingLib.ReversalStatus : Swift.Equatable {}
+extension GeideaParsingLib.ReversalStatus : Swift.Hashable {}
+extension GeideaParsingLib.ReversalStatus : Swift.RawRepresentable {}
+extension GeideaParsingLib.ReconciliationStatus : Swift.Equatable {}
+extension GeideaParsingLib.ReconciliationStatus : Swift.Hashable {}
+extension GeideaParsingLib.ReconciliationStatus : Swift.RawRepresentable {}
+extension GeideaParsingLib.errorType : Swift.Equatable {}
+extension GeideaParsingLib.errorType : Swift.Hashable {}
+extension GeideaParsingLib.errorType : Swift.RawRepresentable {}
+extension GeideaParsingLib.CheckEchoType : Swift.Equatable {}
+extension GeideaParsingLib.CheckEchoType : Swift.Hashable {}
+extension GeideaParsingLib.CheckEchoType : Swift.RawRepresentable {}
+extension GeideaParsingLib.PaymentType : Swift.Equatable {}
+extension GeideaParsingLib.PaymentType : Swift.Hashable {}
+extension GeideaParsingLib.PaymentType : Swift.RawRepresentable {}
+extension GeideaParsingLib.TransactionStatus : Swift.Equatable {}
+extension GeideaParsingLib.TransactionStatus : Swift.Hashable {}
+extension GeideaParsingLib.TransactionStatus : Swift.RawRepresentable {}

@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Alexandria-Regular.ttf">
+            <string>Alexandria-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="itemTableViewCell_sec" rowHeight="143" id="vDg-An-AJM" customClass="itemTableViewCell" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="415" height="143"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vDg-An-AJM" id="zjQ-Uj-yxP">
+                <rect key="frame" x="0.0" y="0.0" width="415" height="143"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CRF-lu-Z1d" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="415" height="143"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_order.png" translatesAutoresizingMaskIntoConstraints="NO" id="SGn-Z3-axe" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="139" width="415" height="4"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="imageFileName" value="line_order.png"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="6" translatesAutoresizingMaskIntoConstraints="NO" id="Hag-xa-ygY">
+                                <rect key="frame" x="8" y="8" width="399" height="127"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tby-Wt-hjg">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="127"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="92l-8W-leT" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="5" y="43.5" width="40" height="40"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="99" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wpy-6i-0YV" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="8" y="8.5" width="24.5" height="23.5"/>
+                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="19"/>
+                                                        <color key="textColor" red="0.42352941179999998" green="0.42352941179999998" blue="0.42352941179999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstItem="Wpy-6i-0YV" firstAttribute="centerY" secondItem="92l-8W-leT" secondAttribute="centerY" id="3hP-oB-kvA"/>
+                                                    <constraint firstAttribute="width" secondItem="92l-8W-leT" secondAttribute="height" multiplier="1:1" id="NuT-Lo-XiH"/>
+                                                    <constraint firstItem="Wpy-6i-0YV" firstAttribute="centerX" secondItem="92l-8W-leT" secondAttribute="centerX" id="iVN-tU-iAB"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="20"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="0.84705882349999995" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.40000000596046448" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="gd8-YU-ILB" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="24" y="120" width="2" height="7"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="7" id="S0j-4Z-k51"/>
+                                                    <constraint firstAttribute="width" constant="2" id="xbF-e5-6pU"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageFileName" value="arrow_up.png"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="92l-8W-leT" firstAttribute="centerX" secondItem="tby-Wt-hjg" secondAttribute="centerX" id="Pfe-cJ-nSH"/>
+                                            <constraint firstAttribute="width" constant="50" id="Wmh-pv-7Yg"/>
+                                            <constraint firstItem="92l-8W-leT" firstAttribute="leading" secondItem="tby-Wt-hjg" secondAttribute="leading" constant="5" id="YqI-OK-2bH"/>
+                                            <constraint firstItem="92l-8W-leT" firstAttribute="centerY" secondItem="tby-Wt-hjg" secondAttribute="centerY" id="ilU-qq-7FS"/>
+                                            <constraint firstItem="gd8-YU-ILB" firstAttribute="centerX" secondItem="tby-Wt-hjg" secondAttribute="centerX" id="nS4-Eq-5Lw"/>
+                                            <constraint firstAttribute="bottom" secondItem="gd8-YU-ILB" secondAttribute="bottom" id="ojU-9J-dFg"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="LE7-7O-a9J">
+                                        <rect key="frame" x="56" y="0.0" width="343" height="127"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="PKM-5B-0rF">
+                                                <rect key="frame" x="0.0" y="0.0" width="343" height="62.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cappuccino( Royal )Cappuccino ( Royal )Cappuccino ( Royal )Cappuccino ( Royal )" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k1i-M0-e7w" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="311.5" height="62.5"/>
+                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="17"/>
+                                                        <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="24" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OLx-BX-Xbq" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="316.5" y="0.0" width="26.5" height="62.5"/>
+                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="22"/>
+                                                        <color key="textColor" red="0.43529411764705883" green="0.43529411764705883" blue="0.43529411764705883" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIO-no-00R" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="67.5" width="343" height="59.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <string key="text">+ Size Large - No Sugar
+</string>
+                                                <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="14"/>
+                                                <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="Hag-xa-ygY" firstAttribute="leading" secondItem="CRF-lu-Z1d" secondAttribute="leading" constant="8" id="164-dP-Gcr"/>
+                            <constraint firstItem="SGn-Z3-axe" firstAttribute="leading" secondItem="CRF-lu-Z1d" secondAttribute="leading" id="Fzt-fy-gmy"/>
+                            <constraint firstAttribute="bottom" secondItem="SGn-Z3-axe" secondAttribute="bottom" id="IME-Gu-jeD"/>
+                            <constraint firstAttribute="trailing" secondItem="SGn-Z3-axe" secondAttribute="trailing" id="KzA-ye-onb"/>
+                            <constraint firstItem="Hag-xa-ygY" firstAttribute="top" secondItem="CRF-lu-Z1d" secondAttribute="top" constant="8" id="UrW-YD-4uJ"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="ZgP-y1-qkg"/>
+                            <constraint firstAttribute="bottom" secondItem="Hag-xa-ygY" secondAttribute="bottom" constant="8" id="jlQ-J0-MgQ"/>
+                            <constraint firstAttribute="trailing" secondItem="Hag-xa-ygY" secondAttribute="trailing" constant="8" id="sqC-xD-Xdw"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="CRF-lu-Z1d" firstAttribute="leading" secondItem="zjQ-Uj-yxP" secondAttribute="leading" id="3rt-dw-4cd"/>
+                    <constraint firstAttribute="bottom" secondItem="CRF-lu-Z1d" secondAttribute="bottom" id="R65-zK-sjO"/>
+                    <constraint firstAttribute="trailing" secondItem="CRF-lu-Z1d" secondAttribute="trailing" id="Z5f-a3-G9o"/>
+                    <constraint firstItem="CRF-lu-Z1d" firstAttribute="top" secondItem="zjQ-Uj-yxP" secondAttribute="top" id="gTG-J3-5kn"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="XGS-rS-PTV"/>
+            <connections>
+                <outlet property="img_status" destination="gd8-YU-ILB" id="YEN-aM-NIW"/>
+                <outlet property="lblCateg" destination="VIO-no-00R" id="TNl-ao-ATu"/>
+                <outlet property="lblPrice" destination="OLx-BX-Xbq" id="MGj-R2-d29"/>
+                <outlet property="lblQty" destination="Wpy-6i-0YV" id="JKU-fT-64y"/>
+                <outlet property="lblTitle" destination="k1i-M0-e7w" id="WSp-vp-4JR"/>
+                <outlet property="statusShadowView" destination="92l-8W-leT" id="MhJ-VN-eaB"/>
+            </connections>
+            <point key="canvasLocation" x="132.12890625" y="-151.171875"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="arrow_up.png" width="384" height="384"/>
+        <image name="line_order.png" width="1656" height="4"/>
+    </resources>
+</document>

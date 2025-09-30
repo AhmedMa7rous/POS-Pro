@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PrinterErrorVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="btnAddPrinter" destination="L0y-9b-P1H" id="W2n-v0-ZeI"/>
+                <outlet property="clearBtn" destination="p1g-2E-5ZM" id="fJK-J8-9Nb"/>
+                <outlet property="clearPrintAllView" destination="hF5-LT-JUb" id="MTz-Ld-Ysv"/>
+                <outlet property="errorLbl" destination="epV-6k-sWV" id="bgn-9H-BTt"/>
+                <outlet property="printBtn" destination="N4E-XX-rF2" id="bi7-od-4ee"/>
+                <outlet property="printerErrorImage" destination="LLP-KH-InT" id="Tlp-si-iia"/>
+                <outlet property="printerInfo" destination="JFc-IN-q0I" id="D6C-MK-zFM"/>
+                <outlet property="segmentControl" destination="JIL-Qf-L1H" id="uYf-py-N8G"/>
+                <outlet property="sentNoteBtn" destination="d9R-Cg-GgE" id="REx-Wq-m5f"/>
+                <outlet property="table" destination="exW-eV-uvz" id="czr-qb-3UY"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="viewErrorPrinter" destination="twd-rt-Xo3" id="oT7-CI-c3r"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="H7d-ka-VRI">
+                    <rect key="frame" x="0.0" y="20" width="1024" height="743"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yWh-sz-aMx">
+                            <rect key="frame" x="0.0" y="0.0" width="1024" height="683"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qb4-KK-c4V" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="449" height="683"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="5g7-e6-zKz">
+                                            <rect key="frame" x="30" y="30" width="389" height="653"/>
+                                            <subviews>
+                                                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="JIL-Qf-L1H">
+                                                    <rect key="frame" x="93" y="0.0" width="203" height="41"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="40" id="fSO-0L-LUb"/>
+                                                    </constraints>
+                                                    <segments>
+                                                        <segment title="Printer errors"/>
+                                                        <segment title="All Printer"/>
+                                                    </segments>
+                                                    <connections>
+                                                        <action selector="tapOnSegment:" destination="-1" eventType="valueChanged" id="L68-HD-Wxc"/>
+                                                    </connections>
+                                                </segmentedControl>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d9R-Cg-GgE" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                    <rect key="frame" x="10" y="50" width="369" height="64"/>
+                                                    <color key="backgroundColor" name="DGTERA-purple"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <inset key="contentEdgeInsets" minX="15" minY="15" maxX="15" maxY="15"/>
+                                                    <inset key="titleEdgeInsets" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
+                                                    <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                    <state key="normal" title="Send note to printers" image="MWicon_notes"/>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                            <real key="value" value="12"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="tapOnSendNoteBtn:" destination="-1" eventType="touchUpInside" id="Zp3-rJ-Wjb"/>
+                                                    </connections>
+                                                </button>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hF5-LT-JUb">
+                                                    <rect key="frame" x="0.0" y="124" width="389" height="45"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jrj-4o-kb3" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="5" width="69" height="35"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                            <state key="normal" title="Clear All">
+                                                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="مسح الكل"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tapOnClearAll:" destination="-1" eventType="touchUpInside" id="VAw-sp-dg4"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l4U-zT-5ox" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="320" y="5" width="64" height="35"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                            <state key="normal" title="Print All">
+                                                                <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="طباعة الكل"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tapOnPrintAllAll:" destination="-1" eventType="touchUpInside" id="bq1-UK-70u"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <constraints>
+                                                        <constraint firstItem="l4U-zT-5ox" firstAttribute="centerY" secondItem="hF5-LT-JUb" secondAttribute="centerY" id="HQG-Qm-zjI"/>
+                                                        <constraint firstItem="Jrj-4o-kb3" firstAttribute="centerY" secondItem="hF5-LT-JUb" secondAttribute="centerY" id="MHH-wu-3IW"/>
+                                                        <constraint firstItem="Jrj-4o-kb3" firstAttribute="leading" secondItem="hF5-LT-JUb" secondAttribute="leading" constant="5" id="NMO-Jb-fcI"/>
+                                                        <constraint firstAttribute="trailing" secondItem="l4U-zT-5ox" secondAttribute="trailing" constant="5" id="bFb-zu-8pl"/>
+                                                        <constraint firstItem="l4U-zT-5ox" firstAttribute="top" secondItem="hF5-LT-JUb" secondAttribute="top" constant="5" id="kjj-QP-UCS"/>
+                                                        <constraint firstItem="Jrj-4o-kb3" firstAttribute="top" secondItem="hF5-LT-JUb" secondAttribute="top" constant="5" id="otr-Ud-eAX"/>
+                                                        <constraint firstAttribute="height" constant="45" id="owc-ue-A8t"/>
+                                                    </constraints>
+                                                </view>
+                                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="exW-eV-uvz">
+                                                    <rect key="frame" x="0.0" y="179" width="389" height="474"/>
+                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                    <connections>
+                                                        <outlet property="dataSource" destination="-1" id="zCt-dZ-zJx"/>
+                                                        <outlet property="delegate" destination="-1" id="l89-kf-3oy"/>
+                                                    </connections>
+                                                </tableView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="d9R-Cg-GgE" firstAttribute="leading" secondItem="5g7-e6-zKz" secondAttribute="leading" constant="10" id="F3z-dQ-3eS"/>
+                                                <constraint firstItem="hF5-LT-JUb" firstAttribute="leading" secondItem="5g7-e6-zKz" secondAttribute="leading" id="VOn-L8-WdE"/>
+                                                <constraint firstItem="exW-eV-uvz" firstAttribute="leading" secondItem="5g7-e6-zKz" secondAttribute="leading" id="ZgY-YD-zma"/>
+                                                <constraint firstAttribute="bottom" secondItem="exW-eV-uvz" secondAttribute="bottom" id="byl-ap-SUr"/>
+                                                <constraint firstAttribute="trailing" secondItem="exW-eV-uvz" secondAttribute="trailing" id="cS3-2g-DyK"/>
+                                                <constraint firstAttribute="trailing" secondItem="hF5-LT-JUb" secondAttribute="trailing" id="wHv-cy-Kp9"/>
+                                                <constraint firstItem="exW-eV-uvz" firstAttribute="top" secondItem="hF5-LT-JUb" secondAttribute="bottom" constant="10" id="wlp-2l-gdt"/>
+                                            </constraints>
+                                        </stackView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="5g7-e6-zKz" firstAttribute="top" secondItem="qb4-KK-c4V" secondAttribute="top" constant="30" id="8yt-g2-vdd"/>
+                                        <constraint firstItem="5g7-e6-zKz" firstAttribute="leading" secondItem="qb4-KK-c4V" secondAttribute="leading" constant="30" id="HTm-5S-EW5"/>
+                                        <constraint firstAttribute="bottom" secondItem="5g7-e6-zKz" secondAttribute="bottom" id="Qgn-ZZ-78n"/>
+                                        <constraint firstAttribute="trailing" secondItem="5g7-e6-zKz" secondAttribute="trailing" constant="30" id="jQF-99-hhB"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="twd-rt-Xo3" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="459" y="0.0" width="565" height="683"/>
+                                    <subviews>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jdo-eb-Wuy">
+                                            <rect key="frame" x="15" y="0.0" width="535" height="45"/>
+                                            <subviews>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="p1g-2E-5ZM" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                    <rect key="frame" x="0.0" y="0.0" width="44" height="45"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <state key="normal" title="Clear">
+                                                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="مسح"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="tapOnClearItem:" destination="-1" eventType="touchUpInside" id="shB-Fi-H2t"/>
+                                                    </connections>
+                                                </button>
+                                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JFc-IN-q0I">
+                                                    <rect key="frame" x="265.5" y="5" width="4" height="35"/>
+                                                    <color key="textColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N4E-XX-rF2" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                    <rect key="frame" x="496" y="0.0" width="39" height="45"/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="17"/>
+                                                    <state key="normal" title="Print">
+                                                        <color key="titleColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="طباعة"/>
+                                                    </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="tapOnPrintItem:" destination="-1" eventType="touchUpInside" id="2La-A0-3pA"/>
+                                                    </connections>
+                                                </button>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="N4E-XX-rF2" firstAttribute="top" secondItem="jdo-eb-Wuy" secondAttribute="top" id="0Wo-or-OZI"/>
+                                                <constraint firstItem="JFc-IN-q0I" firstAttribute="centerY" secondItem="jdo-eb-Wuy" secondAttribute="centerY" id="2a5-SD-g2E"/>
+                                                <constraint firstAttribute="bottom" secondItem="N4E-XX-rF2" secondAttribute="bottom" id="4oC-50-Lad"/>
+                                                <constraint firstItem="p1g-2E-5ZM" firstAttribute="centerY" secondItem="jdo-eb-Wuy" secondAttribute="centerY" id="J64-Es-OlN"/>
+                                                <constraint firstAttribute="bottom" secondItem="p1g-2E-5ZM" secondAttribute="bottom" id="QXg-fZ-7FY"/>
+                                                <constraint firstAttribute="trailing" secondItem="N4E-XX-rF2" secondAttribute="trailing" id="RHF-ga-xpL"/>
+                                                <constraint firstItem="p1g-2E-5ZM" firstAttribute="leading" secondItem="jdo-eb-Wuy" secondAttribute="leading" id="avJ-tp-Ws9"/>
+                                                <constraint firstAttribute="height" constant="45" id="coZ-56-EVG"/>
+                                                <constraint firstItem="p1g-2E-5ZM" firstAttribute="top" secondItem="jdo-eb-Wuy" secondAttribute="top" id="dDm-Yk-uHD"/>
+                                                <constraint firstItem="N4E-XX-rF2" firstAttribute="centerY" secondItem="jdo-eb-Wuy" secondAttribute="centerY" id="hPw-63-lc1"/>
+                                                <constraint firstItem="JFc-IN-q0I" firstAttribute="centerX" secondItem="jdo-eb-Wuy" secondAttribute="centerX" id="vpm-rH-WCh"/>
+                                                <constraint firstItem="JFc-IN-q0I" firstAttribute="top" secondItem="jdo-eb-Wuy" secondAttribute="top" constant="5" id="wWY-bd-5bw"/>
+                                            </constraints>
+                                        </view>
+                                        <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="epV-6k-sWV">
+                                            <rect key="frame" x="15" y="530" width="535" height="143"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <color key="textColor" systemColor="labelColor"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                            <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        </textView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="LLP-KH-InT">
+                                            <rect key="frame" x="15" y="45" width="535" height="478"/>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </imageView>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="epV-6k-sWV" firstAttribute="leading" secondItem="jdo-eb-Wuy" secondAttribute="leading" id="62x-M3-BxT"/>
+                                        <constraint firstAttribute="bottom" secondItem="epV-6k-sWV" secondAttribute="bottom" constant="10" id="86p-fG-Kyc"/>
+                                        <constraint firstItem="LLP-KH-InT" firstAttribute="leading" secondItem="jdo-eb-Wuy" secondAttribute="leading" id="FXT-dP-C6B"/>
+                                        <constraint firstItem="epV-6k-sWV" firstAttribute="trailing" secondItem="jdo-eb-Wuy" secondAttribute="trailing" id="KhV-gb-92R"/>
+                                        <constraint firstItem="jdo-eb-Wuy" firstAttribute="leading" secondItem="twd-rt-Xo3" secondAttribute="leading" constant="15" id="Lx2-Vb-6BX"/>
+                                        <constraint firstItem="LLP-KH-InT" firstAttribute="top" secondItem="jdo-eb-Wuy" secondAttribute="bottom" id="aKm-Wn-05S"/>
+                                        <constraint firstAttribute="trailing" secondItem="jdo-eb-Wuy" secondAttribute="trailing" constant="15" id="gBA-XB-2o4"/>
+                                        <constraint firstItem="jdo-eb-Wuy" firstAttribute="top" secondItem="twd-rt-Xo3" secondAttribute="top" id="gS3-r7-wfu"/>
+                                        <constraint firstItem="LLP-KH-InT" firstAttribute="trailing" secondItem="jdo-eb-Wuy" secondAttribute="trailing" id="vBy-Ia-iic"/>
+                                        <constraint firstItem="epV-6k-sWV" firstAttribute="top" secondItem="LLP-KH-InT" secondAttribute="bottom" constant="7" id="yRG-qb-aBg"/>
+                                        <constraint firstItem="LLP-KH-InT" firstAttribute="height" secondItem="twd-rt-Xo3" secondAttribute="height" multiplier="0.7" id="z5Y-dM-MTI"/>
+                                    </constraints>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                            <real key="value" value="1"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                </view>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="twd-rt-Xo3" firstAttribute="leading" secondItem="yWh-sz-aMx" secondAttribute="leading" constant="459" id="IQf-Bq-8LW"/>
+                            </constraints>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ud8-Oa-gly">
+                            <rect key="frame" x="0.0" y="683" width="1024" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L0y-9b-P1H" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="20" y="5" width="984" height="55"/>
+                                    <color key="backgroundColor" red="0.91372549020000005" green="0.46666666670000001" blue="0.14901960780000001" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Add Printer">
+                                        <fontDescription key="titleFontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="10"/>
+                                        </userDefinedRuntimeAttribute>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="btnAddPrinter:" destination="-1" eventType="touchUpInside" id="BK0-ui-Tou"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="L0y-9b-P1H" secondAttribute="trailing" constant="20" id="7cE-za-mpd"/>
+                                <constraint firstAttribute="height" constant="60" id="fbQ-YX-QXc"/>
+                                <constraint firstItem="L0y-9b-P1H" firstAttribute="leading" secondItem="ud8-Oa-gly" secondAttribute="leading" constant="20" id="go9-uP-wqd"/>
+                                <constraint firstItem="L0y-9b-P1H" firstAttribute="top" secondItem="ud8-Oa-gly" secondAttribute="top" constant="5" id="hkj-91-VyZ"/>
+                                <constraint firstAttribute="bottom" secondItem="L0y-9b-P1H" secondAttribute="bottom" id="sx9-14-pLg"/>
+                            </constraints>
+                        </view>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="yWh-sz-aMx" secondAttribute="trailing" id="0DN-XH-rLl"/>
+                        <constraint firstItem="ud8-Oa-gly" firstAttribute="top" secondItem="yWh-sz-aMx" secondAttribute="bottom" id="Hmj-pl-9Vl"/>
+                        <constraint firstItem="yWh-sz-aMx" firstAttribute="top" secondItem="H7d-ka-VRI" secondAttribute="top" id="aCT-Dm-De7"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="H7d-ka-VRI" secondAttribute="bottom" constant="5" id="Reb-QG-rVd"/>
+                <constraint firstItem="H7d-ka-VRI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="Rp4-kt-4Gd"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="H7d-ka-VRI" secondAttribute="trailing" id="WbH-Pe-p98"/>
+                <constraint firstItem="H7d-ka-VRI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="aZc-Nu-o0Z"/>
+            </constraints>
+            <point key="canvasLocation" x="110" y="-138"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="Jrj-4o-kb3">
+            <size key="intrinsicContentSize" width="69" height="33"/>
+        </designable>
+        <designable name="L0y-9b-P1H">
+            <size key="intrinsicContentSize" width="115.5" height="35"/>
+        </designable>
+        <designable name="N4E-XX-rF2">
+            <size key="intrinsicContentSize" width="39" height="33"/>
+        </designable>
+        <designable name="d9R-Cg-GgE">
+            <size key="intrinsicContentSize" width="275" height="64"/>
+        </designable>
+        <designable name="l4U-zT-5ox">
+            <size key="intrinsicContentSize" width="64" height="33"/>
+        </designable>
+        <designable name="p1g-2E-5ZM">
+            <size key="intrinsicContentSize" width="44" height="33"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="MWicon_notes" width="30" height="34"/>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,11 @@
+framework module GeideaParsingLib {
+  umbrella header "GeideaParsingLib.h"
+  export *
+
+  module * { export * }
+}
+
+module GeideaParsingLib.Swift {
+  header "GeideaParsingLib-Swift.h"
+  requires objc
+}

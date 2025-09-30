@@ -1,0 +1,11 @@
+framework module GeideaMPOSLib {
+  umbrella header "GeideaMPOSLib.h"
+
+  export *
+  module * { export * }
+}
+
+module GeideaMPOSLib.Swift {
+    header "GeideaMPOSLib-Swift.h"
+    requires objc
+}

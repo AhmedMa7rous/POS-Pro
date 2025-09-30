@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta content="text/html; charset=utf-8" http-equiv="content-type">
+            <style>
+            @font-face { font-family: 'Almarai-Regular'; src: url('Almarai-Regular.ttf'); }
+            @font-face { font-family: 'Almarai-Bold'; src: url('Almarai-Bold.ttf'); }
+            @font-face { font-family: 'saudi_riyal'; src: url('saudi_riyal.ttf'); }
+                .invoice-box {
+                    #WIDTH_VALUE#
+                    font-size:38px;
+                    text-align: center;
+                    margin-left:35px;
+                    margin-right:25px ;
+                    margin-bottom: 150px;
+                    font-family:Almarai-Regular;
+                    background-color:white;
+                }
+            
+            .invoice-box table {
+                margin: 5px;
+                width: 100%;
+                table-layout: auto;/**fixed*/
+                line-height: inherit;
+                text-align: left;
+            }
+            
+            .invoice-box table tr.logo-class td {
+                padding-bottom: 20px;
+                width: 100%;
+                text-align: center;
+            }
+            
+            .invoice-box table tr.odoo-header td {
+                padding-bottom: 20px;
+                width: 100%;
+                text-align: center;
+                
+            }
+            
+            .invoice-box table td.border {
+                padding: 5px;
+                border: 3px solid rgb(0, 0, 0);
+                box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+                font-weight: bold;
+                text-align: center;
+                vertical-align: middle;
+                #FONT_SIZE_BORDER#
+            }
+            .invoice-box table td.border-black-bg {
+                padding: 5px;
+                background-color: #000000;
+                color: #ffffff;
+                font-weight: bold;
+                text-align: center;
+                vertical-align: middle;
+                font-size: 80.0px;
+            }
+            
+            
+            .invoice-box table td.bold-title-center {
+                /* padding-top: 3px;*/
+                font-weight: bold;
+                text-align: center;
+                vertical-align: middle;
+                #FONT_SIZE#
+
+            }
+            
+            .invoice-box table td.normal-title-center {
+                /* padding-top: 3px;*/
+                font-weight: normal;
+                text-align: center;
+                vertical-align: middle;
+                #FONT_SIZE#
+
+            }
+            .invoice-box table td.normal-title-center-combo {
+                border-bottom: 3px solid #eee;
+                /* padding-top: 3px;*/
+                font-weight: normal;
+                text-align: center;
+                vertical-align: middle;
+                #FONT_SIZE#
+
+            }
+            .invoice-box table td.normal-title-right-combo {
+                border-bottom: 3px solid #eee;
+                /* padding-top: 3px;*/
+                font-weight: normal;
+                text-align: right;
+                vertical-align: middle;
+                #FONT_SIZE#
+
+            }
+            
+            .invoice-box table td.normal-title-right {
+                /* padding-top: 3px;*/
+                font-weight: normal;
+                text-align: right;
+                vertical-align: middle;
+                #FONT_SIZE#
+
+            }
+            
+            .invoice-box table td.riyal-normal-title-right {
+                /* padding-top: 3px;*/
+                font-weight: normal;
+                text-align: right;
+                vertical-align: middle;
+                font-family: Almarai-Regular;
+                #FONT_SIZE#
+
+            }
+                
+            .normal-title-right .riyal-symbol {
+                font-family: saudi_riyal; /* apply only to the symbol */
+                padding-left: 4px;
+            }
+            
+            .invoice-box table td.normal-title-left {
+                /* padding-top: 3px;*/
+                font-weight: normal;
+                text-align: left;
+                vertical-align: middle;
+                width: 600px;
+                #FONT_SIZE#
+
+                
+            }
+            
+            .invoice-box table td.bold-title-right {
+               /* padding-top: 3px;*/
+                font-weight: bold;
+                text-align: right;
+                vertical-align: middle;
+                #FONT_SIZE#
+
+            }
+            .invoice-box table td.bold-title-right-top {
+                /* padding-top: 3px;*/
+                font-weight: bold;
+                text-align: right;
+                vertical-align: top;
+                #FONT_SIZE#
+
+            }
+            .invoice-box table td.bold-title-left-top {
+                /* padding-top: 3px;*/
+                font-weight: bold;
+                text-align: left;
+                vertical-align: top;
+                #FONT_SIZE#
+
+            }
+            .invoice-box table td.bold-title-center-top {
+                /* padding-top: 3px;*/
+                font-weight: bold;
+                text-align: center;
+                vertical-align: top;
+                #FONT_SIZE#
+
+            }
+            
+            .invoice-box table td.bold-title-left {
+                /* padding-top: 3px;*/
+                font-weight: bold;
+                text-align: left;
+                vertical-align: middle;
+                #FONT_SIZE#
+
+            }
+            
+            .invoice-box table tr.item td {
+                border-bottom: 2px solid #555;
+
+
+            }
+            
+            
+            .invoice-box table tr.notes.invoice td {
+                border-bottom: 3px solid #555;
+                border-top: 3px solid #555;
+                padding: 5px;
+
+            }
+            
+            
+            .invoice-box table tr.separator td {
+                border-bottom: 3px solid #555;
+                /* padding-top: 3px;*/
+
+             }
+            
+            .invoice-box table tr.separator_top td {
+                border-top: 3px solid #555;
+          
+              
+
+             }
+            
+            .invoice-box table tr.separator_combo td {
+             
+             border-bottom: 3px dotted #555;
+
+              
+
+             }
+            
+            .invoice-box table tr.bottom.border td {
+                border-bottom: 3px dotted #eee;
+            }
+            .invoice-box table tr.top.border td {
+                border-top: 3px solid #555;
+                /* padding-top: 3px;*/
+                
+            }
+                .prodct_name {
+                            font-size: 2rem;
+                            font-weight: 300;
+                        }
+   
+            
+            </style>
+            
+            <script>
+              
+              function applyCurrency(currency) {
+                const isSaudi = (currency === 'Saudi');
+
+                
+                document.querySelectorAll('td.normal-title-right').forEach(td => {
+                  if (isSaudi) {
+                    //td.classList.replace('normal-title-right', 'riyal-normal-title-right');
+                  }
+                });
+
+                
+                document.querySelectorAll('td.riyal-normal-title-right').forEach(td => {
+                  if (!isSaudi) {
+                    //td.classList.replace('riyal-normal-title-right', 'normal-title-right');
+                  }
+                });
+              }
+
+              // On load (after window.appCurrency is injected):
+              window.addEventListener('load', () => {
+                applyCurrency(window.appCurrency || '');
+              });
+            </script>
+    </head>
+    
+    <body>
+        <div class="invoice-box" style="margin-right: #MARGIN_RIGHT_VALUE#; margin-left: #MARGIN_LEFT_VALUE#;" >
+            <table id = "header" cellpadding="0" cellspacing="2">
+                <tbody>
+                    #LOGO#
+                    #ODOO_HEADER#
+                    #ORDER_NUMBER#
+                    <!--resentBackIdHint-->
+                    #VAT_NUMBER#
+                    #FULL_ORDER_NUMBER#
+                    #RETURN_ORDER_NUMBER#
+                    #REF_NUMBER#
+                    #CR_NUMBER#
+                    #PRINTER_NAME#
+                    #POS_NUMBER#
+                    #CASHIER#
+                    #CUSTOMER#
+                    #CUSTOMER_VAT#
+                    #TABLE_NUMBER#
+                    #DATE_ORDER#
+                    #ORDER_TYPE#
+                </tbody>
+            </table>
+                    
+            <table cellpadding="0" cellspacing="0">
+                <tbody>
+               
+                  #QTY_ITEM_PRICE#
+                    #ITEMS#
+                    #NOTES#
+                   
+                </tbody>
+            </table>
+            
+            <table id = "price" cellpadding="0" cellspacing="0"  >
+                <tbody>
+                    #PRICE_SECTION#
+                </tbody>
+            </table>
+            #INSURANCE_SECTION#
+            <table id = "footer" cellpadding="0" cellspacing="0">
+                <tbody>
+                    #FOOTER#
+                    #REF_DATE#
+                    #QR#
+                    #NOT_PAID#
+                    #COPY_RIGHT#
+          
+                </tbody>
+            </table>
+            
+        </div>
+        
+    </body>
+    
+</html>

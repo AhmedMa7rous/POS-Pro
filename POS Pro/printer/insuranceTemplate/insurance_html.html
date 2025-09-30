@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type">
+    <style>
+        @font-face {
+            font-family: 'Almarai-Regular';
+            src: url('Almarai-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: 'Almarai-Bold';
+            src: url('Almarai-Bold.ttf');
+        }
+
+        .invoice-box {
+            width: 900px;
+            font-size: 40px;
+            text-align: center;
+            margin-left: 35px;
+            margin-right: 25px;
+            margin-bottom: 150px;
+            font-family: Almarai-Regular;
+            background-color: white;
+        }
+
+        .invoice-box table {
+            margin: 5px;
+            width: 100%;
+            table-layout: auto;
+            /**fixed*/
+            line-height: inherit;
+            text-align: left;
+        }
+
+        .invoice-box table tr.logo-class td {
+            padding-bottom: 20px;
+            width: 100%;
+            text-align: center;
+        }
+
+     
+
+        .invoice-box table td.border {
+            padding: 5px;
+            border: 3px solid rgb(0, 0, 0);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+            font-size: 60px;
+        }
+
+        .invoice-box table td.bold-title-center {
+            /* padding-top: 3px;*/
+            font-weight: bold;
+            text-align: center;
+            vertical-align: middle;
+
+
+        }
+
+        .invoice-box table td.normal-title-center {
+            /* padding-top: 3px;*/
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+
+
+        }
+
+        .invoice-box table td.normal-title-center-combo {
+            border-bottom: 3px solid #eee;
+            /* padding-top: 3px;*/
+            font-weight: normal;
+            text-align: center;
+            vertical-align: middle;
+
+
+        }
+
+        .invoice-box table td.normal-title-right-combo {
+            border-bottom: 3px solid #eee;
+            /* padding-top: 3px;*/
+            font-weight: normal;
+            text-align: right;
+            vertical-align: middle;
+
+
+        }
+
+        .invoice-box table td.normal-title-right {
+            /* padding-top: 3px;*/
+            font-weight: normal;
+            text-align: right;
+            vertical-align: middle;
+
+
+        }
+
+        .invoice-box table td.normal-title-left {
+            /* padding-top: 3px;*/
+            font-weight: normal;
+            text-align: left;
+            vertical-align: middle;
+            width: 600px;
+
+
+
+        }
+
+        .invoice-box table td.bold-title-right {
+            /* padding-top: 3px;*/
+            font-weight: bold;
+            text-align: right;
+            vertical-align: middle;
+
+
+        }
+
+        .invoice-box table td.bold-title-right-top {
+            /* padding-top: 3px;*/
+            font-weight: bold;
+            text-align: right;
+            vertical-align: top;
+
+
+        }
+
+        .invoice-box table td.bold-title-left-top {
+            /* padding-top: 3px;*/
+            font-weight: bold;
+            text-align: left;
+            vertical-align: top;
+
+
+        }
+
+        .invoice-box table td.bold-title-center-top {
+            /* padding-top: 3px;*/
+            font-weight: bold;
+            text-align: center;
+            vertical-align: top;
+
+
+        }
+
+        .invoice-box table td.bold-title-left {
+            /* padding-top: 3px;*/
+            font-weight: bold;
+            text-align: left;
+            vertical-align: middle;
+
+
+        }
+
+        .invoice-box table tr.item td {
+            border-bottom: 2px solid #555;
+
+
+        }
+
+
+        .invoice-box table tr.notes.invoice td {
+            border-bottom: 3px solid #555;
+            border-top: 3px solid #555;
+            padding: 5px;
+
+        }
+
+
+        .invoice-box table tr.separator td {
+            border-bottom: 3px solid #555;
+            /* padding-top: 3px;*/
+
+        }
+
+        .invoice-box table tr.separator_top td {
+            border-top: 3px solid #555;
+
+
+
+        }
+
+        .invoice-box table tr.separator_combo td {
+
+            border-bottom: 3px dotted #555;
+
+
+
+        }
+
+        .invoice-box table tr.bottom.border td {
+            border-bottom: 3px dotted #eee;
+        }
+
+        .invoice-box table tr.top.border td {
+            border-top: 3px solid #555;
+            /* padding-top: 3px;*/
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="invoice-box">
+        <table id="header" cellpadding="0" cellspacing="2">
+            <tbody>
+                #LOGO#
+                <tr>
+                    <td colspan="3" class="normal-title-center">
+                        <b>#COMPANY#
+                            <span>
+                                <br/>
+                                <b>#POS#</b>
+                            </span>
+                        </b>
+                        <br/>
+                        <n>#PHONE_CUSTOMER#</n>
+                        <br />
+                        <br />
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="3" class="bold-title-center">
+                        <b>#NUMBER#</b>
+                    </tr>
+
+
+                <tr>
+                    <td colspan="3" class="bold-title-center">
+                        <p style="font-size: 60px;"> <strong>تأمين</strong> <span>
+                            <br />
+                            <n style="font-size: 38px;">
+                               #CUSTOMER_NAME# : العميل
+                            </n>
+                        </span>
+                    </p>
+                        <br />
+                    </td>
+                </tr>
+
+
+                <tr class="top border">
+                    <td class="bold-title-center" style=font-size:40px; colspan="3">
+                        #NOTE_ODOO#
+                    </td>
+                </tr>
+
+            </tbody>
+        </table>
+
+        <table cellpadding="0" cellspacing="0">
+            <tbody>
+           
+              #QTY_ITEM_PRICE#
+                #ITEMS#
+                
+                <tr class="top border">
+                    <td class="bold-title-right" colspan="2">Total - الإجمالي</td>
+                    <td class="normal-title-right">#PRICE_TOTAL#</td>
+                </tr>
+               
+            </tbody>
+        </table>
+        
+      
+        
+        <table id="footer" cellpadding="0" cellspacing="0">
+            <tbody>
+                <tr class="top border">
+                    <td class="bold-title-left" colspan="1">
+                        <p style="font-size: smaller;"> <strong>#DATE#</strong> </p>
+                    </td>
+
+                    <td class="bold-title-right" colspan="1">
+                        <p style="font-size: smaller;"> <strong>#TIME#</strong> </p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <table id="footer" cellpadding="0" cellspacing="0">
+            <tbody>
+              #COPY_BY#
+            </tbody>
+        </table>
+
+    </div>
+
+</body>
+
+</html>

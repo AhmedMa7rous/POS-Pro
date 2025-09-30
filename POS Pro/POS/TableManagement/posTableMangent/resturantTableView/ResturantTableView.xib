@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="ResturantTableView" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="52N-eO-mGG" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="0.0" width="400" height="300"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gxr-hr-xo7">
+                            <rect key="frame" x="5" y="5" width="390" height="290"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="15"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                    <constraints>
+                        <constraint firstItem="Gxr-hr-xo7" firstAttribute="leading" secondItem="52N-eO-mGG" secondAttribute="leading" constant="5" id="1kO-3E-IBz"/>
+                        <constraint firstItem="Gxr-hr-xo7" firstAttribute="centerY" secondItem="52N-eO-mGG" secondAttribute="centerY" id="2TT-AT-QJA"/>
+                        <constraint firstItem="Gxr-hr-xo7" firstAttribute="top" secondItem="52N-eO-mGG" secondAttribute="top" constant="5" id="3yz-o8-6FK"/>
+                        <constraint firstItem="Gxr-hr-xo7" firstAttribute="centerX" secondItem="52N-eO-mGG" secondAttribute="centerX" id="6UJ-ZG-bCE"/>
+                        <constraint firstAttribute="trailing" secondItem="Gxr-hr-xo7" secondAttribute="trailing" constant="5" id="FBl-rB-kwB"/>
+                        <constraint firstAttribute="bottom" secondItem="Gxr-hr-xo7" secondAttribute="bottom" constant="5" id="SfX-DQ-NrJ"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                            <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.16" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                            <point key="value" x="0.0" y="3"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                            <real key="value" value="6"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="52N-eO-mGG" secondAttribute="trailing" id="1TX-1U-utL"/>
+                <constraint firstItem="52N-eO-mGG" firstAttribute="bottom" secondItem="vUN-kp-3ea" secondAttribute="bottom" id="2Rl-qQ-qx3"/>
+                <constraint firstItem="52N-eO-mGG" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="f4T-NN-vYu"/>
+                <constraint firstItem="52N-eO-mGG" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="sFj-kP-74b"/>
+            </constraints>
+            <nil key="simulatedTopBarMetrics"/>
+            <nil key="simulatedBottomBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="lblInfo" destination="Gxr-hr-xo7" id="PXO-Nb-sk8"/>
+                <outlet property="tableItem" destination="52N-eO-mGG" id="s1B-SY-Mw5"/>
+            </connections>
+            <point key="canvasLocation" x="126" y="64"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

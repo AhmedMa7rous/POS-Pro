@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GeideaPaymentVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="cancelBtn" destination="3fn-AG-ixe" id="TdP-gs-Sc5"/>
+                <outlet property="messageLbl" destination="cew-Uw-c5c" id="m2f-Az-pGS"/>
+                <outlet property="reconnectBtn" destination="8BK-f4-27f" id="yTe-9P-Tgk"/>
+                <outlet property="titleLbl" destination="ZUs-yb-1Jt" id="gID-NA-uBL"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="widthView" destination="hNm-3O-B5d" id="RXh-Wc-5Ch"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="GaA-lT-Wan" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                    <rect key="frame" x="215" y="265" width="650" height="300"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loading.png" translatesAutoresizingMaskIntoConstraints="NO" id="xwR-bq-zvI">
+                            <rect key="frame" x="290" y="0.0" width="70" height="70"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="70" id="Oje-mw-A9D"/>
+                                <constraint firstAttribute="width" constant="70" id="xsB-P3-PE0"/>
+                            </constraints>
+                        </imageView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZUs-yb-1Jt">
+                            <rect key="frame" x="10" y="80" width="630" height="36"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                            <color key="textColor" name="DGTERA-purple"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cew-Uw-c5c">
+                            <rect key="frame" x="10" y="126" width="630" height="29"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                            <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="gLc-BO-ZGz">
+                            <rect key="frame" x="40" y="225" width="570" height="60"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="an0-aO-AUg" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="0.0" width="170" height="60"/>
+                                    <color key="backgroundColor" red="0.1069625989" green="0.51402187349999995" blue="0.38444170360000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="170" id="CyN-oj-g0A"/>
+                                        <constraint firstAttribute="height" constant="60" id="j09-7Y-9cW"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Pay">
+                                        <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="دفع"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnSkip:" destination="-1" eventType="touchUpInside" id="3hy-a0-YZ2"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BK-f4-27f" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="200" y="0.0" width="170" height="60"/>
+                                    <color key="backgroundColor" red="0.47450980390000003" green="0.40784313729999999" blue="0.74117647060000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="kKH-Me-W9E"/>
+                                        <constraint firstAttribute="width" constant="170" id="wWb-jj-slA"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Reconnect">
+                                        <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="إعاده الاتصال"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnReconnectBtn:" destination="-1" eventType="touchUpInside" id="1qZ-yC-cV9"/>
+                                    </connections>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3fn-AG-ixe" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="400" y="0.0" width="170" height="60"/>
+                                    <color key="backgroundColor" systemColor="systemRedColor"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="60" id="Srp-fE-IbB"/>
+                                        <constraint firstAttribute="width" constant="170" id="hIg-1e-dS9"/>
+                                    </constraints>
+                                    <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                        <fontDescription key="titleFontDescription" type="system" pointSize="24"/>
+                                    </buttonConfiguration>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                            <real key="value" value="12"/>
+                                        </userDefinedRuntimeAttribute>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الغاء"/>
+                                    </userDefinedRuntimeAttributes>
+                                    <connections>
+                                        <action selector="tapOnCancel:" destination="-1" eventType="touchUpInside" id="o7s-UH-N3I"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="gLc-BO-ZGz" secondAttribute="bottom" constant="15" id="1nN-lY-FuS"/>
+                        <constraint firstItem="ZUs-yb-1Jt" firstAttribute="centerX" secondItem="GaA-lT-Wan" secondAttribute="centerX" id="7Um-q3-c8a"/>
+                        <constraint firstItem="cew-Uw-c5c" firstAttribute="leading" secondItem="ZUs-yb-1Jt" secondAttribute="leading" id="8UX-sw-qZh"/>
+                        <constraint firstAttribute="height" constant="300" id="E0p-ih-bAM"/>
+                        <constraint firstItem="xwR-bq-zvI" firstAttribute="centerX" secondItem="GaA-lT-Wan" secondAttribute="centerX" id="JKj-Pv-2TA"/>
+                        <constraint firstItem="cew-Uw-c5c" firstAttribute="top" secondItem="ZUs-yb-1Jt" secondAttribute="bottom" constant="10" id="JVe-5v-DZs"/>
+                        <constraint firstItem="ZUs-yb-1Jt" firstAttribute="top" secondItem="xwR-bq-zvI" secondAttribute="bottom" constant="10" id="WnS-P1-NAp"/>
+                        <constraint firstAttribute="width" constant="650" id="hNm-3O-B5d"/>
+                        <constraint firstItem="gLc-BO-ZGz" firstAttribute="top" relation="greaterThanOrEqual" secondItem="cew-Uw-c5c" secondAttribute="bottom" constant="39" id="hPg-Ja-c1t"/>
+                        <constraint firstItem="gLc-BO-ZGz" firstAttribute="centerX" secondItem="cew-Uw-c5c" secondAttribute="centerX" id="sFa-QI-sS3"/>
+                        <constraint firstItem="xwR-bq-zvI" firstAttribute="top" secondItem="GaA-lT-Wan" secondAttribute="top" id="vTx-uC-q7n"/>
+                        <constraint firstItem="ZUs-yb-1Jt" firstAttribute="leading" secondItem="GaA-lT-Wan" secondAttribute="leading" constant="10" id="x4r-2I-L8W"/>
+                        <constraint firstItem="cew-Uw-c5c" firstAttribute="trailing" secondItem="ZUs-yb-1Jt" secondAttribute="trailing" id="yu7-c7-KXc"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="20"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="0.0" alpha="0.21677878676660803" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="GaA-lT-Wan" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="6gt-Wx-1mb"/>
+                <constraint firstItem="GaA-lT-Wan" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="P1D-mZ-YZ2"/>
+            </constraints>
+            <point key="canvasLocation" x="139" y="64"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="3fn-AG-ixe">
+            <size key="intrinsicContentSize" width="96.5" height="43"/>
+        </designable>
+        <designable name="8BK-f4-27f">
+            <size key="intrinsicContentSize" width="135.5" height="43"/>
+        </designable>
+        <designable name="an0-aO-AUg">
+            <size key="intrinsicContentSize" width="61.5" height="43"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="loading.png" width="256" height="256"/>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemRedColor">
+            <color red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

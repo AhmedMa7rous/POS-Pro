@@ -1,0 +1,17 @@
+<cac:TaxTotal>
+  <cbc:TaxAmount currencyID="SAR">#Tax_Amount#</cbc:TaxAmount>
+  <cac:TaxSubtotal>
+    <cbc:TaxableAmount currencyID="SAR">#TaxSubtotal_Taxable_Amount#</cbc:TaxableAmount>
+    <cbc:TaxAmount currencyID="SAR">#TaxSubtotal_Tax_Amount#</cbc:TaxAmount>
+    <cac:TaxCategory>
+      <cbc:ID>#TaxCategory_ID#</cbc:ID>
+      <cbc:Percent>#TaxCategory_Percent#</cbc:Percent>
+      <cac:TaxScheme>
+        <cbc:ID>#VAT#</cbc:ID>
+      </cac:TaxScheme>
+    </cac:TaxCategory>
+  </cac:TaxSubtotal>
+</cac:TaxTotal>
+<cac:TaxTotal>
+  <cbc:TaxAmount currencyID="SAR">#TaxTotal_Value#</cbc:TaxAmount>
+</cac:TaxTotal>

@@ -1,0 +1,83 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2511
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red108\green121\blue134;\red31\green31\blue36;\red255\green255\blue255;
+}
+{\*\expandedcolortbl;;\csgenericrgb\c42394\c47462\c52518;\csgenericrgb\c12054\c12284\c14131;\csgenericrgb\c100000\c100000\c100000;
+}
+\margl1440\margr1440\vieww9000\viewh8400\viewkind0
+\deftab692
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+
+\f0\fs28 \cf2 \cb3  //=============================================================\cf4 \
+\cf2  on Dashboard for start or end session\cf4 \
+\cf2  \cf4 \
+\cf2  1- if no orders to sync\cf4 \
+\cf2  	- open or close on server immediately by calling sync class\cf4 \
+\cf2  \cf4 \
+\cf2  2- if has orders to sync\cf4 \
+\cf2  	- open or close on local only\cf4 \
+\cf2  	- after sync orders close or open session\cf4 \
+\cf2  \cf4 \
+\cf2  in this case status of seesion will postponed on server ,\cf4 \
+\cf2  so create status of orders and session on dashboard\
+\cf4 \
+\cf2  //=============================================================\cf4 \
+\cf2  Steps of sync\cf4 \
+\pard\tx692\tx32158\pardeftab692\ri-22816\pardirnatural\partightenfactor0
+\cf2  \cf4 \
+\pard\tx692\pardeftab692\pardirnatural\partightenfactor0
+\cf2  1- get sessions that not synced sort by desc ( not_created and open )\cf4 \
+\cf2  2- get first old session\cf4 \
+\cf2  3- check session with server (get last session on server)\cf4 \
+\cf2  	A- if exist (server status)\cf4 \
+\cf2  		1- closed on server and open on ipad =>> NP (issue)\
+		2- closed on server and closed on local\cf4 \
+\cf2  		3- open on server ==> \cf4 \
+\cf2  			- send orders\cf4 \
+\cf2  			- check status of session on server (close session if closed local)\cf4 \
+\cf2  \cf4 \
+\cf2  \cf4 \
+\cf2  C- another old session on server  (this session must to be older than cureent session on ipad )\
+    1- closed\
+		- start new session for new on local\
+    2- open\cf4 \
+\cf2  		- send orders if exist\cf4 \
+\cf2  		- close session on server\cf4 \
+\cf2  		- go to step no #1\
+ //=============================================================\cf4 \
+\cf2 \
+\
+\
+ B- if not exist (session on server is )\cf4 \
+\cf2  	- create new session\cf4 \
+\cf2  	- send orders\cf4 \
+\cf2  	- close session if closed local\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\
+\cf4 \
+\cf2  \cf4 \
+\cf2  //=============================================================}

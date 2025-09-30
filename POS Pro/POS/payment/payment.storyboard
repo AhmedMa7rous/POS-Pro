@@ -1,0 +1,877 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Alexandria-Bold.ttf">
+            <string>Alexandria-Bold</string>
+        </array>
+        <array key="Alexandria-Regular.ttf">
+            <string>Alexandria-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Payment method-->
+        <scene sceneID="9bv-yU-exe">
+            <objects>
+                <viewController storyboardIdentifier="payment_method" id="RQW-jw-qjB" customClass="payment_method" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eLf-Ui-c0G">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="JDI-tq-XFz">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Select payment method" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IJ7-cA-e1n" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="409" y="5" width="206" height="21"/>
+                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اختار طريقة الدفع"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order type" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RTr-My-DqM" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="5" width="91" height="21"/>
+                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="نوع الطلب"/>
+                                        </userDefinedRuntimeAttributes>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="IJ7-cA-e1n" firstAttribute="top" secondItem="JDI-tq-XFz" secondAttribute="top" constant="5" id="QEp-EM-Ime"/>
+                                    <constraint firstItem="IJ7-cA-e1n" firstAttribute="centerY" secondItem="JDI-tq-XFz" secondAttribute="centerY" id="bfR-Zd-1RH"/>
+                                    <constraint firstItem="IJ7-cA-e1n" firstAttribute="centerX" secondItem="JDI-tq-XFz" secondAttribute="centerX" id="haZ-Fx-uC2"/>
+                                    <constraint firstItem="RTr-My-DqM" firstAttribute="leading" secondItem="JDI-tq-XFz" secondAttribute="leading" constant="5" id="jEd-qW-3Aq"/>
+                                    <constraint firstItem="RTr-My-DqM" firstAttribute="centerY" secondItem="JDI-tq-XFz" secondAttribute="centerY" id="oqc-lR-CFG"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="G9T-Sb-LH1">
+                                <rect key="frame" x="13" y="56" width="998" height="707"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="BTp-CF-5Bk">
+                                    <size key="itemSize" width="126" height="103"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="5" minY="0.0" maxX="5" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="FlickrCell" id="kPW-h2-NFr" customClass="payment_method_cell" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="5" y="0.0" width="126" height="103"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="126" height="103"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FQL-VG-TUb">
+                                                    <rect key="frame" x="0.0" y="0.0" width="126" height="103"/>
+                                                    <subviews>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Wi2-7w-lVC" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="5" y="1" width="116" height="101"/>
+                                                            <subviews>
+                                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="DaR-yS-9lF">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="101"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mw_icon_bank" translatesAutoresizingMaskIntoConstraints="NO" id="V7L-ci-NCd" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="116" height="69"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="Xjx-Ro-Ebz"/>
+                                                                            </constraints>
+                                                                        </imageView>
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Loyalty Points" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aUE-Me-CXJ">
+                                                                            <rect key="frame" x="0.0" y="69" width="116" height="32"/>
+                                                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="height" constant="32" id="fLK-VZ-uZw"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="17"/>
+                                                                            <color key="textColor" red="0.40392156862745099" green="0.40392156862745099" blue="0.40392156862745099" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            <nil key="highlightedColor"/>
+                                                                        </label>
+                                                                    </subviews>
+                                                                </stackView>
+                                                            </subviews>
+                                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <constraints>
+                                                                <constraint firstItem="DaR-yS-9lF" firstAttribute="top" secondItem="Wi2-7w-lVC" secondAttribute="top" id="ELT-ol-PVH"/>
+                                                                <constraint firstItem="DaR-yS-9lF" firstAttribute="leading" secondItem="Wi2-7w-lVC" secondAttribute="leading" id="NUl-Gl-GMK"/>
+                                                                <constraint firstAttribute="bottom" secondItem="DaR-yS-9lF" secondAttribute="bottom" id="cs7-kL-MkX"/>
+                                                                <constraint firstAttribute="trailing" secondItem="DaR-yS-9lF" secondAttribute="trailing" id="jcL-KM-NyA"/>
+                                                            </constraints>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                    <real key="value" value="1"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                    <color key="value" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="0.12" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="6"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                                    <color key="value" red="0.3411764705882353" green="0.3411764705882353" blue="0.3411764705882353" alpha="0.070000000000000007" colorSpace="calibratedRGB"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                    <point key="value" x="0.0" y="3"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                                    <real key="value" value="62"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </view>
+                                                    </subviews>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <constraints>
+                                                        <constraint firstItem="Wi2-7w-lVC" firstAttribute="top" secondItem="FQL-VG-TUb" secondAttribute="top" constant="1" id="5Bv-cr-70v"/>
+                                                        <constraint firstAttribute="bottom" secondItem="Wi2-7w-lVC" secondAttribute="bottom" constant="1" id="VDx-Gl-XC7"/>
+                                                        <constraint firstItem="Wi2-7w-lVC" firstAttribute="leading" secondItem="FQL-VG-TUb" secondAttribute="leading" constant="5" id="Y9c-YG-JhZ"/>
+                                                        <constraint firstAttribute="trailing" secondItem="Wi2-7w-lVC" secondAttribute="trailing" constant="5" id="gGI-bJ-sWH"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </view>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="FQL-VG-TUb" firstAttribute="leading" secondItem="kPW-h2-NFr" secondAttribute="leading" id="Dja-3s-szs"/>
+                                            <constraint firstItem="FQL-VG-TUb" firstAttribute="top" secondItem="kPW-h2-NFr" secondAttribute="top" id="KLT-qc-j4P"/>
+                                            <constraint firstAttribute="bottom" secondItem="FQL-VG-TUb" secondAttribute="bottom" id="e6a-Bk-BQB"/>
+                                            <constraint firstAttribute="trailing" secondItem="FQL-VG-TUb" secondAttribute="trailing" id="ePy-SR-AzZ"/>
+                                        </constraints>
+                                        <size key="customSize" width="126" height="103"/>
+                                        <connections>
+                                            <outlet property="bg_view" destination="Wi2-7w-lVC" id="vaD-eo-Qna"/>
+                                            <outlet property="icon" destination="V7L-ci-NCd" id="51C-xv-h59"/>
+                                            <outlet property="lbl_ttile" destination="aUE-Me-CXJ" id="Fmi-sY-Kvm"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="RQW-jw-qjB" id="8Pf-ah-Uts"/>
+                                    <outlet property="delegate" destination="RQW-jw-qjB" id="cCh-Qh-2bD"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="YeQ-hV-jiD"/>
+                        <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="YeQ-hV-jiD" firstAttribute="trailing" secondItem="G9T-Sb-LH1" secondAttribute="trailing" constant="13" id="1v4-bP-VSf"/>
+                            <constraint firstItem="G9T-Sb-LH1" firstAttribute="leading" secondItem="eLf-Ui-c0G" secondAttribute="leading" constant="13" id="60y-c1-ejr"/>
+                            <constraint firstAttribute="trailing" secondItem="G9T-Sb-LH1" secondAttribute="trailing" constant="13" id="9eM-SY-cg8"/>
+                            <constraint firstItem="G9T-Sb-LH1" firstAttribute="leading" secondItem="YeQ-hV-jiD" secondAttribute="leading" constant="13" id="BSJ-Oy-iFX"/>
+                            <constraint firstItem="YeQ-hV-jiD" firstAttribute="top" secondItem="JDI-tq-XFz" secondAttribute="top" id="OC2-zh-EwR"/>
+                            <constraint firstAttribute="bottom" secondItem="G9T-Sb-LH1" secondAttribute="bottom" constant="5" id="Ovl-ik-gC0"/>
+                            <constraint firstItem="G9T-Sb-LH1" firstAttribute="top" secondItem="JDI-tq-XFz" secondAttribute="bottom" constant="5" id="chw-DS-kTh"/>
+                            <constraint firstItem="JDI-tq-XFz" firstAttribute="trailing" secondItem="YeQ-hV-jiD" secondAttribute="trailing" id="ilb-63-Zyo"/>
+                            <constraint firstItem="JDI-tq-XFz" firstAttribute="leading" secondItem="YeQ-hV-jiD" secondAttribute="leading" id="zOo-ME-tvd"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedBottomBarMetrics"/>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="collectionView" destination="G9T-Sb-LH1" id="Poe-BK-oqY"/>
+                        <outlet property="lbl_order_type" destination="RTr-My-DqM" id="ZLC-zr-uIQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="92T-wa-v1Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4809.375" y="-5775"/>
+        </scene>
+        <!--Payment Vc-->
+        <scene sceneID="8P2-CV-HEa">
+            <objects>
+                <viewController storyboardIdentifier="paymentVc" id="GYc-xQ-WEX" customClass="paymentVc" customModule="DGTERA" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Tww-0s-Unr">
+                        <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Zkb-LO-YT3" userLabel="rightViewContaier">
+                                <rect key="frame" x="0.0" y="20" width="1024" height="748"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H9U-Jo-qMF">
+                                        <rect key="frame" x="0.0" y="0.0" width="1024" height="150"/>
+                                        <color key="backgroundColor" systemColor="groupTableViewBackgroundColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="150" id="KQt-WT-QIB"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gWZ-Xe-SUZ">
+                                        <rect key="frame" x="0.0" y="150" width="1024" height="148"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="Tey-lT-x0b"/>
+                                        </constraints>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="PJY-Dc-da0" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="355" y="303" width="314" height="370"/>
+                                        <subviews>
+                                            <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="scV-Ce-hCG">
+                                                <rect key="frame" x="136.5" y="10" width="41" height="3"/>
+                                                <color key="backgroundColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="3" id="VAr-uI-CQW"/>
+                                                    <constraint firstAttribute="width" constant="41" id="taB-ZG-Ogw"/>
+                                                </constraints>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QZa-oL-hzN">
+                                                <rect key="frame" x="0.0" y="28" width="314" height="314"/>
+                                                <subviews>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="X6N-mT-eWE">
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="314"/>
+                                                        <subviews>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="gmi-Hr-CfB">
+                                                                <rect key="frame" x="0.0" y="0.0" width="314" height="67.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6yp-jq-naX" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="67.5"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="1">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="8aa-w5-U31"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hP5-WW-YPw" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="82.5" y="0.0" width="67" height="67.5"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="2">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="QMF-qG-OjW"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jrd-qi-bfv" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="164.5" y="0.0" width="67.5" height="67.5"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="3">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="Xn5-ae-C3Q"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="11" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vux-NO-q1k" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="247" y="0.0" width="67" height="67.5"/>
+                                                                        <color key="backgroundColor" red="0.88627450980392153" green="0.36470588235294116" blue="0.36470588235294116" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <state key="normal" backgroundImage="btn_back.png">
+                                                                            <color key="titleColor" systemColor="darkTextColor"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="5HS-Lj-q1Z"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="6th-vC-fdk">
+                                                                <rect key="frame" x="0.0" y="82.5" width="314" height="67"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="4" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r3Y-68-KcT" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="67"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="4">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="PNc-xL-f2D"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="5" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EL6-3w-q5q" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="82.5" y="0.0" width="67" height="67"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="5">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="Hsy-ox-lEd"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="6" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zNz-aL-uKp" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="164.5" y="0.0" width="67.5" height="67"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="6">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="A3S-k2-NSH"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="13" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kqC-0l-cHf" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="247" y="0.0" width="67" height="67"/>
+                                                                        <color key="backgroundColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Bold" family="Alexandria" pointSize="25"/>
+                                                                        <state key="normal" title="+10">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="DLG-NP-wV1"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="KD6-aT-7hz">
+                                                                <rect key="frame" x="0.0" y="164.5" width="314" height="67.5"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="7" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="o0L-CI-8Jl" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="67.5"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="7">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="yXS-fi-QYm"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="8" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="itt-zc-H7t" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="82.5" y="0.0" width="67" height="67.5"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="8">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="BhH-A0-KXF"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="9" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBZ-4w-mUD" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="164.5" y="0.0" width="67.5" height="67.5"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="9">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="XDw-Bg-BuU"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="14" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6lr-ym-ftp" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="247" y="0.0" width="67" height="67.5"/>
+                                                                        <color key="backgroundColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Bold" family="Alexandria" pointSize="25"/>
+                                                                        <state key="normal" title="+50">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <state key="selected" backgroundImage="bgnumber_selected.png"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="LF8-DV-SBq"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="PmW-5B-0G5">
+                                                                <rect key="frame" x="0.0" y="247" width="314" height="67"/>
+                                                                <subviews>
+                                                                    <button opaque="NO" tag="12" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="exM-Re-gTB" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="0.0" width="67.5" height="67"/>
+                                                                        <color key="backgroundColor" red="0.85882352941176465" green="0.85882352941176465" blue="0.85882352941176465" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="26"/>
+                                                                        <state key="normal" title="AC">
+                                                                            <color key="titleColor" systemColor="darkTextColor"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="CfZ-PS-KrV"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4ue-7m-0SH" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="82.5" y="0.0" width="67" height="67"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <state key="normal" title="0">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="zAi-Ve-zW3"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="10" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hJ7-qK-fj8" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="164.5" y="0.0" width="67.5" height="67"/>
+                                                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="34"/>
+                                                                        <inset key="titleEdgeInsets" minX="0.0" minY="-21" maxX="0.0" maxY="0.0"/>
+                                                                        <state key="normal" title=".">
+                                                                            <color key="titleColor" red="0.42352941176470588" green="0.42352941176470588" blue="0.42352941176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        </state>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                                                <point key="value" x="0.0" y="0.0"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="qhK-Xg-5cl"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                    <button opaque="NO" tag="15" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JwV-g2-ZZL" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                                        <rect key="frame" x="247" y="0.0" width="67" height="67"/>
+                                                                        <color key="backgroundColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <fontDescription key="fontDescription" name="Alexandria-Bold" family="Alexandria" pointSize="25"/>
+                                                                        <state key="normal" title="+100">
+                                                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                        </state>
+                                                                        <state key="selected" backgroundImage="bgnumber_selected.png"/>
+                                                                        <userDefinedRuntimeAttributes>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                                <real key="value" value="33"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                                                <real key="value" value="1"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                                                <color key="value" red="0.79607843137254897" green="0.79607843137254897" blue="0.79607843137254897" alpha="1" colorSpace="calibratedRGB"/>
+                                                                            </userDefinedRuntimeAttribute>
+                                                                        </userDefinedRuntimeAttributes>
+                                                                        <connections>
+                                                                            <action selector="btn_keyboardAction:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="8AB-N8-s7H"/>
+                                                                        </connections>
+                                                                    </button>
+                                                                </subviews>
+                                                            </stackView>
+                                                        </subviews>
+                                                    </stackView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HLx-Xq-Fmc" customClass="KeyboardPayment" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="314" height="314"/>
+                                                    </view>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="trailing" secondItem="X6N-mT-eWE" secondAttribute="trailing" id="1Ra-uj-f5T"/>
+                                                    <constraint firstAttribute="trailing" secondItem="HLx-Xq-Fmc" secondAttribute="trailing" id="3gJ-0p-mXc"/>
+                                                    <constraint firstAttribute="height" constant="314" id="FT3-f9-x24"/>
+                                                    <constraint firstItem="X6N-mT-eWE" firstAttribute="top" secondItem="QZa-oL-hzN" secondAttribute="top" id="fmo-VT-ntO"/>
+                                                    <constraint firstItem="HLx-Xq-Fmc" firstAttribute="top" secondItem="QZa-oL-hzN" secondAttribute="top" id="mpg-iJ-vct"/>
+                                                    <constraint firstAttribute="bottom" secondItem="HLx-Xq-Fmc" secondAttribute="bottom" id="pXI-Hw-Dmk"/>
+                                                    <constraint firstItem="HLx-Xq-Fmc" firstAttribute="leading" secondItem="QZa-oL-hzN" secondAttribute="leading" id="tUv-ZV-lD3"/>
+                                                    <constraint firstItem="X6N-mT-eWE" firstAttribute="leading" secondItem="QZa-oL-hzN" secondAttribute="leading" id="vU1-zG-GQk"/>
+                                                    <constraint firstAttribute="width" secondItem="QZa-oL-hzN" secondAttribute="height" multiplier="1:1" id="vx0-yX-R6q"/>
+                                                    <constraint firstAttribute="bottom" secondItem="X6N-mT-eWE" secondAttribute="bottom" id="zPF-Cv-Ay9"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="QZa-oL-hzN" firstAttribute="top" secondItem="scV-Ce-hCG" secondAttribute="bottom" constant="15" id="3RR-0S-Cco"/>
+                                            <constraint firstItem="QZa-oL-hzN" firstAttribute="centerX" secondItem="PJY-Dc-da0" secondAttribute="centerX" id="5tG-oE-rJA"/>
+                                            <constraint firstItem="QZa-oL-hzN" firstAttribute="leading" secondItem="PJY-Dc-da0" secondAttribute="leading" id="KLm-Nf-ynW"/>
+                                            <constraint firstItem="scV-Ce-hCG" firstAttribute="centerX" secondItem="PJY-Dc-da0" secondAttribute="centerX" id="Zsw-wJ-GYN"/>
+                                            <constraint firstItem="QZa-oL-hzN" firstAttribute="centerY" secondItem="PJY-Dc-da0" secondAttribute="centerY" id="bqa-eb-0N1"/>
+                                            <constraint firstItem="scV-Ce-hCG" firstAttribute="top" secondItem="PJY-Dc-da0" secondAttribute="top" constant="10" id="fcS-Qi-8An"/>
+                                        </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                <real key="value" value="1"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.94901960784313721" green="0.94901960784313721" blue="0.94901960784313721" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.050000000000000003" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                <point key="value" x="0.0" y="-6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                <real key="value" value="6"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="12"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </view>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MTj-su-BPv">
+                                        <rect key="frame" x="224" y="683" width="576" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFI-xv-oWY" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="204" y="0.0" width="372" height="60"/>
+                                                <color key="backgroundColor" red="0.41568627450000001" green="0.79215686269999996" blue="0.49803921569999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="372" id="Tup-Mx-TDp"/>
+                                                    <constraint firstAttribute="height" constant="60" id="gMs-v1-9yn"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="20"/>
+                                                <state key="normal" title="Pay"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="11"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.11" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.40000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.78823529410000004" green="0.78823529410000004" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                        <point key="value" x="3" y="-3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اتمام الدفع"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btnPayment:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="bvc-9g-o9f"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5rw-V5-3zP" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="0.0" width="183" height="60"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="183" id="Lug-Re-Rir"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="20"/>
+                                                <state key="normal" title="Cancel">
+                                                    <color key="titleColor" red="0.20392156859999999" green="0.1058823529" blue="0.21960784310000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <real key="value" value="11"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="shadowColor">
+                                                        <color key="value" red="0.0" green="0.0" blue="0.0" alpha="0.11" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="shadowOpacity">
+                                                        <real key="value" value="0.40000000000000002"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                        <real key="value" value="1"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                        <color key="value" red="0.78823529410000004" green="0.78823529410000004" blue="0.78823529410000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="point" keyPath="shadowOffset">
+                                                        <point key="value" x="3" y="-3"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الغاء"/>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <action selector="btn_back:" destination="GYc-xQ-WEX" eventType="touchUpInside" id="AmR-po-rco"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="5rw-V5-3zP" firstAttribute="top" secondItem="MTj-su-BPv" secondAttribute="top" id="8Bu-8v-yWt"/>
+                                            <constraint firstItem="5rw-V5-3zP" firstAttribute="leading" secondItem="MTj-su-BPv" secondAttribute="leading" id="A4r-R3-peO"/>
+                                            <constraint firstAttribute="bottom" secondItem="5rw-V5-3zP" secondAttribute="bottom" id="ciY-3Y-xwb"/>
+                                            <constraint firstAttribute="bottom" secondItem="zFI-xv-oWY" secondAttribute="bottom" id="egR-Zo-u3L"/>
+                                            <constraint firstAttribute="trailing" secondItem="zFI-xv-oWY" secondAttribute="trailing" id="fVh-yz-oUI"/>
+                                            <constraint firstItem="zFI-xv-oWY" firstAttribute="leading" secondItem="5rw-V5-3zP" secondAttribute="trailing" constant="21" id="plc-4f-dUP"/>
+                                            <constraint firstItem="zFI-xv-oWY" firstAttribute="top" secondItem="MTj-su-BPv" secondAttribute="top" id="rqT-Q3-lxe"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="PJY-Dc-da0" firstAttribute="centerX" secondItem="Zkb-LO-YT3" secondAttribute="centerX" id="0Uh-Qt-nz4"/>
+                                    <constraint firstItem="MTj-su-BPv" firstAttribute="top" secondItem="PJY-Dc-da0" secondAttribute="bottom" constant="10" id="0sI-YB-IAs"/>
+                                    <constraint firstItem="PJY-Dc-da0" firstAttribute="top" secondItem="gWZ-Xe-SUZ" secondAttribute="bottom" constant="5" id="8Nq-QJ-K91"/>
+                                    <constraint firstAttribute="trailing" secondItem="H9U-Jo-qMF" secondAttribute="trailing" id="HdW-eG-N3m"/>
+                                    <constraint firstItem="gWZ-Xe-SUZ" firstAttribute="leading" secondItem="Zkb-LO-YT3" secondAttribute="leading" id="TRa-H9-6jV"/>
+                                    <constraint firstItem="MTj-su-BPv" firstAttribute="centerX" secondItem="Zkb-LO-YT3" secondAttribute="centerX" id="dSd-IZ-1Qv"/>
+                                    <constraint firstItem="H9U-Jo-qMF" firstAttribute="top" secondItem="Zkb-LO-YT3" secondAttribute="top" id="f8Q-Vd-zta"/>
+                                    <constraint firstAttribute="trailing" secondItem="gWZ-Xe-SUZ" secondAttribute="trailing" id="iDD-ND-uoZ"/>
+                                    <constraint firstItem="gWZ-Xe-SUZ" firstAttribute="top" secondItem="H9U-Jo-qMF" secondAttribute="bottom" id="jn3-JT-dld"/>
+                                    <constraint firstAttribute="bottom" secondItem="MTj-su-BPv" secondAttribute="bottom" constant="5" id="xqe-2k-l61"/>
+                                    <constraint firstItem="H9U-Jo-qMF" firstAttribute="leading" secondItem="Zkb-LO-YT3" secondAttribute="leading" id="zVe-PA-eUo"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2RD-56-Z5V"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="2RD-56-Z5V" firstAttribute="bottom" secondItem="Zkb-LO-YT3" secondAttribute="bottom" id="7JB-XS-cxV"/>
+                            <constraint firstItem="2RD-56-Z5V" firstAttribute="trailing" secondItem="Zkb-LO-YT3" secondAttribute="trailing" id="O4N-4m-Xiz"/>
+                            <constraint firstItem="Zkb-LO-YT3" firstAttribute="leading" secondItem="2RD-56-Z5V" secondAttribute="leading" id="aGf-d9-rBU"/>
+                            <constraint firstItem="2RD-56-Z5V" firstAttribute="top" secondItem="Zkb-LO-YT3" secondAttribute="top" id="qey-F8-N1Z"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="btnPay" destination="zFI-xv-oWY" id="NJC-A3-ZpT"/>
+                        <outlet property="keyboardPaymentView" destination="HLx-Xq-Fmc" id="Vsb-T4-TvR"/>
+                        <outlet property="oldKeyboardStackview" destination="X6N-mT-eWE" id="rmI-lg-dHB"/>
+                        <outlet property="viewKeyboard" destination="QZa-oL-hzN" id="TWc-ex-SNk"/>
+                        <outlet property="view_payment" destination="H9U-Jo-qMF" id="i3g-jl-yZF"/>
+                        <outlet property="view_paymentRows" destination="gWZ-Xe-SUZ" id="psD-bM-v3d"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t6i-Fv-qDl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-4809" y="-5094"/>
+        </scene>
+    </scenes>
+    <designables>
+        <designable name="4ue-7m-0SH">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="5rw-V5-3zP">
+            <size key="intrinsicContentSize" width="68" height="37"/>
+        </designable>
+        <designable name="6lr-ym-ftp">
+            <size key="intrinsicContentSize" width="46" height="43"/>
+        </designable>
+        <designable name="6yp-jq-naX">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="EL6-3w-q5q">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="IJ7-cA-e1n">
+            <size key="intrinsicContentSize" width="206" height="21"/>
+        </designable>
+        <designable name="JwV-g2-ZZL">
+            <size key="intrinsicContentSize" width="59" height="43"/>
+        </designable>
+        <designable name="RTr-My-DqM">
+            <size key="intrinsicContentSize" width="91" height="21"/>
+        </designable>
+        <designable name="V7L-ci-NCd">
+            <size key="intrinsicContentSize" width="41" height="32"/>
+        </designable>
+        <designable name="exM-Re-gTB">
+            <size key="intrinsicContentSize" width="37" height="44"/>
+        </designable>
+        <designable name="hJ7-qK-fj8">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="hP5-WW-YPw">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="itt-zc-H7t">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="jrd-qi-bfv">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="kqC-0l-cHf">
+            <size key="intrinsicContentSize" width="41" height="43"/>
+        </designable>
+        <designable name="nBZ-4w-mUD">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="o0L-CI-8Jl">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="r3Y-68-KcT">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+        <designable name="vux-NO-q1k">
+            <size key="intrinsicContentSize" width="336" height="336"/>
+        </designable>
+        <designable name="zFI-xv-oWY">
+            <size key="intrinsicContentSize" width="36" height="37"/>
+        </designable>
+        <designable name="zNz-aL-uKp">
+            <size key="intrinsicContentSize" width="30" height="54"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="bgnumber_selected.png" width="418" height="308"/>
+        <image name="btn_back.png" width="336" height="336"/>
+        <image name="mw_icon_bank" width="41" height="32"/>
+        <systemColor name="darkTextColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="groupTableViewBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

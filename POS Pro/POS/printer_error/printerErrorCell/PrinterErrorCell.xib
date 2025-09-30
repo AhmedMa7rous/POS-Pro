@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PrinterErrorCell" rowHeight="90" id="KGk-i7-Jjw" customClass="PrinterErrorCell" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="90"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="49G-FM-qdT" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="80"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="tf1-On-vQy">
+                                <rect key="frame" x="5" y="15" width="310" height="70"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="91I-x3-C8q">
+                                        <rect key="frame" x="10" y="0.0" width="300" height="30"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Order: #4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lik-8S-u2c">
+                                                <rect key="frame" x="0.0" y="4.5" width="79.5" height="21.5"/>
+                                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                                <color key="textColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QvZ-KS-TuL">
+                                                <rect key="frame" x="84.5" y="0.0" width="215.5" height="30"/>
+                                                <state key="normal" title="Test printer"/>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="244" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oGJ-cU-glQ">
+                                        <rect key="frame" x="10" y="30" width="44.5" height="30"/>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="textColor" red="0.4823529411764706" green="0.46274509803921571" blue="0.46666666666666667" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oGJ-cU-glQ" firstAttribute="leading" secondItem="tf1-On-vQy" secondAttribute="leading" constant="10" id="E4G-Db-QSd"/>
+                                    <constraint firstAttribute="trailing" secondItem="oGJ-cU-glQ" secondAttribute="trailing" constant="10" id="QuF-sy-RZl"/>
+                                    <constraint firstItem="91I-x3-C8q" firstAttribute="top" secondItem="tf1-On-vQy" secondAttribute="top" id="fpL-Se-aDM"/>
+                                    <constraint firstAttribute="bottom" secondItem="oGJ-cU-glQ" secondAttribute="bottom" constant="10" id="iDM-pZ-kVH"/>
+                                    <constraint firstItem="91I-x3-C8q" firstAttribute="leading" secondItem="tf1-On-vQy" secondAttribute="leading" constant="10" id="pVH-Fu-VaF"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="80" id="41J-iA-py0"/>
+                            <constraint firstItem="tf1-On-vQy" firstAttribute="top" secondItem="49G-FM-qdT" secondAttribute="top" constant="15" id="UOS-36-6jN"/>
+                            <constraint firstItem="tf1-On-vQy" firstAttribute="leading" secondItem="49G-FM-qdT" secondAttribute="leading" constant="5" id="Wf3-Dl-TkL"/>
+                            <constraint firstAttribute="trailing" secondItem="tf1-On-vQy" secondAttribute="trailing" constant="5" id="kh8-hz-wRF"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.92549019607843142" green="0.92549019607843142" blue="0.92549019607843142" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="49G-FM-qdT" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="88m-XK-6xK"/>
+                    <constraint firstAttribute="trailing" secondItem="49G-FM-qdT" secondAttribute="trailing" id="Mzu-cK-Vxx"/>
+                    <constraint firstItem="49G-FM-qdT" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="b0t-GV-1Hb"/>
+                    <constraint firstAttribute="bottom" secondItem="49G-FM-qdT" secondAttribute="bottom" constant="10" id="nSi-Iw-hIK"/>
+                    <constraint firstItem="49G-FM-qdT" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="tsI-88-8Jb"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <constraints>
+                <constraint firstItem="49G-FM-qdT" firstAttribute="leading" secondItem="njF-e1-oar" secondAttribute="leading" id="S4z-ta-6pI"/>
+                <constraint firstItem="njF-e1-oar" firstAttribute="trailing" secondItem="49G-FM-qdT" secondAttribute="trailing" id="Y9t-2f-ZI8"/>
+                <constraint firstItem="49G-FM-qdT" firstAttribute="width" secondItem="KGk-i7-Jjw" secondAttribute="width" id="hPR-J6-rKD"/>
+                <constraint firstItem="49G-FM-qdT" firstAttribute="top" secondItem="njF-e1-oar" secondAttribute="top" id="mVa-eG-ioc"/>
+            </constraints>
+            <connections>
+                <outlet property="orderNumberLbl" destination="lik-8S-u2c" id="5bQ-Ga-vOF"/>
+                <outlet property="printerInfoLbl" destination="oGJ-cU-glQ" id="Nc3-R1-Ji0"/>
+                <outlet property="testPtinterBtn" destination="QvZ-KS-TuL" id="bpd-m0-wbv"/>
+            </connections>
+            <point key="canvasLocation" x="192.7734375" y="-12.5"/>
+        </tableViewCell>
+    </objects>
+</document>

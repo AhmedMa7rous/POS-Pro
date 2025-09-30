@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Alexandria-Regular.ttf">
+            <string>Alexandria-Regular</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="gray" indentationWidth="10" reuseIdentifier="itemTableViewCell" rowHeight="68" id="vDg-An-AJM" customClass="itemTableViewCell" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vDg-An-AJM" id="zjQ-Uj-yxP">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TjR-U0-odE" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="68"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Ljt-bZ-OiU">
+                                <rect key="frame" x="8" y="8" width="304" height="52"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWm-tV-JMp">
+                                        <rect key="frame" x="0.0" y="0.0" width="50" height="52"/>
+                                        <subviews>
+                                            <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="arrow_up.png" translatesAutoresizingMaskIntoConstraints="NO" id="oMF-Yt-i7v" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="23" y="22.5" width="4" height="7"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="7" id="57M-IY-bSY"/>
+                                                    <constraint firstAttribute="width" constant="4" id="dXG-wv-QNw"/>
+                                                </constraints>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="string" keyPath="imageFileName" value="arrow_up.png"/>
+                                                </userDefinedRuntimeAttributes>
+                                            </imageView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="oMF-Yt-i7v" firstAttribute="centerY" secondItem="vWm-tV-JMp" secondAttribute="centerY" id="54c-fm-xPA"/>
+                                            <constraint firstAttribute="width" constant="50" id="FQj-RA-JhQ"/>
+                                            <constraint firstItem="oMF-Yt-i7v" firstAttribute="centerX" secondItem="vWm-tV-JMp" secondAttribute="centerX" id="YYd-2l-We3"/>
+                                        </constraints>
+                                    </view>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="nrR-bN-U6e">
+                                        <rect key="frame" x="60" y="0.0" width="244" height="52"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="0Lf-h5-wfS">
+                                                <rect key="frame" x="0.0" y="0.0" width="244" height="16.5"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cappuccino Cappuccino Cappuccino" lineBreakMode="middleTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NLL-P5-faX" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="211" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="14"/>
+                                                        <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="99" textAlignment="right" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ffc-Rp-eAY" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                        <rect key="frame" x="216" y="0.0" width="28" height="16.5"/>
+                                                        <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="22"/>
+                                                        <color key="textColor" red="0.43529411759999997" green="0.43529411759999997" blue="0.43529411759999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </stackView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="123x at 5.0 saR unit KG , Discount 10 %123x at 5.0 saR unit KG , Discount 10 %123x at 5.0 saR unit KG , Discount 10 %" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VIO-no-00R" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="21.5" width="244" height="30.5"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="fontDescription" name="Alexandria-Regular" family="Alexandria" pointSize="14"/>
+                                                <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="Ljt-bZ-OiU" secondAttribute="trailing" constant="8" id="NtH-LU-BQq"/>
+                            <constraint firstItem="Ljt-bZ-OiU" firstAttribute="leading" secondItem="TjR-U0-odE" secondAttribute="leading" constant="8" id="ePG-g6-uzU"/>
+                            <constraint firstAttribute="bottom" secondItem="Ljt-bZ-OiU" secondAttribute="bottom" constant="8" id="gEH-0e-y2Z"/>
+                            <constraint firstItem="Ljt-bZ-OiU" firstAttribute="top" secondItem="TjR-U0-odE" secondAttribute="top" constant="8" id="iDZ-7E-ov0"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="x3E-Jq-al9"/>
+                        </constraints>
+                    </view>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line_order.png" translatesAutoresizingMaskIntoConstraints="NO" id="hzo-zs-2dF" customClass="KSImageView" customModule="DGTERA" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="66" width="320" height="2"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="2" id="G7b-ef-eEM"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="string" keyPath="imageFileName" value="line_order.png"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="hzo-zs-2dF" firstAttribute="leading" secondItem="zjQ-Uj-yxP" secondAttribute="leading" id="4lz-XM-4We"/>
+                    <constraint firstItem="TjR-U0-odE" firstAttribute="leading" secondItem="zjQ-Uj-yxP" secondAttribute="leading" id="8Wa-XW-tFn"/>
+                    <constraint firstAttribute="bottom" secondItem="TjR-U0-odE" secondAttribute="bottom" id="PVb-s0-SzL"/>
+                    <constraint firstItem="hzo-zs-2dF" firstAttribute="bottom" secondItem="TjR-U0-odE" secondAttribute="bottom" id="dLw-bN-YpI"/>
+                    <constraint firstAttribute="trailing" secondItem="hzo-zs-2dF" secondAttribute="trailing" id="jMk-Dq-5es"/>
+                    <constraint firstAttribute="trailing" secondItem="TjR-U0-odE" secondAttribute="trailing" id="vXz-5d-bsF"/>
+                    <constraint firstItem="TjR-U0-odE" firstAttribute="top" secondItem="zjQ-Uj-yxP" secondAttribute="top" id="vgT-i6-8C9"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="XGS-rS-PTV"/>
+            <constraints>
+                <constraint firstItem="zjQ-Uj-yxP" firstAttribute="leading" secondItem="XGS-rS-PTV" secondAttribute="leading" id="148-3V-gKs"/>
+                <constraint firstItem="zjQ-Uj-yxP" firstAttribute="top" secondItem="XGS-rS-PTV" secondAttribute="top" id="7us-tI-RrS"/>
+                <constraint firstItem="zjQ-Uj-yxP" firstAttribute="trailing" secondItem="XGS-rS-PTV" secondAttribute="trailing" id="RYg-1B-o5V"/>
+                <constraint firstItem="zjQ-Uj-yxP" firstAttribute="bottom" secondItem="XGS-rS-PTV" secondAttribute="bottom" id="dFz-6t-uwy"/>
+            </constraints>
+            <connections>
+                <outlet property="img_status" destination="oMF-Yt-i7v" id="mda-GQ-NwG"/>
+                <outlet property="lblCateg" destination="VIO-no-00R" id="TNl-ao-ATu"/>
+                <outlet property="lblPrice" destination="ffc-Rp-eAY" id="azD-MX-tTs"/>
+                <outlet property="lblTitle" destination="NLL-P5-faX" id="bVO-so-vIB"/>
+            </connections>
+            <point key="canvasLocation" x="70.01953125" y="-29.296875"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="NLL-P5-faX">
+            <size key="intrinsicContentSize" width="259" height="17.5"/>
+        </designable>
+        <designable name="VIO-no-00R">
+            <size key="intrinsicContentSize" width="797.5" height="17.5"/>
+        </designable>
+        <designable name="ffc-Rp-eAY">
+            <size key="intrinsicContentSize" width="28" height="27"/>
+        </designable>
+        <designable name="hzo-zs-2dF">
+            <size key="intrinsicContentSize" width="1656" height="4"/>
+        </designable>
+        <designable name="oMF-Yt-i7v">
+            <size key="intrinsicContentSize" width="512" height="512"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="arrow_up.png" width="384" height="384"/>
+        <image name="line_order.png" width="1656" height="4"/>
+    </resources>
+</document>

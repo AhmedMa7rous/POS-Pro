@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="InfoDeviceCell" id="KGk-i7-Jjw" customClass="InfoDeviceCell" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="vgC-SY-dya">
+                        <rect key="frame" x="5" y="5" width="310" height="34"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="status" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3OM-ya-zpR" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="142.5" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="140" id="ocY-c1-1ZR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
+                                <color key="textColor" red="0.86347156759999999" green="0.42724502089999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <color key="highlightedColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="حاله الاتصال"/>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="valuevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevaluevalue" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qwe-yO-NnM" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                <rect key="frame" x="147.5" y="0.0" width="162.5" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="32"/>
+                                <color key="textColor" name="DGTERA-purple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                    </stackView>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nx6-u7-UkH">
+                        <rect key="frame" x="0.0" y="43" width="320" height="1"/>
+                        <color key="backgroundColor" red="0.64313725489999995" green="0.66274509800000003" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="1" id="QTf-FL-uQn"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="vgC-SY-dya" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="9dA-wa-nf8"/>
+                    <constraint firstAttribute="bottom" secondItem="nx6-u7-UkH" secondAttribute="bottom" id="LVX-dq-DMB"/>
+                    <constraint firstAttribute="trailing" secondItem="nx6-u7-UkH" secondAttribute="trailing" id="PYi-f5-eJm"/>
+                    <constraint firstAttribute="bottom" secondItem="vgC-SY-dya" secondAttribute="bottom" constant="5" id="WFo-f7-yr8"/>
+                    <constraint firstAttribute="trailing" secondItem="vgC-SY-dya" secondAttribute="trailing" constant="5" id="dsI-7A-MJ4"/>
+                    <constraint firstItem="nx6-u7-UkH" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="eYC-dC-sZC"/>
+                    <constraint firstItem="vgC-SY-dya" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="myc-Zp-AJW"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="infoLbl" destination="3OM-ya-zpR" id="04O-Ti-Ck3"/>
+                <outlet property="valueLbl" destination="qwe-yO-NnM" id="sgh-ok-Gir"/>
+            </connections>
+            <point key="canvasLocation" x="113.04347826086958" y="73.660714285714278"/>
+        </tableViewCell>
+    </objects>
+    <designables>
+        <designable name="3OM-ya-zpR">
+            <size key="intrinsicContentSize" width="94" height="38.5"/>
+        </designable>
+        <designable name="qwe-yO-NnM">
+            <size key="intrinsicContentSize" width="1810.5" height="38.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

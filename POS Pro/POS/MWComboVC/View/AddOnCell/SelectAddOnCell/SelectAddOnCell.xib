@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="SelectAddOnCell" id="gTV-IL-0wX" customClass="SelectAddOnCell" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="224" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="224" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Mya-nK-tCI" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                        <rect key="frame" x="0.0" y="0.0" width="224" height="50"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="uiM-z7-xPt">
+                                <rect key="frame" x="0.0" y="0.0" width="224" height="50"/>
+                                <subviews>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tGw-g5-y69" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                        <rect key="frame" x="-40" y="0.0" width="40" height="50"/>
+                                        <color key="backgroundColor" red="0.99607843139999996" green="0.41176470590000003" blue="0.0" alpha="0.22406462585034015" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                        <color key="tintColor" red="0.99607843139999996" green="0.41176470590000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <inset key="contentEdgeInsets" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" title="1">
+                                            <color key="titleColor" red="0.99607843139999996" green="0.41176470590000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                <color key="value" red="0.99607843139999996" green="0.41176470590000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" horizontalCompressionResistancePriority="1000" text="(+ 5 SAR)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2XD-AC-fy4">
+                                        <rect key="frame" x="0.0" y="0.0" width="73.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.99607843139999996" green="0.41176470590000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="12" translatesAutoresizingMaskIntoConstraints="NO" id="Hzb-Kc-nJJ">
+                                        <rect key="frame" x="75.5" y="0.0" width="148.5" height="50"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <color key="textColor" red="0.45098039215686275" green="0.49019607843137253" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dfd-bW-JZ9">
+                                        <rect key="frame" x="224" y="0.0" width="40" height="50"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="mins-btn-icon"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058823529409" green="0.98039215686274506" blue="0.9882352941176471" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstItem="uiM-z7-xPt" firstAttribute="top" secondItem="Mya-nK-tCI" secondAttribute="top" id="7ja-0O-mW5"/>
+                            <constraint firstAttribute="bottom" secondItem="uiM-z7-xPt" secondAttribute="bottom" id="XqG-gy-Rcz"/>
+                            <constraint firstAttribute="trailing" secondItem="uiM-z7-xPt" secondAttribute="trailing" id="jmH-Wg-a0G"/>
+                            <constraint firstItem="uiM-z7-xPt" firstAttribute="leading" secondItem="Mya-nK-tCI" secondAttribute="leading" id="rYL-go-tT4"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.82352941176470584" green="0.792156862745098" blue="0.792156862745098" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="Mya-nK-tCI" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="5AG-EE-sBY"/>
+                <constraint firstAttribute="bottom" secondItem="Mya-nK-tCI" secondAttribute="bottom" id="Tse-Cg-ruZ"/>
+                <constraint firstItem="Mya-nK-tCI" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="XMV-hJ-fPS"/>
+                <constraint firstAttribute="trailing" secondItem="Mya-nK-tCI" secondAttribute="trailing" id="gWh-j7-Kkk"/>
+            </constraints>
+            <size key="customSize" width="224" height="50"/>
+            <connections>
+                <outlet property="cellView" destination="Mya-nK-tCI" id="r3F-sm-AkK"/>
+                <outlet property="minsQtyBtn" destination="Dfd-bW-JZ9" id="ysE-nW-LvH"/>
+                <outlet property="nameLbl" destination="Hzb-Kc-nJJ" id="wbW-xx-F8h"/>
+                <outlet property="priceLbl" destination="2XD-AC-fy4" id="DWu-7S-kQ6"/>
+                <outlet property="qtyAndPlusBtn" destination="tGw-g5-y69" id="giB-Zd-lmT"/>
+            </connections>
+            <point key="canvasLocation" x="61.463414634146339" y="-1.0169491525423728"/>
+        </collectionViewCell>
+    </objects>
+    <designables>
+        <designable name="tGw-g5-y69">
+            <size key="intrinsicContentSize" width="40" height="24"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="mins-btn-icon" width="40" height="39"/>
+    </resources>
+</document>

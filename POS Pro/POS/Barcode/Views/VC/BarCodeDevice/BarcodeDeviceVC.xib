@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad9_7" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BarcodeDeviceVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="AddRemoveBtn" destination="lNH-11-gq8" id="zLx-aM-XGW"/>
+                <outlet property="exampleBtn" destination="Jfd-iX-cIM" id="OTr-9o-EZY"/>
+                <outlet property="statusImage" destination="7FO-W3-tch" id="JWO-Se-VVO"/>
+                <outlet property="statusLbl" destination="dR5-SY-m43" id="wem-Fn-qh3"/>
+                <outlet property="statusStack" destination="8kL-l5-wrK" id="XZj-gp-4Fx"/>
+                <outlet property="table" destination="Jt1-ej-ERn" id="d8O-XD-jfP"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gXc-eS-MZ2" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                    <rect key="frame" x="40" y="60" width="944" height="668"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MWdg_logo_large" translatesAutoresizingMaskIntoConstraints="NO" id="kWg-uT-p3I">
+                            <rect key="frame" x="20" y="15" width="904" height="120"/>
+                        </imageView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="IdT-wc-7aX">
+                            <rect key="frame" x="20" y="185" width="904" height="333"/>
+                            <subviews>
+                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" alignment="center" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="8kL-l5-wrK">
+                                    <rect key="frame" x="0.0" y="0.0" width="904" height="45"/>
+                                    <subviews>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_message_payment_suc.png" highlightedImage="icon_error.png" translatesAutoresizingMaskIntoConstraints="NO" id="7FO-W3-tch">
+                                            <rect key="frame" x="0.0" y="5" width="35" height="35"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" secondItem="7FO-W3-tch" secondAttribute="height" multiplier="1:1" id="9Yi-0d-ILA"/>
+                                                <constraint firstAttribute="width" constant="35" id="rld-kF-2xI"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dR5-SY-m43" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                            <rect key="frame" x="40" y="0.0" width="864" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="ZV7-LB-Kar"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                            <color key="textColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <color key="highlightedColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Jt1-ej-ERn">
+                                    <rect key="frame" x="0.0" y="0.0" width="904" height="333"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                    <color key="separatorColor" red="0.32654449340000002" green="0.15484383700000001" blue="0.5016411543" alpha="0.80000000000000004" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <connections>
+                                        <outlet property="dataSource" destination="-1" id="hfj-ws-NTn"/>
+                                        <outlet property="delegate" destination="-1" id="QeY-BG-Yt9"/>
+                                    </connections>
+                                </tableView>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lNH-11-gq8" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                            <rect key="frame" x="52" y="548" width="840" height="80"/>
+                            <color key="backgroundColor" red="0.99215686270000003" green="0.5450980392" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="80" id="27e-yA-jCH"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                            <state key="normal" title="Add New Device">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                    <real key="value" value="12"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                    <real key="value" value="1"/>
+                                </userDefinedRuntimeAttribute>
+                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="اضافة جهاز"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="tapOnAddRemoveBtn:" destination="-1" eventType="touchUpInside" id="Wei-NS-5v7"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="IdT-wc-7aX" firstAttribute="centerX" secondItem="gXc-eS-MZ2" secondAttribute="centerX" id="Hkp-0J-h1q"/>
+                        <constraint firstItem="IdT-wc-7aX" firstAttribute="top" secondItem="kWg-uT-p3I" secondAttribute="bottom" constant="50" id="IHu-pe-YvY"/>
+                        <constraint firstAttribute="trailing" secondItem="IdT-wc-7aX" secondAttribute="trailing" constant="20" id="KnO-nP-ltb"/>
+                        <constraint firstAttribute="trailing" secondItem="kWg-uT-p3I" secondAttribute="trailing" constant="20" id="LVW-BB-PSJ"/>
+                        <constraint firstItem="kWg-uT-p3I" firstAttribute="top" secondItem="gXc-eS-MZ2" secondAttribute="top" constant="15" id="ObT-Tb-sPX"/>
+                        <constraint firstItem="lNH-11-gq8" firstAttribute="top" secondItem="IdT-wc-7aX" secondAttribute="bottom" constant="30" id="hLL-HV-PNE"/>
+                        <constraint firstItem="lNH-11-gq8" firstAttribute="centerX" secondItem="gXc-eS-MZ2" secondAttribute="centerX" id="iEb-QS-p3A"/>
+                        <constraint firstItem="kWg-uT-p3I" firstAttribute="centerX" secondItem="gXc-eS-MZ2" secondAttribute="centerX" id="lfz-a6-cy4"/>
+                        <constraint firstAttribute="trailing" secondItem="lNH-11-gq8" secondAttribute="trailing" constant="52" id="twg-Yj-BuS"/>
+                        <constraint firstAttribute="bottom" secondItem="lNH-11-gq8" secondAttribute="bottom" constant="40" id="wNh-9X-WMx"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="12"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jfd-iX-cIM">
+                    <rect key="frame" x="917" y="38" width="89" height="38.5"/>
+                    <state key="normal" title="Button"/>
+                    <buttonConfiguration key="configuration" style="plain" title="Example"/>
+                    <connections>
+                        <action selector="tapOnExample:" destination="-1" eventType="touchUpInside" id="9h2-IX-7wm"/>
+                    </connections>
+                </button>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Jfd-iX-cIM" secondAttribute="trailing" constant="18" id="6Zs-Xr-15L"/>
+                <constraint firstItem="gXc-eS-MZ2" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="N6Z-mP-0kG"/>
+                <constraint firstItem="Jfd-iX-cIM" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="18" id="Rd1-Nz-0Qz"/>
+                <constraint firstItem="gXc-eS-MZ2" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="baC-RL-O59"/>
+                <constraint firstItem="gXc-eS-MZ2" firstAttribute="centerY" secondItem="fnl-2z-Ty3" secondAttribute="centerY" id="hur-9w-AXD"/>
+                <constraint firstItem="gXc-eS-MZ2" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="40" id="lUV-tE-cL3"/>
+            </constraints>
+            <point key="canvasLocation" x="114" y="74"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="dR5-SY-m43"/>
+        <designable name="lNH-11-gq8">
+            <size key="intrinsicContentSize" width="214" height="48"/>
+        </designable>
+    </designables>
+    <resources>
+        <image name="MWdg_logo_large" width="500" height="120"/>
+        <image name="icon_error.png" width="112" height="108"/>
+        <image name="icon_message_payment_suc.png" width="328" height="328"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

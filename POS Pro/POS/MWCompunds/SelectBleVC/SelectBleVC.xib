@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SelectBleVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="bleSSDTable" destination="dja-yl-5wq" id="h91-Dw-Wb2"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1180" height="820"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="d6j-BZ-mKY">
+                    <rect key="frame" x="10" y="10" width="1180" height="780"/>
+                    <subviews>
+                        <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XnZ-B1-fNI">
+                            <rect key="frame" x="0.0" y="0.0" width="1180" height="50"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCj-T9-7k7" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="0.0" y="8" width="76.5" height="34.5"/>
+                                    <color key="tintColor" red="0.91372549020000005" green="0.46666666670000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Cancel"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الغاء"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MWL-y1-34e" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                    <rect key="frame" x="1115.5" y="8" width="64.5" height="34.5"/>
+                                    <color key="tintColor" red="0.91372549020000005" green="0.46666666670000001" blue="0.1647058824" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <state key="normal" title="Button"/>
+                                    <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="تم"/>
+                                    </userDefinedRuntimeAttributes>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="1Lx-9p-5RA"/>
+                                <constraint firstItem="MWL-y1-34e" firstAttribute="centerY" secondItem="XnZ-B1-fNI" secondAttribute="centerY" id="7Rd-ky-qRP"/>
+                                <constraint firstItem="JCj-T9-7k7" firstAttribute="leading" secondItem="XnZ-B1-fNI" secondAttribute="leading" id="XUX-lB-L0F"/>
+                                <constraint firstAttribute="trailing" secondItem="MWL-y1-34e" secondAttribute="trailing" id="dua-GT-CeP"/>
+                                <constraint firstItem="JCj-T9-7k7" firstAttribute="centerY" secondItem="XnZ-B1-fNI" secondAttribute="centerY" id="dwI-X9-5Pr"/>
+                            </constraints>
+                        </view>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="dja-yl-5wq">
+                            <rect key="frame" x="0.0" y="0.0" width="1180" height="780"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <connections>
+                                <outlet property="dataSource" destination="-1" id="w5d-13-xFJ"/>
+                                <outlet property="delegate" destination="-1" id="mfD-yu-Sap"/>
+                            </connections>
+                        </tableView>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstItem="d6j-BZ-mKY" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="10" id="Dpp-tV-hqy"/>
+                <constraint firstItem="d6j-BZ-mKY" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" constant="10" id="GrX-JA-IFz"/>
+                <constraint firstItem="d6j-BZ-mKY" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="U5W-E8-8p7"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="d6j-BZ-mKY" secondAttribute="bottom" constant="10" id="vVW-jm-nrA"/>
+            </constraints>
+            <point key="canvasLocation" x="48" y="-1"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="JCj-T9-7k7">
+            <size key="intrinsicContentSize" width="76.5" height="34.5"/>
+        </designable>
+        <designable name="MWL-y1-34e">
+            <size key="intrinsicContentSize" width="64.5" height="34.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

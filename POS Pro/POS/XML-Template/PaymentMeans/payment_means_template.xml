@@ -1,0 +1,7 @@
+<cac:PaymentMeans>
+  <cbc:PaymentMeansCode listID="UN/ECE 4461">#Payment_Means_Code#</cbc:PaymentMeansCode>
+   <cbc:PaymentDueDate>#Payment_Due_Date#</cbc:PaymentDueDate>
+   <cbc:InstructionID>#Instruction_ID#</cbc:InstructionID>
+   #RETURN_RESON_NOTE#
+  <cbc:PaymentID>#Payment_ID#</cbc:PaymentID>
+</cac:PaymentMeans>

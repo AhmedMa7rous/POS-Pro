@@ -1,0 +1,341 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1">
+    <title>Odoo Report</title>
+
+    <style>
+        @font-face {
+            font-family: 'Almarai-Regular';
+            src: url('Almarai-Regular.ttf');
+        }
+
+        @font-face {
+            font-family: 'Almarai-Bold';
+            src: url('Almarai-Bold.ttf');
+        }
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        div,
+        span,
+        p,
+        t,
+        header,
+        body,
+        html,
+        table,
+        tr,
+        td {
+            font-family: 'Cairo', sans-serif;
+            font-weight: 400;
+            line-height: 1.5;
+            font-size: 15px;
+            color: #495057;
+        }
+
+        b,
+        strong {
+            font-weight: midume;
+        }
+
+        .text-right {
+            text-align: right !important;
+        }
+
+        .text-center {
+            text-align: center !important;
+        }
+
+        .text-left {
+            text-align: left !important;
+        }
+
+        .bg-light {
+            background-color: #f8f9fa !important;
+            color: #212529;
+        }
+
+        table {
+            border-spacing: 0;
+            border-collapse: collapse;
+        }
+
+        /* #tableInvoice {
+    border: 1px solid black; 
+} */
+
+        #tableInvoice th {
+            border: 1px solid white;
+        }
+
+        #tableInvoice tr {
+            border: 1px solid black;
+        }
+
+        #tableInvoice td {
+
+
+            border-right: 1px solid black;
+            border-left: 1px solid black;
+            border-bottom: 1px solid white;
+
+        }
+
+     
+
+        #header td {
+            border-bottom: 1px solid black;
+
+
+        }
+
+        .row {
+            border: 1px solid black;
+
+        }
+
+        #tableTotal td {
+
+            border-bottom: 2px solid #f8f9fa;
+
+        }
+        
+        body {
+            width: 900px; text-align: center;margin-left: 35px;margin-right: 25px;margin-bottom: 150px;
+            font-family:Almarai-Regular;
+            background-color:white;
+        }
+        
+    </style>
+</head>
+
+<body   >
+    <div>
+        <main>
+
+            <div>
+                <img  style="width: 200px;margin-bottom: 20px;"  alt="Logo" src="data:image/png;base64, #logo" loading="lazy">
+            </div>
+
+            <div>
+
+
+                <div>
+
+
+                    <div class="bg-light">
+                        <div class="text-center" style="font-size:1.2rem;">
+                            <strong>Tax Invoice فاتورة
+                                ضريبية</strong>
+
+
+                        </div>
+                    </div>
+
+                    <table style="width: 100%;">
+                        <tr>
+                           <td rowspan="7"  style="width: 110px;"> #QR </td>
+                                               </tr>
+                        
+                        <tr>
+                            <td class="text-left"> <strong>Company Name</strong> </td>
+                            <td class="text-center">#companyName</td>
+                            <td class="text-right"><strong>اسم المنشأة</strong></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left"> <strong>Vat No </strong> </td>
+                            <td class="text-center"> #vatNo </td>
+                            <td class="text-right"><strong> الرقم الضريبي </strong></td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left"> <strong> Invoice Number </strong> </td>
+                            <td class="text-center"> #invoiceNo </td>
+                            <td class="text-right"><strong> رقم الفاتورة </strong></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"> <strong> Invoice Date </strong> </td>
+                            <td class="text-center"> #invoiceDate </td>
+                            <td class="text-right"><strong> تاريخ الفاتورة </strong></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"> <strong> Cashier </strong> </td>
+                            <td class="text-center"> #cashier </td>
+                            <td class="text-right"><strong> اسم المندوب </strong></td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"> <strong> Address </strong> </td>
+                            <td class="text-center"> #ADRESS# </td>
+                            <td class="text-right"><strong> العنوان </strong></td>
+                        </tr>
+
+
+                    </table>
+
+                    #ORDER_TYPE_A4#
+                    #customerRow
+                    #DRIVER_INFO_A4#
+
+
+
+
+                    <table id="tableInvoice" style="width: 100%;">
+                        <tr class="bg-light">
+                            <th class="text-left" colspan="3">Invoice Lines
+                            </th>
+
+                            <th class="text-right" colspan="3"> بنود الفاتورة</th>
+                        </tr>
+
+
+                        <tr id="header" class="text-center">
+                            <td class="text-left">
+                                <div>Name</div>
+                                <div>
+                                    الصنف
+                                </div>
+                            </td>
+                            <td>
+                                <div>Unit Price</div>
+                                <div> سعر الوحدة</div>
+                            </td>
+                            <td>
+                                <div>Quantity</div>
+                                <div> الكمية</div>
+                            </td>
+
+                            <td>
+                                <div>Taxes</div>
+                                <div>الضريبة</div>
+                            </td>
+                            <td>
+                                <div>Amount tax</div>
+                                <div>مبلغ الضريبة</div>
+                            </td>
+                            <td>
+                                <div>Taxable Amount</div>
+                                <div> المبلغ الخاضع
+                                    للضريبة
+                                </div>
+                            </td>
+                        </tr>
+
+                        #invoiceRow
+                    </table>
+                    
+                    #ORDER_NOTES#
+
+                    <div style="height: 20px;"> </div>
+
+                    <table id="tableTotal" style="width: 100%;">
+                        <tr class="bg-light">
+                            <th class="text-left">Total Amount </th>
+                            <th></th>
+                            <th class="text-right">الاجمالي </th>
+                        </tr>
+                        <tr>
+                            <td class="text-left"> Total (Excluding VAT) </td>
+                            <td class="text-right"> الاجمالي غير شامل ضريبة القيمة المضافة
+                            </td>
+
+                            <td class="text-center">#TotalWithOutTax #CURRENCY#</td>
+                        </tr>
+                        <tr>
+                            <td class="text-left"> Discount </td>
+                            <td class="text-right"> الخصم
+                            </td>
+                            <td class="text-center">#discount #CURRENCY#</td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left"> Total Taxable Amount (Excluding VAT)
+                            </td>
+                            <td class="text-right"> الإجمالي الخاضع للضريبة غير شامل ضريبة القيمة المضافة
+
+                            </td>
+
+                            <td class="text-center">#TotalWithTax #CURRENCY#</td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left"> Total VAT
+                            </td>
+                            <td class="text-right"> إجمالي الضريبة المضافة
+
+                            </td>
+
+                            <td class="text-center">#Tax #CURRENCY#</td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left"> Total </td>
+                            <td class="text-right"> الإجمالي
+                            </td>
+
+                            <td class="text-center">#Total #CURRENCY#</td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left"> Paid Amount
+                            </td>
+                            <td class="text-right"> المبلغ المدفوع
+
+                            </td>
+
+                            <td class="text-center">#paid #CURRENCY#</td>
+                        </tr>
+
+                        <tr>
+                            <td class="text-left"> Amount Due
+                            </td>
+                            <td class="text-right"> المبلغ المتبقي
+
+                            </td>
+
+                            <td class="text-center">#due #CURRENCY#</td>
+                        </tr>
+
+                    </table>
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+            <div class="text-center">
+
+                <hr />
+                <span>
+
+                    #ADRESS# </span>
+
+
+
+
+
+
+            </div>
+
+
+
+        </main>
+    </div>
+
+
+
+
+</body>
+
+</html>

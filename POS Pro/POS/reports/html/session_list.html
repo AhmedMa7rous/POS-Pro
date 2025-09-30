@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" >
+    <head>
+        <meta charset="UTF-8">
+            <title></title>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+
+            <style>
+                         @font-face { font-family: '#font'; src: url('#font.ttf'); }
+                         
+                       
+                             * {
+                               box-sizing: border-box;
+                             }
+
+                             #myInput {
+                               background-image: url('/css/searchicon.png');
+                               background-position: 10px 10px;
+                               background-repeat: no-repeat;
+                               width: 100%;
+                               font-size: 20px;
+                               padding: 12px 20px 12px 40px;
+                               border: 1px solid #ddd;
+                               margin-bottom: 12px;
+                             }
+
+                             #myTable {
+                               border-collapse: collapse;
+                               width: 100%;
+                               border: 1px solid #ddd;
+                              
+                             }
+
+                             #myTable th, #myTable td {
+                               text-align: left;
+                               padding: 12px;
+                             }
+
+                             #myTable tr {
+                               border-bottom: 1px solid #ddd;
+                             }
+
+                             #myTable tr.header, #myTable tr:hover {
+                               background-color: #f1f1f1;
+                             }
+                
+                       </style>
+    </head>
+    <body  #dir  >
+        
+        <div style="width: 900px;font-size:35px;text-align: center;line-height: 1.2;margin-left: 25px;margin-right: 25px;margin-bottom: 150px; font-family:#font;"  >
+            
+            <div>                
+                <div  >
+                   <h2 style=" border: 4px solid black;padding: 10px;margin-right: 40px;  "> #header</h2>
+                    <div  >
+                        <table style="text-align: left">
+                          
+                            #rows_header
+                        </table>
+                  </div>
+                  
+                </div>
+            </div><!--End Invoice Mid-->
+            
+            <div  >
+                #rows_total
+          
+ 
+                    
+ 
+                  
+             
+                
+  
+            </div><!--End InvoiceBot-->
+            #copy_right
+
+        </div><!--End Invoice-->
+        <!-- partial -->
+        
+        <script>
+        function myFunction() {
+          var input, filter, table, tr, td, i, txtValue;
+          input = document.getElementById("myInput");
+          filter = input.value.toUpperCase();
+          table = document.getElementById("myTable");
+          tr = table.getElementsByTagName("tr");
+          for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+              txtValue = td.textContent || td.innerText;
+              if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                tr[i].style.display = "";
+              } else {
+                tr[i].style.display = "none";
+              }
+            }
+          }
+        }
+        </script>
+        
+    </body>
+</html>

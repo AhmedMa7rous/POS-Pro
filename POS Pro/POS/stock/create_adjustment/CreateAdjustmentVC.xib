@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_2" orientation="landscape" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CreateAdjustmentVC" customModule="DGTERA" customModuleProvider="target">
+            <connections>
+                <outlet property="categoryBtn" destination="K4g-0C-TLI" id="VuQ-AU-XIV"/>
+                <outlet property="categoryStackView" destination="3QS-UE-q5v" id="VSz-Ou-pZ8"/>
+                <outlet property="inventoryRefTF" destination="MYD-CR-2z7" id="WzT-a7-Fd8"/>
+                <outlet property="leftView" destination="g0C-WW-wxz" id="0kx-be-14G"/>
+                <outlet property="productBtn" destination="Tej-EP-XDl" id="rv5-uA-Jdz"/>
+                <outlet property="productsStackView" destination="ez0-zi-eEY" id="rYf-xh-f8O"/>
+                <outlet property="selectBySegment" destination="Nrc-Y2-VQI" id="ruX-3e-Nmv"/>
+                <outlet property="selectedItemsTable" destination="NCS-kx-wE7" id="Zu7-Bm-LDc"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="1080" height="810"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Create Adjustment" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yjk-14-fTK" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                    <rect key="frame" x="408" y="30" width="264" height="36"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <nil key="highlightedColor"/>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="انشاء جرد جديد"/>
+                    </userDefinedRuntimeAttributes>
+                </label>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="w02-XO-esk" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                    <rect key="frame" x="20" y="86" width="1040" height="704"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="SV3-8z-eDG">
+                            <rect key="frame" x="0.0" y="0.0" width="1040" height="704"/>
+                            <subviews>
+                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mj5-bL-U3e" userLabel="RightView">
+                                    <rect key="frame" x="0.0" y="0.0" width="1040" height="704"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="gEL-e8-Kdy">
+                                            <rect key="frame" x="8" y="20" width="1024" height="260"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="XMA-z0-vZa">
+                                                    <rect key="frame" x="0.0" y="0.0" width="1024" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory Reference" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E6s-sY-9FB" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="175" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" name="DGTERA-purple"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="انشاء جرد جديد"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="name" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MYD-CR-2z7">
+                                                            <rect key="frame" x="185" y="0.0" width="839" height="50"/>
+                                                            <color key="textColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                                            <textInputTraits key="textInputTraits"/>
+                                                        </textField>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="9S9-ba-Jqr"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AM5-wE-7uk">
+                                                    <rect key="frame" x="0.0" y="58" width="1024" height="1"/>
+                                                    <color key="backgroundColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="zt6-7V-b7E"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" alignment="center" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="86l-vC-cc4">
+                                                    <rect key="frame" x="0.0" y="67" width="1024" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Include Exhausted Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IsD-Ew-PXI" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="13" width="965" height="24"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" name="DGTERA-purple"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="قم بتضمين المنتجات المستنفدة"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="4Xc-Pq-Es4">
+                                                            <rect key="frame" x="975" y="9.5" width="51" height="31"/>
+                                                            <connections>
+                                                                <action selector="togleIncludeExhaustedProductes:" destination="-1" eventType="valueChanged" id="l0L-Jt-Tti"/>
+                                                            </connections>
+                                                        </switch>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstItem="IsD-Ew-PXI" firstAttribute="leading" secondItem="86l-vC-cc4" secondAttribute="leading" id="TPF-7h-SxY"/>
+                                                        <constraint firstAttribute="height" constant="50" id="Xhw-on-dHu"/>
+                                                        <constraint firstAttribute="trailing" secondItem="4Xc-Pq-Es4" secondAttribute="trailing" id="xXa-KR-7KY"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gxh-eP-2nY">
+                                                    <rect key="frame" x="0.0" y="125" width="1024" height="1"/>
+                                                    <color key="backgroundColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="n0N-i7-MDc"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="CY7-YU-h9t">
+                                                    <rect key="frame" x="0.0" y="134" width="1024" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" horizontalCompressionResistancePriority="1000" verticalCompressionResistancePriority="1000" text="Select By" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ett-TD-j88" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="764" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" name="DGTERA-purple"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="نوع الجرد"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Nrc-Y2-VQI">
+                                                            <rect key="frame" x="774" y="0.0" width="250" height="51"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="250" id="NZY-Jk-GBD"/>
+                                                            </constraints>
+                                                            <segments>
+                                                                <segment title="Products"/>
+                                                                <segment title="Categories"/>
+                                                            </segments>
+                                                            <connections>
+                                                                <action selector="tapOnSelectBySegment:" destination="-1" eventType="valueChanged" id="R4Y-kq-AMm"/>
+                                                            </connections>
+                                                        </segmentedControl>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="WjS-7k-bDQ"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hcB-CH-pRP">
+                                                    <rect key="frame" x="0.0" y="192" width="1024" height="1"/>
+                                                    <color key="backgroundColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="sOc-hX-Tbg"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="ez0-zi-eEY">
+                                                    <rect key="frame" x="0.0" y="201" width="1024" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Products" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="olA-Uk-Xcj" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="79" height="50"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                            <color key="textColor" name="DGTERA-purple"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="المنتجات"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tej-EP-XDl" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="99" y="0.0" width="925" height="50"/>
+                                                            <color key="tintColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="All">
+                                                                <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                                            </buttonConfiguration>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الكل"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tapOnProductsBtn:" destination="-1" eventType="touchUpInside" id="kIp-Bh-uYc"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="j6n-pI-Ubn"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jPV-ax-74f">
+                                                    <rect key="frame" x="0.0" y="255" width="1024" height="1"/>
+                                                    <color key="backgroundColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="2ZD-1G-jY3"/>
+                                                    </constraints>
+                                                </view>
+                                                <stackView hidden="YES" opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="3QS-UE-q5v">
+                                                    <rect key="frame" x="0.0" y="255" width="1024" height="50"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Categories" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tBZ-i7-DIu" customClass="KLabel" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="113" height="50"/>
+                                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                                            <color key="textColor" red="0.25490196079999999" green="0.13725490200000001" blue="0.38431372549999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="التصنيفات"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="K4g-0C-TLI" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="133" y="0.0" width="891" height="50"/>
+                                                            <color key="tintColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="All">
+                                                                <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                                            </buttonConfiguration>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الكل"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tapOnCategoryBtn:" destination="-1" eventType="touchUpInside" id="Vn0-ef-qqK"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="50" id="0q2-5C-OcQ"/>
+                                                    </constraints>
+                                                </stackView>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="D4x-xh-Aiy">
+                                                    <rect key="frame" x="0.0" y="259" width="1024" height="1"/>
+                                                    <color key="backgroundColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="tj0-XX-i1b"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                        </stackView>
+                                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="NCS-kx-wE7">
+                                            <rect key="frame" x="8" y="296" width="1024" height="332"/>
+                                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                            <connections>
+                                                <outlet property="dataSource" destination="-1" id="lkn-Yg-yys"/>
+                                                <outlet property="delegate" destination="-1" id="UAA-Or-uqd"/>
+                                            </connections>
+                                        </tableView>
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gtK-VT-0tr">
+                                            <rect key="frame" x="20" y="636" width="1000" height="60"/>
+                                            <subviews>
+                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KNx-a5-8Hk">
+                                                    <rect key="frame" x="292" y="2" width="416" height="56"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6qw-6n-AHm" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="0.0" y="0.0" width="204" height="56"/>
+                                                            <color key="backgroundColor" name="DGTERA-purple"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="204" id="Y9i-BO-RdH"/>
+                                                            </constraints>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="Create">
+                                                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="22"/>
+                                                            </buttonConfiguration>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="انشاء"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tapOnCreatelBtn:" destination="-1" eventType="touchUpInside" id="TJG-rT-GQ8"/>
+                                                            </connections>
+                                                        </button>
+                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="syi-O7-hCJ" customClass="KButton" customModule="DGTERA" customModuleProvider="target">
+                                                            <rect key="frame" x="212" y="0.0" width="204" height="56"/>
+                                                            <color key="backgroundColor" red="0.87843137250000003" green="0.47058823529999999" blue="0.2156862745" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                            <state key="normal" title="Button"/>
+                                                            <buttonConfiguration key="configuration" style="plain" title="Cancel">
+                                                                <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="22"/>
+                                                            </buttonConfiguration>
+                                                            <userDefinedRuntimeAttributes>
+                                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                                    <real key="value" value="12"/>
+                                                                </userDefinedRuntimeAttribute>
+                                                                <userDefinedRuntimeAttribute type="string" keyPath="text_ar" value="الغاء"/>
+                                                            </userDefinedRuntimeAttributes>
+                                                            <connections>
+                                                                <action selector="tapOnCancelBtn:" destination="-1" eventType="touchUpInside" id="Z5R-21-Rzh"/>
+                                                            </connections>
+                                                        </button>
+                                                    </subviews>
+                                                </stackView>
+                                            </subviews>
+                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            <constraints>
+                                                <constraint firstItem="KNx-a5-8Hk" firstAttribute="centerY" secondItem="gtK-VT-0tr" secondAttribute="centerY" id="BjF-A0-oOm"/>
+                                                <constraint firstAttribute="height" constant="60" id="EGF-yX-cgU"/>
+                                                <constraint firstAttribute="bottom" secondItem="KNx-a5-8Hk" secondAttribute="bottom" constant="2" id="ERQ-20-2EG"/>
+                                                <constraint firstItem="KNx-a5-8Hk" firstAttribute="centerX" secondItem="gtK-VT-0tr" secondAttribute="centerX" id="Jxy-jf-Bxi"/>
+                                            </constraints>
+                                        </view>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <constraints>
+                                        <constraint firstAttribute="bottom" secondItem="gtK-VT-0tr" secondAttribute="bottom" constant="8" id="4LN-gw-aiQ"/>
+                                        <constraint firstItem="NCS-kx-wE7" firstAttribute="top" secondItem="gEL-e8-Kdy" secondAttribute="bottom" constant="16" id="6o2-ob-zke"/>
+                                        <constraint firstItem="NCS-kx-wE7" firstAttribute="trailing" secondItem="gEL-e8-Kdy" secondAttribute="trailing" id="TWr-YH-jPH"/>
+                                        <constraint firstItem="gtK-VT-0tr" firstAttribute="leading" secondItem="mj5-bL-U3e" secondAttribute="leading" constant="20" symbolic="YES" id="aoc-rf-etk"/>
+                                        <constraint firstAttribute="trailing" secondItem="gEL-e8-Kdy" secondAttribute="trailing" constant="8" id="enw-8R-buo"/>
+                                        <constraint firstItem="gEL-e8-Kdy" firstAttribute="top" secondItem="mj5-bL-U3e" secondAttribute="top" constant="20" id="ewn-A3-LER"/>
+                                        <constraint firstAttribute="trailing" secondItem="gtK-VT-0tr" secondAttribute="trailing" constant="20" symbolic="YES" id="gSC-6G-CwV"/>
+                                        <constraint firstItem="gEL-e8-Kdy" firstAttribute="leading" secondItem="mj5-bL-U3e" secondAttribute="leading" constant="8" id="p1M-FD-FAT"/>
+                                        <constraint firstItem="gtK-VT-0tr" firstAttribute="top" secondItem="NCS-kx-wE7" secondAttribute="bottom" constant="8" id="pjx-Ic-vUL"/>
+                                        <constraint firstItem="NCS-kx-wE7" firstAttribute="leading" secondItem="gEL-e8-Kdy" secondAttribute="leading" id="rmh-R6-QFC"/>
+                                    </constraints>
+                                </view>
+                                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g0C-WW-wxz" userLabel="LeftView">
+                                    <rect key="frame" x="0.0" y="0.0" width="0.0" height="704"/>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </view>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstItem="SV3-8z-eDG" firstAttribute="top" secondItem="w02-XO-esk" secondAttribute="top" id="5J6-hc-pyW"/>
+                        <constraint firstAttribute="trailing" secondItem="SV3-8z-eDG" secondAttribute="trailing" id="ghj-eV-gs7"/>
+                        <constraint firstItem="SV3-8z-eDG" firstAttribute="leading" secondItem="w02-XO-esk" secondAttribute="leading" id="vM0-p8-iTG"/>
+                        <constraint firstAttribute="bottom" secondItem="SV3-8z-eDG" secondAttribute="bottom" id="z9D-Ys-JH0"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="25"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                            <real key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="DGTERA-purple"/>
+            <constraints>
+                <constraint firstItem="w02-XO-esk" firstAttribute="top" secondItem="Yjk-14-fTK" secondAttribute="bottom" constant="20" id="7Jt-x9-7Us"/>
+                <constraint firstItem="w02-XO-esk" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="DMW-rG-DIS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="w02-XO-esk" secondAttribute="trailing" constant="20" id="Gkp-mL-2sj"/>
+                <constraint firstItem="Yjk-14-fTK" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="Kh9-SM-PJm"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="w02-XO-esk" secondAttribute="bottom" constant="20" id="Pwf-cO-YBX"/>
+                <constraint firstItem="Yjk-14-fTK" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="ehg-W3-XY7"/>
+            </constraints>
+            <point key="canvasLocation" x="138.88888888888889" y="81.481481481481481"/>
+        </view>
+    </objects>
+    <designables>
+        <designable name="6qw-6n-AHm">
+            <size key="intrinsicContentSize" width="89.5" height="40.5"/>
+        </designable>
+        <designable name="E6s-sY-9FB">
+            <size key="intrinsicContentSize" width="175" height="24"/>
+        </designable>
+        <designable name="IsD-Ew-PXI">
+            <size key="intrinsicContentSize" width="244" height="24"/>
+        </designable>
+        <designable name="K4g-0C-TLI">
+            <size key="intrinsicContentSize" width="48" height="40.5"/>
+        </designable>
+        <designable name="Tej-EP-XDl">
+            <size key="intrinsicContentSize" width="48" height="40.5"/>
+        </designable>
+        <designable name="Yjk-14-fTK">
+            <size key="intrinsicContentSize" width="264" height="36"/>
+        </designable>
+        <designable name="ett-TD-j88">
+            <size key="intrinsicContentSize" width="82.5" height="24"/>
+        </designable>
+        <designable name="olA-Uk-Xcj">
+            <size key="intrinsicContentSize" width="79" height="24"/>
+        </designable>
+        <designable name="syi-O7-hCJ">
+            <size key="intrinsicContentSize" width="92" height="40.5"/>
+        </designable>
+        <designable name="tBZ-i7-DIu">
+            <size key="intrinsicContentSize" width="113" height="26.5"/>
+        </designable>
+    </designables>
+    <resources>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

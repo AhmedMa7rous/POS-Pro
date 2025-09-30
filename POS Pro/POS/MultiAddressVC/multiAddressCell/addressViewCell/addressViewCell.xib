@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="ipad10_9rounded" orientation="portrait" layout="fullscreen" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="addressViewCell" rowHeight="-121" id="KGk-i7-Jjw" customClass="addressViewCell" customModule="DGTERA" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="79"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Koq-dS-u0w" customClass="ShadowView" customModule="DGTERA" customModuleProvider="target">
+                        <rect key="frame" x="5" y="5" width="310" height="69"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0uZ-BN-JHz">
+                                <rect key="frame" x="5" y="5" width="261" height="23"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" name="DGTERA-purple"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1SG-wM-QGh">
+                                <rect key="frame" x="5" y="38" width="261" height="26"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <color key="textColor" red="0.67058825489999996" green="0.64313727620000005" blue="0.63137257099999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wtP-3M-QRM">
+                                <rect key="frame" x="276" y="5" width="24" height="59"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" image="remove"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.97647058819999999" green="0.98039215690000003" blue="0.98431372549999996" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="wtP-3M-QRM" secondAttribute="trailing" constant="10" id="BEj-mS-be5"/>
+                            <constraint firstItem="1SG-wM-QGh" firstAttribute="top" secondItem="0uZ-BN-JHz" secondAttribute="bottom" constant="10" id="BcO-qh-BF3"/>
+                            <constraint firstAttribute="bottom" secondItem="wtP-3M-QRM" secondAttribute="bottom" constant="5" id="IpU-aP-WQN"/>
+                            <constraint firstItem="0uZ-BN-JHz" firstAttribute="top" secondItem="Koq-dS-u0w" secondAttribute="top" constant="5" id="OZf-l6-skc"/>
+                            <constraint firstItem="wtP-3M-QRM" firstAttribute="leading" secondItem="0uZ-BN-JHz" secondAttribute="trailing" constant="10" id="RQd-Kr-xhS"/>
+                            <constraint firstItem="wtP-3M-QRM" firstAttribute="centerY" secondItem="Koq-dS-u0w" secondAttribute="centerY" id="UTT-Lh-TKV"/>
+                            <constraint firstItem="0uZ-BN-JHz" firstAttribute="leading" secondItem="Koq-dS-u0w" secondAttribute="leading" constant="5" id="dSZ-dz-Zr5"/>
+                            <constraint firstItem="1SG-wM-QGh" firstAttribute="trailing" secondItem="0uZ-BN-JHz" secondAttribute="trailing" id="hTl-GK-iWw"/>
+                            <constraint firstItem="1SG-wM-QGh" firstAttribute="leading" secondItem="0uZ-BN-JHz" secondAttribute="leading" id="qSt-as-bmS"/>
+                            <constraint firstAttribute="bottom" secondItem="1SG-wM-QGh" secondAttribute="bottom" constant="5" id="qba-Io-Lef"/>
+                            <constraint firstItem="wtP-3M-QRM" firstAttribute="top" secondItem="Koq-dS-u0w" secondAttribute="top" constant="5" id="vv7-Bx-AKu"/>
+                        </constraints>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowBlur">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="shadowSpread">
+                                <real key="value" value="1"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="Koq-dS-u0w" secondAttribute="bottom" constant="5" id="3MP-F8-G0m"/>
+                    <constraint firstAttribute="trailing" secondItem="Koq-dS-u0w" secondAttribute="trailing" constant="5" id="3bb-DU-cdc"/>
+                    <constraint firstItem="Koq-dS-u0w" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="Qy5-Tp-23S"/>
+                    <constraint firstItem="Koq-dS-u0w" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="tBl-UC-h0P"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <connections>
+                <outlet property="areaLbl" destination="1SG-wM-QGh" id="Ln6-As-gc7"/>
+                <outlet property="nameAddressLbl" destination="0uZ-BN-JHz" id="wR1-h6-sCA"/>
+                <outlet property="removeBtn" destination="wtP-3M-QRM" id="6FU-41-X9m"/>
+            </connections>
+            <point key="canvasLocation" x="39.512195121951216" y="22.627118644067799"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="remove" width="24" height="24"/>
+        <namedColor name="DGTERA-purple">
+            <color red="0.3059999942779541" green="0.22400000691413879" blue="0.68599998950958252" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>
